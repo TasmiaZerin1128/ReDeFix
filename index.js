@@ -1,14 +1,17 @@
-import MistralClient from '@mistralai/mistralai';
+import { Mistral } from '@mistralai/mistralai';
+import 'dotenv/config';
 
-const apiKey = process.env.MISTRL_API_TOKEN;
-const client = new MistralClient(apiKey);
+const apiKey = process.env.MISTRL_API_KEY || 'your_api_key';
+console.log('API Key:', apiKey);
 
-const chatResponse = await client.chat({
+const client = new Mistral({apiKey: apiKey});
+
+const chatResponse = await client.chat.complete({
     model: 'mistral-tiny',
     messages: [
         {
             role: 'user',
-            content: 'Hello, how are you?',
+            content: 'Hello, where is niagra falls?',
         },
     ],
     temperature: 0.6
