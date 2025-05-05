@@ -1,0 +1,222 @@
+[
+    {
+        "title": "How to differentiate first and last position of wrapped text in firefox",
+        "score": 9,
+        "tags": [
+            "javascript",
+            "html",
+            "css"
+        ],
+        "answers": [
+            {
+                "score": 2,
+                "body": "As explained by @Krokomot Firefox has a quirky way to treat line wraps.\nIn fact both the end of the previous line and the start of the current line (showing the cursor/caret) will return the same character index/position (or anchorOffset value).\nA workaround might be to save the last character index as well as the last top y value in  global variables.\nIf the current character position and the previous top y  equal the previous ones\n– we take the y position calculated from the next character (anchorOffset + 1) – in this case after the line break.\n\n\nconst textEl = document.getElementById(\"myText\");\nlet bbText = textEl.getBoundingClientRect();\nlet textElTop = bbText.top;\nlet textElRight = bbText.right;\n\nlet lastCharPos = 0;\nlet lastTop = 0;\n\nmyText.addEventListener(\"click\", (e) => {\n  updateSelection(e);\n});\n\ndocument.addEventListener(\"keyup\", (e) => {\n  updateSelection(e);\n});\n\nfunction updateSelection(e) {\n  let selection = window.getSelection();\n  let caret = selection.getRangeAt(0);\n  let range = document.createRange();\n  let {\n    anchorNode,\n    anchorOffset\n  } = selection;\n  range.setStart(anchorNode, anchorOffset);\n\n  // get y pos of next character\n  let anchorOffset2 =\n    anchorOffset < anchorNode.textContent.length - 1 ?\n    anchorOffset + 1 :\n    anchorOffset;\n\n  let rangeN = document.createRange();\n  rangeN.setStart(anchorNode, anchorOffset2);\n\n  let bb = caret.getBoundingClientRect();\n  let bb2 = rangeN.getBoundingClientRect();\n\n  let height = bb.height;\n  let top = bb.top - textElTop;\n  let top2 = bb2.top - textElTop;\n\n\n\n  // check mouse position on click\n  let mouseX = e.pageX ? e.pageX : 0;\n  let distX = mouseX ? Math.abs(bb.left - mouseX) : 0;\n  let distX2 = mouseX ? Math.abs(bb2.left - mouseX) : 0;\n\n\n\n  if (\n    ((lastTop && lastTop == top && lastCharPos == anchorOffset) ||\n      (lastTop && lastTop != top && lastCharPos < anchorOffset)\n    ) ||\n    (distX > distX2)\n  ) {\n    top = top2;\n  }\n\n  if (distX < distX2) {\n    top = bb.top - textElTop;\n  }\n\n  // update\n  lastCharPos = anchorOffset;\n  lastTop = top;\n  mouseX = 0;\n\n  // shift line indicator\n  selectionLine.setAttribute(\"style\", `top:${top}px; height:${height}px;`);\n  cursor.setAttribute(\"style\", `top:${bb.top}px; left:${bb.left}px;`);\n\n\n}\nbody {\n  font-size: 2em;\n  margin: 0em;\n  padding: 11px;\n}\n\n* {\n  box-sizing: border-box;\n}\n\n.wrap {\n  position: relative;\n  width: 300px;\n}\n\n.text-container {\n  display: block;\n  border: 1px solid black;\n  line-height: 1.5em;\n  padding: 1em;\n  position: relative;\n}\n\n.text-container:focus+.selectionLine {\n  border-left: 10px solid green;\n  display: block;\n  position: absolute;\n  width: 0;\n  height: 1em;\n  top: 0;\n  right: 0;\n}\n\n#cursor {\n  position: absolute;\n  width: 0.2em;\n  height: 0.2em;\n  top: 0;\n  right: 0;\n  background: red;\n  border-radius: 50%;\n}\n<div id=\"info\" style=\"position:absolute; right:0; top:0;\"></div>\n<div class=\"wrap\">\n  <div id=\"myText\" class=\"text-container\" contentEditable=\"true\">Go on the last position in the first row and come it to first position in the second row.\n  </div>\n  <div id=\"selectionLine\" class=\"selectionLine\"></div>\n</div>\n\n<div id=\"cursor\"></div>\n\n\n\nThe above examples also check new caret positions based on mouse inputs.\nHowever, this approach still fails when using up/down arrow keys.\nRed spot indicates the native caret position – which can't be fixed. Green bar represents the fixed y offset.\nInclude selection direction (forward or backwards)\nWe're also checking for key inputs like \"ArrowLeft\", \"ArrowUp\" to adjust caret position.\nPretty clunky, but this way we get a decent support for arrow-key navigation.\nThis example also includes a Firefox user detection as suggested by @Krokomot.\n\n\nconst textEl = document.getElementById(\"myText\");\nlet bbText = textEl.getBoundingClientRect();\nlet textElTop = bbText.top;\nlet textElRight = bbText.right;\n\nlet lastCharPos = 0;\nlet lastTop = 0;\nlet forwards = true;\n\n// simple firefox agent detection\nconst isFirefox = typeof InstallTrigger !== \"undefined\";\n\nmyText.addEventListener(\"click\", (e) => {\n  updateSelection(e);\n});\n\ndocument.addEventListener(\"keyup\", (e) => {\n  updateSelection(e);\n});\n\nfunction updateSelection(e) {\n  let selection = window.getSelection();\n  let caret = selection.getRangeAt(0);\n  let range = document.createRange();\n  let { anchorNode, anchorOffset } = selection;\n  range.setStart(anchorNode, anchorOffset);\n\n  let bb = caret.getBoundingClientRect();\n  let height = bb.height;\n  let top = bb.top - textElTop;\n\n  if (isFirefox) {\n    // get y pos of next character\n    let anchorOffset2 =\n      anchorOffset < anchorNode.textContent.length - 1\n        ? anchorOffset + 1\n        : anchorOffset;\n\n    let anchorOffset3 = anchorOffset > 0 ? anchorOffset - 1 : anchorOffset;\n\n    let rangeN = document.createRange();\n    rangeN.setStart(anchorNode, anchorOffset2);\n\n    let rangeP = document.createRange();\n    rangeP.setStart(anchorNode, anchorOffset3);\n\n    let bb2 = rangeN.getBoundingClientRect();\n    let bb0 = rangeP.getBoundingClientRect();\n\n    let top2 = bb2.top - textElTop;\n    let top0 = bb0.top - textElTop;\n\n    // check mouse position on click\n    let mouseX = e.pageX ? e.pageX : 0;\n    let mouseY = e.pageY ? e.pageY : 0;\n\n    // check keybord inputs\n    let key = e.key ? e.key : \"\";\n\n    let distX = mouseX ? Math.abs(bb.left - mouseX) : 0;\n    let distX2 = mouseX ? Math.abs(bb2.left - mouseX) : 0;\n\n    let distY = mouseY ? Math.abs(bb.top - mouseY) : 0;\n    let distY2 = mouseY ? Math.abs(bb2.top - mouseY) : 0;\n\n    // direction: forward or backward\n    if (\n      lastCharPos > anchorOffset ||\n      key === \"ArrowLeft\" ||\n      key === \"ArrowUp\" ||\n      (distY && distY < distY2)\n    ) {\n      forwards = false;\n    } else if (\n      lastCharPos < anchorOffset ||\n      key === \"ArrowRight\" ||\n      key === \"ArrowDown\" ||\n      (distY && distY > distY2)\n    ) {\n      forwards = true;\n    }\n\n    // forwards\n    if (\n      forwards &&\n      (lastCharPos == anchorOffset || distX > distX2 || key === \"ArrowDown\")\n    ) {\n      top = top2;\n    }\n    \n    // backwards\n    else {\n      //console.log(\"back\", lastCharPos, anchorOffset);\n      if (lastCharPos > anchorOffset) {\n        top = top2;\n      }\n    }\n\n    // update\n    lastCharPos = anchorOffset;\n    lastTop = top;\n  }\n\n  // shift line indicator\n  selectionLine.setAttribute(\"style\", `top:${top}px; height:${height}px;`);\n  cursor.setAttribute(\"style\", `top:${bb.top}px; left:${bb.left}px;`);\n}\nbody{\n  font-size: 2em;\n  margin:0em;\n  padding:11px;\n}\n\n*{\n  box-sizing:border-box;\n}\n\n.wrap{\n  position: relative;\n  width: 300px;\n\n}\n\n.text-container {\n  display: block;\n  border: 1px solid black;\n  line-height: 1.5em;\n  padding: 1em;\n  position: relative;\n}\n\n\n\n\n.text-container:focus+\n.selectionLine {\n  border-left: 10px solid green;\n  display:block;\n  position: absolute;\n  width:0;\n  height:1em;\n  top:0;\n  right:0;\n\n}\n\n#cursor{\n    position: absolute;\n  width:0.2em;\n  height:0.2em;\n  top:0;\n  right:0;\n  background: red;\n    border-radius: 50%;\n}\n<div id=\"info\" style=\"position:absolute; right:0; top:0;\"></div>\n<div class=\"wrap\">\n<div id=\"myText\" class=\"text-container\" contentEditable=\"true\">Go on the last position in the first row and come it to first position in the second row. \n</div>\n<div id=\"selectionLine\" class=\"selectionLine\"></div>\n  </div>\n\n<div id=\"cursor\"></div>"
+            },
+            {
+                "score": 5,
+                "body": "First the diagnosis, then the treatment.\nDiagnosis\nThis strange behavior occurs thanks to the fact, that Chrome and Firefox seemingly treat the wrap-newline differently. Execute the following snippet in Chrome and Firefox. The only difference is, that I added\nanchorOffset: ${domSelection.anchorOffset}\n\nto the console output. We'll discuss the results below.\n\n\nconst textEl = document.getElementById(\"myText\")\n\ntextEl.addEventListener(\"keyup\", (event) => {\n  const domSelection = window.getSelection();\n  if (domSelection && domSelection.isCollapsed && domSelection.anchorNode) {\n    let offsetNewLine = 0;\n\n    let domRange = domSelection.getRangeAt(0);\n    let rect = domRange.getBoundingClientRect();\n    const rects = domRange.getClientRects();\n    const newRange = document.createRange();\n    const newRangeNextOffset = domSelection.anchorNode.textContent.length < domSelection.anchorOffset + 1 ? domSelection.anchorOffset : domSelection.anchorOffset + 1\n\n    newRange.setStart(domSelection.anchorNode, newRangeNextOffset);\n    newRange.setEnd(domSelection.anchorNode, newRangeNextOffset);\n    let nextCharacterRect = newRange.getBoundingClientRect();\n\n    console.log(`anchorOffset: ${domSelection.anchorOffset}, CURRENT_TOP: ${rect.y}, NEXT_CHAR_TOP: ${nextCharacterRect.y}`);\n  }\n})\n.text-container {\n  width: 500px;\n  display: inline-block;\n  border: 1px solid black;\n  line-height: 20px;\n  padding: 5px;\n}\n<span id=\"myText\" class=\"text-container\" contentEditable=\"true\">Go on the last position in the first row and come it to first position in the second row</span>\n\n\n\nThe browsers wrap at different positions here, but that's not the point. Look at the output in Chrome first. Note, that the caret jumps directly to the next line, the actually existing space has been transformed to a newline (NL), and seemingly in the classical Carriage Return plus Line Feed (CR+LF) form. So after the NL Chrome sees the cursor, like the human eye, already on Line 2.\n\n\n\n\nlast non-whitespace at line 1\nwrapping-newline\nfirst non-whitespace at line 2\n\n\n\n\n't' at offset 61\nNL at offset 62\n'p' at offset 63\n\n\n\n\n\nNow Firefox. The caret follows the space and then jumps to the next line. The space (SP) has been preserved. However the inserted newline has not been included into the offset-calculation. Further, it is still treated as part of line 1, i.e. the human eye sees the cursor on line 2, but Firefox on line 1. Whyever.\nSo Firefox iterates twice at the end of line 1 (SP then NL), but increments the offset only once (for SP and NL together), and without having really moved to line 2 yet. All that makes things so messy here.\n\n\n\n\nlast non-whitespace at line 1\nwrapping-newline\nfirst non-whitespace at line 2\n\n\n\n\n'n' at offset 73\nSP and NL, both at offset 74\n't' at offset 75\n\n\n\n\n\nTreatment\nThe only way I currently can think of is to detect the browser and introduce a Firefox-specific workaround, so to check on Firefox e.g. with\nconst isFirefox = typeof InstallTrigger !== 'undefined';\n\nTested, and still works, with Firefox 111.\nSo, we could bridge the problem by denoting whether we are in a Firefox-newline. Let us add some globals first:\n// whether we're in a (Firefox-)NL\nlet isNewline = false;\n// whether we're in Firefox\nconst isFirefox = typeof InstallTrigger !== 'undefined';\n\nNote, that one can use isNewline also for other browsers if necessary. Next we add the Firefox-specific line-hopping into the keyup handler:\n/*\n* Check whether we're in Firefox and on the edge of a line.\n* At need easily extendable for other browsers.\n*/\nif(isFirefox && rect.y < nextCharacterRect.y)\n{\n    // caret is after the SP, i.e. we're in the NL-sequence\n    if(isNewline)\n    {\n        /*\n        * Hop straight to the next line by\n        * de facto enforcing a LF+CR.\n        */\n        domRange = newRange;\n        domSelection.getRangeAt(0);\n        rect = domRange.getBoundingClientRect();\n\n        // end of Firefox' NL-sequence\n        isNewline = false;\n    }\n    // begin of Firefox' NL-sequence, i.e. we hit the SP\n    else\n        isNewline = true;\n}\n\nThis may be extended e.g. by selection direction detection for fine-tuning.\nLets put everything together in the following snippet. Note, that domRange resp. rect became let instead of const.\n\n\n// our denotation values, see above\nlet isNewline = false;\nconst isFirefox = typeof InstallTrigger !== 'undefined';\n\nconst textEl = document.getElementById(\"myText\")\n\ntextEl.addEventListener(\"keyup\", (event) => {\n  const domSelection = window.getSelection();\n  if (domSelection && domSelection.isCollapsed && domSelection.anchorNode) {\n    let offsetNewLine = 0;\n\n    let domRange = domSelection.getRangeAt(0);\n    let rect = domRange.getBoundingClientRect();\n    const rects = domRange.getClientRects();\n    const newRange = document.createRange();\n    const newRangeNextOffset = domSelection.anchorNode.textContent.length < domSelection.anchorOffset + 1 ? domSelection.anchorOffset : domSelection.anchorOffset + 1\n\n    newRange.setStart(domSelection.anchorNode, newRangeNextOffset);\n    newRange.setEnd(domSelection.anchorNode, newRangeNextOffset);\n    const nextCharacterRect = newRange.getBoundingClientRect();\n\n    // the line-hopping, see above\n    if(isFirefox && rect.y < nextCharacterRect.y)\n    {\n        if(isNewline)\n        {\n            domRange = newRange;\n            domSelection.getRangeAt(0);\n            rect = domRange.getBoundingClientRect();\n            isNewline = false;\n        }\n        else\n            isNewline = true;\n    }\n\n    console.log(`anchorOffset: ${domSelection.anchorOffset}, CURRENT_TOP: ${rect.y}, NEXT_CHAR_TOP: ${nextCharacterRect.y}`);\n  }\n})\n.text-container {\n  width: 500px;\n  display: inline-block;\n  border: 1px solid black;\n  line-height: 20px;\n  padding: 5px;\n}\n<span id=\"myText\" class=\"text-container\" contentEditable=\"true\">Go on the last position in the first row and come it to first position in the second row</span>\n\n\n\nConclusion\nThere may be a more elegant and sophisticated solution, but for now it does the job. Essentially we're modding Firefox' line-wrapping behavior by enforcing a LF+CR type of newline à la Chrome. The only remaining difference is the additional space at the end of line before the actual wrapping, i.e. in Firefox we still have to press the key twice to get to the next line, instead of once as in Chrome. But that's pretty irrelevant here. Otherwise the behavior of both browsers is now equivalent. Furthermore, this workaround can easily be adapted for other browsers, if necessary.\n\nAcknowledgement\nThe final spark of inspiration for using a newline-denotation variable came through a post by @herrstrietzel, where also approaches to consider the selection direction and mouse interaction are discussed."
+            }
+        ]
+    },
+    {
+        "title": "How to prevent ::before / ::after elements influencing the breaking behaviour of spans?",
+        "score": 7,
+        "tags": [
+            "html",
+            "css",
+            "pseudo-element"
+        ],
+        "answers": [
+            {
+                "score": 6,
+                "body": "I was reading the specs here and it says that:\n\nOut-of-flow elements and inline element boundaries do not introduce a\nforced line break or soft wrap opportunity in the flow.\n\nApparently, position: absolute elements as well as </span><span> should not generate a soft wrap; Chromimum based browsers are doing it wrong!\nThe article further states that:\n\nFor Web-compatibility there is a soft wrap opportunity before and\nafter each replaced element or other atomic inline, even when adjacent\nto a character that would normally suppress them, such as U+00A0\nNO-BREAK SPACE.\n\nSo display: inline-block elements could generate a soft wrap.\n\n\nbody {\n  font: medium monospace;\n}\n.test > span:nth-child(odd) {\n  background-color: #FC0;\n}\n.test > span:nth-child(even) {\n  background-color: #CF0;\n}\n.test-1 > span {\n  position: relative;\n}\n.test-1 > span::before {\n  content: \"tooltip\";\n  position: absolute;\n  left: 0;\n  top: 0;\n  color: #FFF;\n  background-color: rgb(0, 0, 0, .65);\n}\n.test-2 > span {\n  display: inline-block;\n}\n<h1>position: absolute<br>should not wrap</h1>\n<p class=\"test test-1\"><span>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span><span>Bbbbbbbbbbbbbbbbbbbb</span><span>Cccccccccccccccccccccccccccccc</span><span>Dddddddddddddddddddddddddddddddddddddddddddddddddd</span></p>\n\n<h1>display: inline-block<br>should wrap</h1>\n<p class=\"test test-2\"><span>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span><span>Bbbbbbbbbbbbbbbbbbbb</span><span>Cccccccccccccccccccccccccccccc</span><span>Dddddddddddddddddddddddddddddddddddddddddddddddddd</span></p>"
+            }
+        ]
+    },
+    {
+        "title": "In contenteditable element with `inline-block` display, drag-and-drop will create an extra line break in Chrome-like browser",
+        "score": 2,
+        "tags": [
+            "javascript",
+            "html",
+            "css"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "If you change from a <div> element to a <span> element, and style it with display: block you avoid this issue. It is not that I can explain why, but  I tested something similar some years ago.\n\n\n<span contenteditable=\"true\" style=\"\n    display: block; \n    white-space:pre-wrap;padding:3px\n    min-height:100px;width:100%;border:1px solid skyblue; \">\n    \n    drag `this` text below, see if new line break created at the end of drop postion\n    \n    drop `here` please\n    \n</span>\n\n\n\nplaintext-only\nYou can also try out the \"new\" contenteditable=\"plaintext-only\". It has not landed in Firefox yet, but other browsers have this feature. And like commented, not suited for rich text.\n\n\n<div contenteditable=\"plaintext-only\" style=\"\n    white-space:pre-wrap;padding:3px\n    min-height:100px;width:100%;border:1px solid skyblue; \">\n    \n    drag `this` text below, see if new line break created at the end of drop postion\n    \n    drop `here` please\n    \n</div>"
+            }
+        ]
+    },
+    {
+        "title": "Wrapping text overlayed on HTML video",
+        "score": 2,
+        "tags": [
+            "html",
+            "css",
+            "html5-video"
+        ],
+        "answers": [
+            {
+                "score": 2,
+                "body": "Since you're using Grid, you don't need the absolute positioning:\n\n\nbody {\n  margin: auto;\n  text-align: center;\n  background-color: black;\n  line-height: 0;\n}\n\n.container {\n  display: grid;\n  grid-template-areas: \"video\";\n  place-items: center;\n}\n\n.container video {\n  max-width: 100%;\n  max-height: 100vh;\n  margin: auto;\n  width: 100%;\n  height: auto;\n  grid-area: video;\n}\n\n.overlay {\n  grid-area: video;\n  color: white;\n  font-size: 8vw;\n  font-family: Arial, Sans-Serif;\n  opacity: 25%;\n}\n<div class=\"container\">\n  <video type=\"video/mp4\" src='data:video/mp4;base64,...'>Your browser does not support the video tag.</video>\n  <div class=\"overlay\">\n    <p>OVERLAY TEXT</p>\n  </div>\n</div>"
+            }
+        ]
+    },
+    {
+        "title": "How to achieve typing and cursor effect across multiple lines?",
+        "score": 1,
+        "tags": [
+            "javascript",
+            "html",
+            "css",
+            "web-animations"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "I have changed some things.\n\nSimplified the text manipulation - you had some confusing line.element.removeChild(line.element.firstChild);\nMade the cursor white and removed the function to create it.\nChanged the CSS to animate the opacity of the cursor so it blinks\nGenerate the text from the span contents\nAdded a loop boolean in case you change your mind about looping\n\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  const loop = true; // Set to false to stop after one full run\n  const lines = Array.from(document.querySelectorAll(\".top-container span.text\")).map(span => {\n    const text = span.textContent;\n    span.textContent = \"\"; // Clear text immediately\n    return { element: span, text };\n  });\n\n  let currentLine = 0, currentChar = 0, typingTimeout;\n  const typingSpeed = 40, lineDelay = 500, restartDelay = 2000;\n\n  const cursor = document.createElement(\"span\");\n  cursor.className = \"cursor\";\n  cursor.textContent = \"|\";\n\n  const resetAndRestart = () => {\n    setTimeout(() => {\n      lines.forEach(({ element }) => element.textContent = \"\");\n      currentLine = 0;\n      currentChar = 0;\n      typeChar();\n    }, restartDelay);\n  };\n\n  const typeChar = () => {\n    // Check if we've finished all lines.\n    if (currentLine >= lines.length) {\n      if (loop) resetAndRestart();\n      return;\n    }\n\n    const { element, text } = lines[currentLine];\n    // If starting a new line, ensure the cursor is appended.\n    if (currentChar === 0 && !element.contains(cursor)) {\n      element.appendChild(cursor);\n    }\n    if (currentChar < text.length) {\n      const span = document.createElement(\"span\");\n      span.textContent = text[currentChar];\n      span.style.color = \"white\";\n      element.insertBefore(span, cursor);\n      currentChar++;\n      typingTimeout = setTimeout(typeChar, typingSpeed);\n    } else {\n      // Finished current line; move to next.\n      currentLine++;\n      currentChar = 0;\n      typingTimeout = setTimeout(typeChar, lineDelay);\n    }\n  };\n\n  typeChar();\n});\n.top-container h1 {\n  font-size: 2rem;\n  font-weight: 950;\n  line-height: 1.2;\n  word-wrap: break-word;\n  white-space: nowrap;\n  overflow: hidden;\n  background-color: black;\n}\n\n.top-container h1 .text {\n  display: inline-block;\n  position: relative;\n}\n\n.cursor {\n  display: inline-block;\n  width: 0.15em;\n  color: white;\n  animation: blink-caret 0.75s step-end infinite;\n  position: absolute;\n}\n\n@keyframes blink-caret {\n  0%, 100% { opacity: 1; }\n  50% { opacity: 0; }\n}\n\n/* Button Container */\n.button-container {\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n  width: 100%;\n  margin-top: 5%;\n  margin-top: 200px;\n}\n<div class=\"top-container\">\n  <h1>\n    <span class=\"text\" id=\"line1\">Lorem ipsum dolor</span><br>\n    <span class=\"text\" id=\"line2\">sit</span><br>\n    <span class=\"text\" id=\"line3\">amet, consectetur adipiscing elit.</span>\n  </h1>\n</div>"
+            },
+            {
+                "score": 1,
+                "body": "I would suggest a simpler approach. Here's an example highly inspired by an earlier answer of mine (Typing animated text in JavaScript), with a more human-alike random typing timeout, and a sleek animated caret — just modified for your specific case to allow for a group of connected typer elements (as a group):\n\n\nconst rand = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);\n\nconst typer = (els) => {\n  const text = [...els].map(el => { const t = el.textContent; el.textContent = \"\"; return t; });\n  let ch = 0, i = 0;\n  (function tick () {\n    els[i].textContent = text[i].substring(0, ch++);\n    els[i].classList.add(\"is-typer-init\");\n    if (ch > text[i].length) {\n      ch = 0;\n      if (i >= els.length - 1) return; // End!\n      els[i].classList.remove(\"is-typing\");\n      i += 1;\n    } else {\n      els[i].classList.add(\"is-typing\");\n    }\n    setTimeout(tick, rand(60, 250));\n  })();\n};\n\ntyper(document.querySelectorAll(\".typer-group-1\"));\ntyper(document.querySelectorAll(\".typer-group-2\"));\n/* PULSATING CARET */\n.typer {\n  font-family: monospace;\n  color: #0000; /* Transparent to prevent flick of content on page load */\n  &.is-typer-init {\n    color: #000;\n  }\n  &.is-typing::after { /* The animated caret */\n    content:\"\";\n    display: inline-block;\n    vertical-align: middle;\n    width: 0.1em;\n    height:1em;\n    background: #000;\n    animation: caretPulsate 1s linear infinite;\n  }\n}\n@keyframes caretPulsate {\n  0%   {opacity:1;}\n  50%  {opacity:1;}\n  60%  {opacity:0;}\n  100% {opacity:0;}\n}\n<h1>\n  <span class=\"typer typer-group-1\">Lorem ipsum dolor</span><br>\n  <span class=\"typer typer-group-1\">sit</span><br>\n  <span class=\"typer typer-group-1\">amet, adipiscing elit.</span><br>\n</h1>\n\n<p>\n  <span class=\"typer typer-group-2\">You can have as many</span><br>\n  <span class=\"typer typer-group-2\">groups as you want.</span><br>\n</p>"
+            }
+        ]
+    },
+    {
+        "title": "Navbar is jumping to new line, as I close it",
+        "score": 1,
+        "tags": [
+            "html",
+            "css"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "Could you try setting the a tag to flex.\n\nWhen using flex the content will stay on the same line (won't wrap), flex-wrap: wrap can be used to wrap flex children.\n\n\n\n/* Set the width of the side navigation to 250px */\nfunction openNav() {\n    document.getElementById(\"mySidenav\").style.width = \"250px\";\n}\n\n/* Set the width of the side navigation to 0 */\nfunction closeNav() {\n    document.getElementById(\"mySidenav\").style.width = \"0\";\n}\n*,  \n*::after,  \n*::before{  \n    margin: 0;  \n    padding: 0;  \n    text-decoration: none;  \n    box-sizing: border-box;  \n}\n\n.sideNav{  \n    height: 100vh;  \n    width: 300px;  \n    position: fixed;  \n    top: 0;  \n    bottom: 0;  \n    left: 0;  \n    background-color: black;  \n    z-index: 100;  \n    transition: all 5s;  \n    overflow: hidden;  \n\n}\n\n.sideNav .header {\n    font-size: 32px;  \n    font-weight: 600;  \n    color: white;  \n    text-align: left;  \n    line-height: 60px;  \n    padding-left: 8px;  \n}  \n\n.menu {  \n    margin-top: 30px;  \n}\n  \n.menu ul li {  \n    list-style-type: none;  \n    padding: 8px 16px;  \n    margin: 1px 0;  \n    width: 100%;  \n    transition: all 0.15s;  \n    overflow: hidden;  \n}\n\n.menu a {  \n    color: white;  \n    text-decoration: none;  \n    font-size: 24px; \n    transition: padding 0.15s;  \n    display: flex;\n    align-items: center;\n    justify-content: flex-start;\n    overflow: hidden;  \n\n}  \n\n.menu i{\n    margin-right: 10px;  \n}\n\n.menu a:hover {\n    padding-left: 15px;\n}\n\n.menu ul li:hover {\n    border-left: 1px solid white;  \n    border-right: 1px solid rgba(255, 255, 255, 0.4);  \n    border-top: 1px solid rgba(255, 255, 255, 0.4);  \n    border-bottom: 1px solid rgba(255, 255, 255, 0.4);  \n}\n\n\n.btn-show-nav{  \n    position: absolute;  \n    top: 30px;  \n    left: 30px;  \n    width: 50px;  \n    height: 50px;  \n    background-color: black;  \n    border-radius: 50%;  \n    display: flex;  \n    justify-content: center;  \n    align-items: center;  \n    cursor: pointer;  \n}\n\n.btn-show-nav i{\n    color: white;  \n    font-size: 20px;  \n}\n\n.closebtn{  \n    position: absolute;     \n    top: 10px;  \n    right: 25px;  \n    font-size: 32px;  \n    font-weight: 700;  \n    color: white;  \n}\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css\" integrity=\"sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />\n<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\n\n<label class=\"btn-show-nav\" onclick=\"openNav()\">\n        <i class='fas fa-bars'></i>\n    </label>\n<section>\n  <nav class=\"sideNav\" id=\"mySidenav\">\n    <a href=\"#\" class=\"closebtn\" id=\"closebtn\" onclick=\"closeNav()\">&#10006;</a>\n    <div class=\"header\">\n      CodingLabs\n    </div>\n    <div class=\"menu\">\n      <ul>\n        <li><a href=\"#\"><i class=\"fas fa-qrcode\"></i>Dashboard</a></li>\n        <li><a href=\"#\"><i class=\"fas fa-link\"></i>Shortcuts</a></li>\n        <li><a href=\"#\"><i class=\"fas fa-stream\"></i>Overview</a></li>\n        <li><a href=\"#\"><i class=\"fas fa-calendar-week\"></i>Events</a></li>\n        <li><a href=\"#\"><i class=\"fas fa-question-circle\"></i>About</a></li>\n        <li><a href=\"#\"><i class=\"fas fa-sliders-h\"></i>Services</a></li>\n        <li><a href=\"#\"><i class=\"fas fa-phone-volume\"></i>Contact</a></li>\n        <li><a href=\"#\"><i class=\"far fa-comments\"></i>Feedback</a></li>\n      </ul>\n    </div>\n  </nav>\n</section>"
+            }
+        ]
+    },
+    {
+        "title": "Centering vertically multiple-line list element to the &#39;dot&#39;",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "vertical-alignment"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "The standard bullet does not allow for adjustment in this manner.\nIt is necessary to create a pseudo-element for the marker and then align it using. say, flexbox.\n\n\nli {\n  width: 300px;\n  display: flex;\n  align-items: center;\n}\n\nli:before {\n  content: \"\\2022\";\n  margin-right: 1em;\n}\n\n.wider {\n  width: 450px;\n}\n<ul>\n  <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis perferendis tempore nesciunt, cum molestias ut necessitatibus nostrum incidunt adipisci odio.</li>\n</ul>\n\n<ul>\n  <li class=\"wider\">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis perferendis tempore nesciunt, cum molestias ut necessitatibus nostrum incidunt adipisci odio.</li>\n</ul>"
+            },
+            {
+                "score": 1,
+                "body": "Here is an idea using border-image to replace the default marker\n\n\nul {\n  font-size: 20px;\n}\n\nul li {\n  list-style: none;\n  /* .2em = radius\n      20px = control the position\n  */\n  border-image: \n   radial-gradient(circle closest-side at .2em 50%,#000 80%,#0000) \n   fill 0//20px\n}\n<ul>\n<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis neque felis. Pellentesque commodo velit diam, a egestas nisi molestie sed. Phasellus luctus lobortis orci nec venenatis.</li>\n<li>Lorem ipsum dolor sit amet, consectetur </li>\n</ul>"
+            }
+        ]
+    },
+    {
+        "title": "Multiline ellipsis for text aligned to the right",
+        "score": 1,
+        "tags": [
+            "html",
+            "css"
+        ],
+        "answers": []
+    },
+    {
+        "title": "Setting `overflow: hidden` on element to force scrollbars invalidates `transform: translateX(...)` on that same element",
+        "score": 1,
+        "tags": [
+            "html",
+            "css"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "You can set height or better-yet max-height to the container, which will make the scroll-y meaningful.\n\n\nconst main = document.querySelector('main');\n\nfunction openSlide(slide) {\n  main.style.transform = `translateX(-${slide * 100}vw)`;\n}\n\nwindow.addEventListener('keydown', function(event) {\n  if (['ArrowLeft', 'ArrowRight'].includes(event.key)) {\n    event.key === 'ArrowLeft' ? openSlide(0) : openSlide(1);\n    event.preventDefault();\n  }\n});\n\nopenSlide(0);\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\nhtml,\nbody {\n  font-family: sans-serif;\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n}\n\nbody {\n  width: 100%;\n  height: 100vh;\n  font-size: 7vh;\n  display: flex;\n  flex-direction: column;\n}\n\nnav {\n  padding: 2vh;\n}\n\nmain {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  flex-grow: 1;\n  transition: transform 0.6s ease-in-out;\n  max-height: 150px;\n  border: 1px solid red;\n}\n\nsection.slide {\n  padding: 2vh;\n  min-width: 100vw;\n  max-width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\nsection.slide .left {\n  width: 55vw;\n  display: flex;\n  flex-flow: column nowrap;\n  overflow-y: auto;\n}\n\nsection.slide .left>div {\n  background-color: yellow;\n  margin-bottom: 5vh;\n}\n\nsection.slide .right {\n  width: 45vw;\n  display: flex;\n  flex-flow: column nowrap;\n  overflow-y: auto;\n}\n\nsection.slide .right>div {\n  background-color: red;\n  margin-bottom: 5vh;\n}\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n\n<body>\n  <nav>\n    Navigation - press left or right arrow\n  </nav>\n  <main>\n    <section class=\"slide\" data-slide=\"0\">\n      <div class=\"left\">\n        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis lorem, ullamcorper sed porttitor non, hendrerit aliquet nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum varius leo non maximus. Morbi quis dui tellus.\n          Praesent at quam et metus fringilla volutpat ut eu justo. Phasellus at odio non ante consectetur aliquam. Fusce congue ultrices ante, eu sollicitudin lectus tristique sed. Sed neque velit, cursus non consequat ut, aliquet auctor ante.</div>\n      </div>\n      <div class=\"right\">\n        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis lorem, ullamcorper sed porttitor non, hendrerit aliquet nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum varius leo non maximus. Morbi quis dui tellus.\n          Praesent at quam et metus fringilla volutpat ut eu justo. Phasellus at odio non ante consectetur aliquam. Fusce congue ultrices ante, eu sollicitudin lectus tristique sed. Sed neque velit, cursus non consequat ut, aliquet auctor ante.</div>\n        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis lorem, ullamcorper sed porttitor non, hendrerit aliquet nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum varius leo non maximus. Morbi quis dui tellus.\n          Praesent at quam et metus fringilla volutpat ut eu justo. Phasellus at odio non ante consectetur aliquam. Fusce congue ultrices ante, eu sollicitudin lectus tristique sed. Sed neque velit, cursus non consequat ut, aliquet auctor ante.</div>\n      </div>\n    </section>\n    <section class=\"slide\" data-slide=\"1\">\n      <div class=\"left\">\n        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis lorem, ullamcorper sed porttitor non, hendrerit aliquet nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum varius leo non maximus. Morbi quis dui tellus.\n          Praesent at quam et metus fringilla volutpat ut eu justo. Phasellus at odio non ante consectetur aliquam. Fusce congue ultrices ante, eu sollicitudin lectus tristique sed. Sed neque velit, cursus non consequat ut, aliquet auctor ante.</div>\n        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis lorem, ullamcorper sed porttitor non, hendrerit aliquet nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum varius leo non maximus. Morbi quis dui tellus.\n          Praesent at quam et metus fringilla volutpat ut eu justo. Phasellus at odio non ante consectetur aliquam. Fusce congue ultrices ante, eu sollicitudin lectus tristique sed. Sed neque velit, cursus non consequat ut, aliquet auctor ante.</div>\n      </div>\n      <div class=\"right\">\n        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis lorem, ullamcorper sed porttitor non, hendrerit aliquet nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum varius leo non maximus. Morbi quis dui tellus.\n          Praesent at quam et metus fringilla volutpat ut eu justo. Phasellus at odio non ante consectetur aliquam. Fusce congue ultrices ante, eu sollicitudin lectus tristique sed. Sed neque velit, cursus non consequat ut, aliquet auctor ante.</div>\n      </div>\n    </section>\n  </main>\n</body>\n\n</html>"
+            }
+        ]
+    },
+    {
+        "title": "How to style a wrapping anchor element?",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "anchor",
+            "word-wrap"
+        ],
+        "answers": []
+    },
+    {
+        "title": "CSS Grid place items out of order in display: contents wrapper",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "css-grid"
+        ],
+        "answers": []
+    },
+    {
+        "title": "Make the element sticky untill the scroll driven animation is finished",
+        "score": 1,
+        "tags": [
+            "javascript",
+            "html",
+            "css",
+            "scroll",
+            "css-animations"
+        ],
+        "answers": [
+            {
+                "score": 2,
+                "body": "Would you like to try this?\nI used CSS animation-range-start, It was in the code you provided..\nbut it seems difficult to support it on Firefox and Safari because it's an experimental function.\nI've worked on the movements you want, so use the parts you can refer to!\nI hope it helps :)\n\n\ndocument.addEventListener('DOMContentLoaded', function() {\n  const elementsContent = document.querySelector('.animation-content');\n  const elements = document.querySelectorAll('.animation');\n\n  const observer = new IntersectionObserver((entries) => {\n    entries.forEach(entry => {\n      if (entry.isIntersecting) {\n        elements.forEach((element) => {\n          element.style.animationName = 'mymove'; // add animation to div\n          element.style.animationPlayState = 'running'; // Start animation\n        });\n        observer.unobserve(entry.target); // Stop observing\n      }\n    });\n  }, {\n    threshold: 0.8\n  }); // Trigger when 80% of the element is in view\n\n  observer.observe(elementsContent);\n});\nhtml,\nbody {\n  margin: 0;\n  padding: 2vw;\n  background: #222;\n}\n\n.animation-wrap {\n  height: 300vh;\n  background: #fff;\n}\n\n.animation-content {\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  height: 100vh;\n  position: sticky;\n  top: 0;\n}\n\n.animation {\n  view-timeline: --subjectReveal block;\n  animation-timeline: --subjectReveal;\n  animation-range-start: entry 200%;\n  height: 0; /* ignore this, just for square */\n  width: 20vw; /* ignore this, just for square */\n  padding-bottom:20vw; /* ignore this, just for square */\n  background-color: bisque;\n  animation-iteration-count: 1;\n  animation-duration: 3s;\n  animation-fill-mode: forwards;\n  /*whenendanimation,holdstartstate*/\n  animation-play-state: paused;\n  /*pausedatfirst*/\n  position: relative;\n  /*Normalposition*/\n}\n\n.animation:nth-child(1) {\n  animation-delay: 0s;\n}\n\n.animation:nth-child(2) {\n  animation-delay: 1.4s;\n}\n\n.animation:nth-child(3) {\n  animation-delay: 2.8s;\n}\n\n@keyframes mymove {\n  0% {\n    transform: rotate(0deg);\n  }\n  25% {\n    transform: rotate(360deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n\ndiv[class*=\"other-content\"] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  font-size: 3rem;\n}\n\n.other-content_01 {\n  height: 400px;\n  background: #eee;\n}\n\n.other-content_02 {\n  height: 1000px;\n  background: #ddd;\n}\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Document</title>\n  <link rel=\"stylesheet\" href=\"test.css\">\n</head>\n\n<body>\n  <div class=\"other-content_01\">\n    Scroll Page :)\n  </div>\n  <div class=\"animation-wrap\">\n    <div class=\"animation-content\">\n      <div class=\"animation\"></div>\n      <div class=\"animation\"></div>\n      <div class=\"animation\"></div>\n    </div>\n  </div>\n  <div class=\"other-content_02\">\n    Thank you!\n  </div>\n\n  <script src=\"test.js\"></script>\n</body>\n\n</html>"
+            }
+        ]
+    },
+    {
+        "title": "Navigation bar icon does not center correctly",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "django",
+            "navbar",
+            "bootstrap-5"
+        ],
+        "answers": []
+    },
+    {
+        "title": "Does line-height apply to the img tag?",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "image",
+            "line-height"
+        ],
+        "answers": []
+    },
+    {
+        "title": "How to put multiple p-tags containing multi-line text together (side by side) in CSS?",
+        "score": 1,
+        "tags": [
+            "html",
+            "css"
+        ],
+        "answers": []
+    },
+    {
+        "title": "Create a line break in a CSS flex container with overflow-x set to auto",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "flexbox"
+        ],
+        "answers": []
+    }
+]

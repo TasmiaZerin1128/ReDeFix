@@ -1,0 +1,336 @@
+[
+    {
+        "title": "Why are image flex items behaving differently in Firefox and Chrome?",
+        "score": 2,
+        "tags": [
+            "html",
+            "css",
+            "flexbox"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "Images as flex items are notoriously quirky. They will render differently across different browsers. The solution, which seems to work reliably and consistently across all browsers, is to wrap the images in a container, such as a div. This makes the container the flex item. This removes the images from a flex formatting context and returns them to a block formatting context.\n\n\nimg {\n  width: 100%;\n  vertical-align: top; /* remove descender space */\n}\n\n.wrapper {\n  width: 90%;\n  margin: 0 auto;\n  max-width: 960px;\n  display: flex;\n}\n<div class=\"wrapper\">\n  <div><!-- new wrapper -->\n    <img src=\"https://www.unsplash.it/700/300\" alt=\"\">\n  </div>\n  <div><!-- new wrapper -->\n    <img src=\"https://www.unsplash.it/900/300\" alt=\"\">\n  </div>\n</div>"
+            }
+        ]
+    },
+    {
+        "title": "Absolute checkbox in overflow container breaks render when being checked",
+        "score": 2,
+        "tags": [
+            "html",
+            "css",
+            "checkbox",
+            "overflow",
+            "css-position"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "When on RTL layout, you can use top: -5000px; or left: -5000px without causing glitches like this. However, since you don't need to see the checkbox, and you control with the for attribute, you can just set it to display: none:\n\n\ndocument.getElementById('fixme').addEventListener('click', () => {\n  const input = document.querySelector('input');\n  input.style.position = 'static';\n  setTimeout(() => input.style.position = 'absolute', 10);\n});\nbody {\n  font-size: 100%;\n  font-family: sans-serif;\n}\n\n.container {\n  position: relative;\n  overflow: hidden;\n  background: #c00;\n  color: white;\n  padding: 1rem;\n  border-radius: .5rem;\n  max-width: 600px;\n  margin-right: auto;\n  margin-bottom: 1rem;\n\n}\n\n.fancy-toggle {\n  display: flex;\n  gap: 1rem;\n}\n\nlabel {\n  display: flex;\n  gap: 1rem;\n}\n\ninput {\n  display: none;\n}\n\n.pseudo-checkbox {\n  display: grid;\n  place-content: center;\n  width: 1.5rem;\n  height: 1.5rem;\n  background: white;\n  border: 2px solid black;\n}\n\ninput:checked+label .pseudo-checkbox .fake-check {\n  color: black;\n}\n<main>\n  <div class=\"container\">\n    <div class=\"fancy-toggle\">\n      <div class=\"row-icon\">\n        [ICON]\n      </div>\n      <input type=\"checkbox\" id=\"checkbox\" value=\"1\">\n      <label for=\"checkbox\">\n          <span>\n            <span class=\"pseudo-checkbox\">\n              <span class=\"fake-check\">X</span>\n            </span>\n          </span>\n          <span class=\"pseudo-checkbox-label\">Yes I would like this option</span>\n        </label>\n    </div>\n  </div>\n  <button id=\"fixme\">Click Me to \"Fix\" the issue</button>\n\n  <p>Clicking the &lt;label&gt; element checks the checkbox input due to the `for` designation.</p>\n  <p>The checkbox is `display: absolute` and positioned way off screen when the page loads.</p>\n  <p>When you click the label to check the box, the absolute position of the checkbox is broken is essentially treated as position: relative (as the `right: -5000px` is still applied).</p>\n  <p>The result of this, due to overlow hidden on the parent container, is that all of the desireable content is pushed to the left off screen.</p>\n  <p>What /SHOULD/ happen is the checkbox remains aboslutely positioned off-screen to the right, keeping the desired content in-place.</p>\n  <p>Once causing the issue, you can press the fix button to force the position of the checkbox to `static`, and then 10ms later change it back to `absolute`. This simple action \"Fixes\" the issue. If you inspect the checkbox element before pressing the button, the borwser will show the position is absolute even though it's not being rendered as such.</p>\n  <p>It makes no sense that simply removing and restoring the position value of the checkbox fixes the render.</p>\n</main>"
+            },
+            {
+                "score": 3,
+                "body": "This is really all about \"overflow\" and what the values of the overflow property really mean. Overflow happens when an element is painted partly or entirely outside of its container.\noverflow: hidden means that the browser does not provide the user controls (e.g. scrollbars) to shift the scrollport to show that overflowed content.\nImportantly, it doesn't mean that the scrollport doesn't exist, or that there is no means to shift the scrollport to show that content.\nWhen the checkbox is checked, the focus is moved to the checkbox. If scrollports need to be scrolled to show the focussed element then that's what happens, and that's what you are seeing.\nOne way to fix this is simply to change overflow: hidden to overflow: clip. The clip value simply removes the overflowed content from the rendering, so there is nothing to scroll to.\nOther suggested solutions such as using top: -5000px or left: -5000px (in LTR direction) in essence work the same way. Content is automatically clipped on those sides so there is again nothing to scroll to.\n\n\ndocument.getElementById('fixme').addEventListener('click', () => {\n  const input = document.querySelector('input');\n  input.style.position = 'static';\n  setTimeout(() => input.style.position = 'absolute', 10);\n});\nbody {\n  font-size: 100%;\n  font-family: sans-serif;\n}\n\n.container {\n  position: relative;\n  overflow: clip;      /* <=== Just this line changed */\n  background: #c00;\n  color: white;\n  padding: 1rem;\n  border-radius: .5rem;\n  max-width: 600px;\n  margin-right: auto;\n  margin-bottom: 1rem;\n\n}\n\n.fancy-toggle {\n  display: flex;\n  gap: 1rem;\n}\n\nlabel {\n  display: flex;\n  gap: 1rem;\n}\n\ninput {\n  position: absolute;\n  right: -5000px;\n}\n\n.pseudo-checkbox {\n  display: grid;\n  place-content: center;\n  width: 1.5rem;\n  height: 1.5rem;\n  background: white;\n  border: 2px solid black;\n}\n\ninput:checked+label .pseudo-checkbox .fake-check {\n  color: black;\n}\n<main>\n  <div class=\"container\">\n    <div class=\"fancy-toggle\">\n      <div class=\"row-icon\">\n        [ICON]\n      </div>\n      <input type=\"checkbox\" id=\"checkbox\" value=\"1\">\n      <label for=\"checkbox\">\n          <span>\n            <span class=\"pseudo-checkbox\">\n              <span class=\"fake-check\">X</span>\n            </span>\n          </span>\n          <span class=\"pseudo-checkbox-label\">Yes I would like this option</span>\n        </label>\n    </div>\n  </div>\n  <button id=\"fixme\">Click Me to \"Fix\" the issue</button>\n\n  <p>Clicking the &lt;label&gt; element checks the checkbox input due to the `for` designation.</p>\n  <p>The checkbox is `display: absolute` and positioned way off screen when the page loads.</p>\n  <p>When you click the label to check the box, the absolute position of the checkbox is broken is essentially treated as position: relative (as the `right: -5000px` is still applied).</p>\n  <p>The result of this, due to overlow hidden on the parent container, is that all of the desireable content is pushed to the left off screen.</p>\n  <p>What /SHOULD/ happen is the checkbox remains aboslutely positioned off-screen to the right, keeping the desired content in-place.</p>\n  <p>Once causing the issue, you can press the fix button to force the position of the checkbox to `static`, and then 10ms later change it back to `absolute`. This simple action \"Fixes\" the issue. If you inspect the checkbox element before pressing the button, the borwser will show the position is absolute even though it's not being rendered as such.</p>\n  <p>It makes no sense that simply removing and restoring the position value of the checkbox fixes the render.</p>\n</main>"
+            }
+        ]
+    },
+    {
+        "title": "Flexbox breaks with nested flex containers and writing-mode vertical-lr in Firefox",
+        "score": 2,
+        "tags": [
+            "html",
+            "css",
+            "firefox",
+            "flexbox",
+            "cross-browser"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "I have modify your html and css code structure for solve your problem i hope useful this code.:\n\n\nbody,\nhtml {\n  margin: 0;\n  padding: 0;\n}\n\n*,\n*:before,\n*:after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\nul{padding: 0;margin: 0;}\nli{list-style: none;}\n\n.title {\n  background: pink;\n  text-align: center;\n  padding: 20px 10px;\n}\n.titleClone {\n  background: blue;\n  text-align: center;\n  padding: 20px 10px;\n  color: white;\n}\n.link {\n  writing-mode: vertical-lr;\n  border: solid black 1px;\n  background: green;\n  height: 350px;\n  margin: 0;\n  float: left;\n}\n<div class=\"firstFlex\">\n<ul class='secondFlex'>\n  <li class=\"link\">\n    <h2 class='title'>Titler</h2>\n  </li>\n  <li class=\"link\">\n    <h2 class='title'>Shorter Title</h2>\n  </li>\n  <li class=\"link\">\n    <h2 class='title'>This is a much longer title and will wrap into m</h2>\n  </li>\n  <li class=\"link\">\n    <h2 class='title'>This is a really long title that will wrap into multiple lines</h2>\n  </li>\n  <li class=\"link\">\n    <h2 class='title'>This is a really long artist title that will wrap into multiple lines</h2>\n  </li>\n</ul>\n<ul class='secondFlex'>\n  <li class=\"link\">\n    <h2 class='titleClone'>Titler</h2>\n  </li>\n  <li class=\"link\">\n    <h2 class='titleClone'>Shorter Title</h2>\n  </li>\n  <li class=\"link\">\n    <h2 class='titleClone'>This is a much longer title and will wrap into m</h2>\n  </li>\n  <li class=\"link\">\n    <h2 class='titleClone'>This is a really long title that will wrap into multiple lines</h2>\n  </li>\n  <li class=\"link\">\n    <h2 class='titleClone'>This is a really long artist title that will wrap into multiple lines</h2>\n  </li>\n</ul>\n  </div>"
+            }
+        ]
+    },
+    {
+        "title": "Why will a div&#39;s width collapse to 0 when it doesn&#39;t have a margin or padding?",
+        "score": 2,
+        "tags": [
+            "html",
+            "css",
+            "webkit"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "overflow:auto causes the .content div to establish a block formatting context. What the CSS 2 specification says is:\n\nThe border box of a table, a block-level replaced element, or an element in the normal flow that establishes a new block formatting context (such as an element with overflow other than visible) must not overlap the margin box of any floats in the same block formatting context as the element itself. If necessary, implementations should clear the said element by placing it below any preceding floats, but may place it adjacent to such floats if there is sufficient space. They may even make the border box of said element narrower than defined by section 10.3.3. CSS 2 does not define when a UA may put said element next to the float or by how much said element may become narrower.\n\nSo vagueness prevails. But one of the rules that was added by CSS box-sizing was that the width of an element's content box was floored at zero. i.e. negative widths of the content box are not allowed.\nSo, let's assume that the rule is that the border box width of the BFC can in the presence of a float shrink until it reaches zero, but no further. In that case, providing the BFC has no inline border or padding, then the BFC's width is zero and it can fit alongside the float, so it does so.\nBut if the BFC contains any inline padding or border at all, with the content-box width floored at zero, then the BFC must have some positive width, and cannot fit alongside the float. So it is placed below the float.\nNote that it is the border box that shrinks, so adding inline margin should have no effect."
+            }
+        ]
+    },
+    {
+        "title": "Site overflow issue (newbie)",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "overflow"
+        ],
+        "answers": []
+    },
+    {
+        "title": "Text overflow issue in table",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "list",
+            "listview",
+            "html-table"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "Add word-wrap and overflow properties to the table cells to handle long text:\n.pkgtable {\n    width: 100%;\n    table-layout: fixed;\n}\n\n.pkgtable th, .pkgtable td {\n    vertical-align: top;\n    word-wrap: break-word;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n.pkgtable ul {\n    font-size: 10px;\n    line-height: 20px;\n    width: 100%;\n    list-style-type: square;\n    padding-left: 20px;\n}\n\n.pkgtable li {\n    margin-left: -12px;\n    text-align: left;\n    text-transform: uppercase;\n}\n\nNote:- if you will get any further issues change the above css as per your scenario, mainly you have to play with overflow and word-wrap properties."
+            }
+        ]
+    },
+    {
+        "title": "Images overflowing in CSS grid - how to fix?",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "css-grid"
+        ],
+        "answers": [
+            {
+                "score": 3,
+                "body": "Use grid-template-columns: repeat(2, 1fr); or grid-template-columns: 1fr 1fr;\ngrid-template-columns: repeat(1fr, 1fr); is incorrent. You will get Invalid property value error\nTo remove horizontal scroll, delete left and right margin in .main-container img\n\nIf you need space between images, use gap property.\nIf you need some space from the left or top, use padding of the parent container\n\nThis example below is how to get rid of vertical and horizontal scroll bar\nbody {\n    height: calc(100vh - 20px * 2);\n    margin: 0;\n}\n\n.main-container {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-column-gap: 90rem;\n    gap: 6rem;\n    padding: 20px;\n    height: 100%;\n}\n\n.main-container img {\n    width: 100%;\n    height: 100%;\n    object-fit: contain;\n    overflow: auto;\n}"
+            }
+        ]
+    },
+    {
+        "title": "Problem updating parent max-height in nested accordions (measurement is wrong)",
+        "score": 1,
+        "tags": [
+            "javascript",
+            "html",
+            "css"
+        ],
+        "answers": []
+    },
+    {
+        "title": "Bottom section is cutting off in mobile safari",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "tailwind-css"
+        ],
+        "answers": [
+            {
+                "score": 2,
+                "body": "What's been used here is min-height: 100vh; and is susceptible to the problems that new CSS units such as dvh, lvh, svh are intended to solve.\nSome resources:\nhttps://css-tricks.com/the-large-small-and-dynamic-viewports/\nhttps://ishadeed.com/article/new-viewport-units/\nQuote from one of the above articles:\n\nWhen using 100vh to size an element to take the full height of the viewport on mobile, it will be larger than the space between the top and bottom bars. This will happen in browsers that shrink their UI on scrolling, such as Safari or Chrome on Android.\n\nThese units are relatively new, so here are the compatibility tables:\nhttps://caniuse.com/viewport-unit-variants"
+            }
+        ]
+    },
+    {
+        "title": "overflow issue shown in dev tools with no styles applied",
+        "score": 1,
+        "tags": [
+            "html",
+            "css"
+        ],
+        "answers": []
+    },
+    {
+        "title": "HTML/CSS: &#39;Overflow: scroll&#39; applied on a &#39;div&#39; does not cover whole text",
+        "score": 1,
+        "tags": [
+            "html",
+            "css"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "Remove align-items:center; rule."
+            }
+        ]
+    },
+    {
+        "title": "Prevent grid items containing an image from stretching other grid items",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "layout",
+            "css-grid"
+        ],
+        "answers": []
+    },
+    {
+        "title": "DaisyUI dropdown button inside collapse is hidden inside container",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "tailwind-css",
+            "daisyui"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "You'd need to override the overflow: hidden declaration from the .collapse rule from Daisy UI to overflow: visible.\nFor example, with overflow: visible !important via the !overflow-visible class:\n\n\n<link href=\"https://cdn.jsdelivr.net/npm/daisyui@4.4.23/dist/full.min.css\" rel=\"stylesheet\" type=\"text/css\" />\n<script src=\"https://cdn.tailwindcss.com/3.4.0\"></script>\n\n<div tabindex=\"0\" class=\"collapse collapse-open border border-base-300 bg-red-200 !overflow-visible\">\n  <div class=\"collapse-title text-xl font-medium\">\n    I have collapse-open class\n  </div>\n  <div class=\"collapse-content\">\n    <details class=\"dropdown\">\n      <summary class=\"m-1 btn\">open or close</summary>\n      <ul class=\"p-2 shadow menu dropdown-content z-[99] bg-base-100 rounded-box w-52\">\n        <li><a>Item 1</a></li>\n        <li><a>Item 2</a></li>\n        <li><a>Item 1</a></li>\n        <li><a>Item 2</a></li>\n        <li><a>Item 1</a></li>\n        <li><a>Item 2</a></li>\n        <li><a>Item 1</a></li>\n        <li><a>Item 2</a></li>\n        <li><a>Item 1</a></li>\n        <li><a>Item 2</a></li>\n        <li><a>Item 1</a></li>\n        <li><a>Item 2</a></li>\n        <li><a>Item 1</a></li>\n        <li><a>Item 2</a></li>\n        <li><a>Item 1</a></li>\n        <li><a>Item 2</a></li>\n        <li><a>Item 1</a></li>\n        <li><a>Item 2</a></li>\n        <li><a>Item 1</a></li>\n        <li><a>Item 2</a></li>\n      </ul>\n    </details>\n  </div>\n</div>"
+            }
+        ]
+    },
+    {
+        "title": "Panel content overflow to bottom",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "twitter-bootstrap",
+            "twitter-bootstrap-3",
+            "panel"
+        ],
+        "answers": []
+    },
+    {
+        "title": "Using 3D CSS transforms on large background elements breaks scrolling overflow in Chromium browsers",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "chromium",
+            "css-transforms",
+            "perspective"
+        ],
+        "answers": []
+    },
+    {
+        "title": "Fix an element to the right edge of an overflowing container",
+        "score": 1,
+        "tags": [
+            "javascript",
+            "html",
+            "css",
+            "scrollbar",
+            "overflow"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "What you want is position: sticky, not absolute, but the parent has display:grid, so you need to add grid-row-start: 1 to both the indicator and the first row make them overlap instead of creating another row.\n\n\n.rpt {\n  display: inline-grid;\n  position: relative;\n  overflow-x: auto;\n  width: 100%;\n}\n\n.rpt::after {\n  content: \"\";\n  display: block;\n  position: sticky;\n  top: 0;\n  right: 0;\n  width: 30px;\n  height: 30px;\n  background: #b00;\n  z-index: 1;\n  pointer-events: none;\n  grid-row-start: 1;\n}\n\n.rpt .rpt-row {\n  flex-wrap: nowrap;\n  display: flex;\n  flex: 1 1 0%;\n  height: 50px;\n}\n\n.rpt .rpt-row:first-child {\n  grid-row-start: 1;\n}\n\n.flx-item {\n  width: 100px;\n}\n<div class=\"rpt\">\n  <div class=\"rpt-row\">\n    <div class=\"flx-item\">\n      <span>Lipsum</span>\n    </div>\n    <div class=\"flx-item\">\n      <span></span>\n    </div>\n    <div class=\"flx-item\">\n      <span>12345</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>25</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>1</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>0</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>0</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>0</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>0</span>\n    </div>\n  </div>\n</div>\n\n\n\nEdit: if you want the indicator to span all row it's some what tricky with auto row template because currently CSS can't get the last auto-generated line. If you can be sure that the number of rows never exceed a limit (for example, 100), you can do this:\n.rpt::after {\n  content: \"\";\n  display: block;\n  position: sticky;\n  top: 0;\n  right: 0;\n  width: 30px;\n  background: #b00;\n  z-index: 1;\n  pointer-events: none;\n  grid-row: 1/span 100;\n}\n\nIf you can't find such a magic number then maybe try changing the HTML structure or using JS to update the number of rows:\n\n\n//Call this function when finish loading and when rows are added/removed\nfunction countRows() {\n  document.querySelectorAll('.rpt').forEach(function(ele) {\n    const rows = ele.getElementsByClassName('rpt-row').length;\n    ele.style.setProperty(\"--rows\", rows);;\n  });\n}\n\nfunction addRow() {\n  const ele = document.querySelector('.rpt');\n  ele.appendChild(ele.firstElementChild.cloneNode(true));\n  countRows();\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", function(event) {\n  countRows();\n});\n.rpt {\n  display: inline-grid;\n  position: relative;\n  overflow-x: auto;\n  width: 100%;\n}\n\n.rpt::after {\n  content: \"\";\n  display: block;\n  position: sticky;\n  top: 0;\n  right: 0;\n  width: 30px;\n  background: #b00;\n  z-index: 1;\n  pointer-events: none;\n  grid-row: 1/ span var(--rows, 100);\n}\n\n.rpt .rpt-row {\n  flex-wrap: nowrap;\n  display: flex;\n  flex: 1 1 0%;\n  height: 50px;\n}\n\n.rpt .rpt-row:first-child {\n  grid-row-start: 1;\n}\n\n.flx-item {\n  width: 100px;\n}\n<div>\n  <button onclick=\"addRow()\">Add 1 row</button>\n</div>\n<div class=\"rpt\">\n  <div class=\"rpt-row\">\n    <div class=\"flx-item\">\n      <span>Lipsum</span>\n    </div>\n    <div class=\"flx-item\">\n      <span></span>\n    </div>\n    <div class=\"flx-item\">\n      <span>12345</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>25</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>1</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>0</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>0</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>0</span>\n    </div>\n    <div class=\"flx-item\">\n      <span>0</span>\n    </div>\n  </div>\n\n</div>"
+            }
+        ]
+    },
+    {
+        "title": "Can&#39;t scroll down on mobile after hero section loads — content visible but not accessible",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "mobile",
+            "scroll",
+            "responsive-design"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "Ok, so I was able to fix the issue, it's caused by the .hero-video CSS class.\nIt turns out that Safari and Chrome don’t handle height and aspect-ratio together very well. This combination will break the layout flow and make the browser not calculate the page height properly on mobile.\nI fixed this by changing this\n.hero-video {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  aspect-ratio: 16/9;\n  object-fit: cover;\n  object-position: center;\n  z-index: 0; /* don’t use -1 */\n  filter: brightness(0.6);\n  pointer-events: none;\n}\n\nto this\n.hero-video {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: auto;\n  min-height: 100%;\n  object-fit: cover;\n  object-position: center;\n  z-index: 0; /* don’t use -1 */\n  filter: brightness(0.6);\n  pointer-events: none; /* avoids accidental interaction on mobile */\n}\n\nThe reason this fixed the problem.\nEven though @media queries are evaluated immediately, the layout assumptions are made before in .hero-video and break the sizing. By the time the mobile media query applies (like hiding the video), the browser has already miscalculated the page height due to aspect-ratio + height: 100%.\nBy removing the aspect-ratio and using min-height: 100% + height: auto gives the browser a stable, predictable layout that scrolls correctly on all devices."
+            }
+        ]
+    },
+    {
+        "title": "Troubleshooting Slideshow Image Sizing and Navigation Dot Alignment Issues in CSS",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "navigation",
+            "alignment",
+            "slideshow"
+        ],
+        "answers": []
+    },
+    {
+        "title": "How to set flexbox to fill the remaining height and be on the middle of the screen?",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "tailwind-css"
+        ],
+        "answers": [
+            {
+                "score": 2,
+                "body": "You could consider:\n\nApplying height: 100% on the <body> via h-full, so that the immediate child <div> \"gets\" the height with its own h-full.\nApplying display: flex; flex-direction: column via flex flex-col on the immediate <div> child of the <body> to layout elements in a vertical layout.\n\nAfter the above two changes made, you could either:\nApply flex-grow: 1 via grow to the <div> immediately after the <!-- Login --> comment:\n\n\nhtml {\n  height: 100%;\n}\n\nbody {\n  overflow-x: hidden;\n}\n<script src=\"https://cdn.tailwindcss.com\"></script>\n\n<body class=\"antialiased text-slate-400 bg-slate-900 h-full\">\n  <div class=\"h-full flex flex-col\">\n    <!-- Navbar -->\n    <nav class=\"w-full flex justify-between items-center px-10 py-4 border-b border-b-slate-700\">\n      <a href=\"/\" class=\"relative text-3xl text-slate-200 font-bold tracking-wider\">Navbar</a>\n      <ul class=\"flex gap-5 cursor-pointer\">\n        <li>\n          <a href=\"/\" class=\"px-4 py-2 border border-transparent font-semibold rounded-lg duration-100\">Home</a>\n        </li>\n        <li>\n          <a href=\"/login\" class=\"px-4 py-2 border border-transparent font-semibold rounded-lg duration-100\">Login</a>\n        </li>\n      </ul>\n    </nav>\n\n    <!-- Login -->\n    <div class=\"grow flex justify-center items-center\">\n      <div class=\"w-[350px] flex flex-col justify-center items-center space-y-10 px-10 py-10 border border-slate-700/50 shadow-lg rounded-lg\">\n        <h3 class=\"mb-5 flex justify-center items-center text-2xl font-bold text-sky-500 cursor-default\">Login</h3>\n        <form class=\"flex flex-col justify-center gap-3\">\n          <label for=\"username\" class=\"font-semibold\">Username</label>\n          <input type=\"text\" name=\"username\" id=\"username\" class=\"outline-none bg-sky-600/10 px-4 py-2 rounded-md font-semibold text-slate-300 placeholder:text-sm placeholder:font-semibold\" placeholder=\"Enter your username\" />\n          <label for=\"password\" class=\"font-semibold\">Password</label>\n          <input type=\"password\" name=\"password\" id=\"password\" class=\"outline-none bg-sky-600/10 px-4 py-2 rounded-md font-semibold text-slate-300 placeholder:text-sm placeholder:font-semibold\" placeholder=\"Enter your password\" />\n          <div class=\"w-full flex flex-col justify-center items-center gap-5 mt-10\">\n            <button class=\"w-full px-5 py-2 bg-sky-500 rounded-full font-semibold text-white hover:bg-sky-500/80 duration-300\">Login</button>\n            <a href=\"/register\" class=\"w-full px-5 py-2 bg-green-500 rounded-full font-semibold text-white text-center hover:bg-green-500/80 duration-300\">Create an account</a >\n                </div>\n            </form>\n        </div>\n    </div>\n  </div>\n</body>\n\n\n\nOr apply margin-top: auto; margin-bottom: auto via my-auto to the <div> immediately after the <!-- Login --> comment:\n\n\nhtml {\n  height: 100%;\n}\n\nbody {\n  overflow-x: hidden;\n}\n<script src=\"https://cdn.tailwindcss.com\"></script>\n\n<body class=\"antialiased text-slate-400 bg-slate-900 h-full\">\n  <div class=\"h-full flex flex-col\">\n    <!-- Navbar -->\n    <nav class=\"w-full flex justify-between items-center px-10 py-4 border-b border-b-slate-700\">\n      <a href=\"/\" class=\"relative text-3xl text-slate-200 font-bold tracking-wider\">Navbar</a>\n      <ul class=\"flex gap-5 cursor-pointer\">\n        <li>\n          <a href=\"/\" class=\"px-4 py-2 border border-transparent font-semibold rounded-lg duration-100\">Home</a>\n        </li>\n        <li>\n          <a href=\"/login\" class=\"px-4 py-2 border border-transparent font-semibold rounded-lg duration-100\">Login</a>\n        </li>\n      </ul>\n    </nav>\n\n    <!-- Login -->\n    <div class=\"my-auto flex justify-center items-center\">\n      <div class=\"w-[350px] flex flex-col justify-center items-center space-y-10 px-10 py-10 border border-slate-700/50 shadow-lg rounded-lg\">\n        <h3 class=\"mb-5 flex justify-center items-center text-2xl font-bold text-sky-500 cursor-default\">Login</h3>\n        <form class=\"flex flex-col justify-center gap-3\">\n          <label for=\"username\" class=\"font-semibold\">Username</label>\n          <input type=\"text\" name=\"username\" id=\"username\" class=\"outline-none bg-sky-600/10 px-4 py-2 rounded-md font-semibold text-slate-300 placeholder:text-sm placeholder:font-semibold\" placeholder=\"Enter your username\" />\n          <label for=\"password\" class=\"font-semibold\">Password</label>\n          <input type=\"password\" name=\"password\" id=\"password\" class=\"outline-none bg-sky-600/10 px-4 py-2 rounded-md font-semibold text-slate-300 placeholder:text-sm placeholder:font-semibold\" placeholder=\"Enter your password\" />\n          <div class=\"w-full flex flex-col justify-center items-center gap-5 mt-10\">\n            <button class=\"w-full px-5 py-2 bg-sky-500 rounded-full font-semibold text-white hover:bg-sky-500/80 duration-300\">Login</button>\n            <a href=\"/register\" class=\"w-full px-5 py-2 bg-green-500 rounded-full font-semibold text-white text-center hover:bg-green-500/80 duration-300\">Create an account</a >\n                </div>\n            </form>\n        </div>\n    </div>\n  </div>\n</body>"
+            }
+        ]
+    },
+    {
+        "title": "Image overflowing grid&#39;s height",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "css-grid"
+        ],
+        "answers": [
+            {
+                "score": 1,
+                "body": "Set the grid row to the same height as the height of your grid-container and the image will not overflow.\n\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  outline: 2px solid red;\n}\n\n.hero {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  grid-template-rows: 70vh;\n  height: 70vh;\n}\n\nimg {\n  object-fit: cover;\n  width: auto;\n  max-height: 100%\n}\n<div class=\"hero\">\n  <article>\n    <h1>Access a library of free design resources</h1>\n    <p>The best resources and books from around the web, collected and curated for your reading.</p>\n    <a href=\"\">Get Access Now</a>\n  </article>\n  <img src=\"https://picsum.photos/500/500\" alt=\"\">\n</div>"
+            },
+            {
+                "score": 1,
+                "body": "Just add min-height: 0 or overflow: hidden to image to shrink it.\n\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  border: 2px solid red;\n}\n\nhtml {\n  font-family: sans-serif;\n}\n\nheader {\n  display: flex;\n  height: 3.5rem;\n  justify-content: space-between;\n  margin: 0 2rem;\n}\n\nheader>* {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\nspan {\n  height: 2rem;\n  display: flex;\n  align-items: center;\n}\n\na {\n  text-decoration: none;\n}\n\n.hero {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  height: 70vh;\n}\n\nimg {\n  object-fit: cover;\n  width: 100%;\n  max-height: 100%;\n  overflow: hidden;\n}\n<div class=\"hero\">\n  <article>\n    <h1>Access a library of free design resources</h1>\n    <p>The best resources and books from around the web, collected and curated for your reading.</p>\n    <a href=\"\">Get Access Now</a>\n  </article>\n  <img src=\"https://picsum.photos/500/500\" alt=\"\">\n</div>\n\n\n\nP.S. Related answer about width and flex: Why don't flex items shrink past content size?"
+            }
+        ]
+    },
+    {
+        "title": "Contents in div overflowing despite div being 100% height",
+        "score": 1,
+        "tags": [
+            "html",
+            "css"
+        ],
+        "answers": []
+    },
+    {
+        "title": "Select dropdown form options in HTML are (when clicked) way to big relative to the initial select box?",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "select",
+            "dropdown"
+        ],
+        "answers": []
+    },
+    {
+        "title": "Exit out of parent overflow hidden with position: relative div inside",
+        "score": 1,
+        "tags": [
+            "html",
+            "css",
+            "tooltip",
+            "overflow"
+        ],
+        "answers": []
+    },
+    {
+        "title": "How to use sticky element in a scroll table",
+        "score": 1,
+        "tags": [
+            "html",
+            "css"
+        ],
+        "answers": [
+            {
+                "score": 2,
+                "body": "Just adjust something like this, your problem is use overflow for .wrapper and wrong overflow attribute for .container class.\n\n\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n    <style>\n        .container {\n            width: 400px;\n            overflow:auto;\n            height: 150px;\n        }\n\n        .list {\n            white-space: nowrap;\n        }\n\n        .list span {\n            display: inline-block;\n            width: 50px;\n            line-height: 50px;\n        }\n\n        .fix {\n            position: sticky;\n            left: 0px;\n            background: red;\n            color: white;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"wrapper\">\n        <div class=\"container\">\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n            <div class=\"list\">\n                <span class=\"fix\">TEXT 1</span>\n                <span>TEXT 2</span>\n                <span>TEXT 3</span>\n                <span>TEXT 4</span>\n                <span>TEXT 5</span>\n                <span>TEXT 6</span>\n                <span>TEXT 7</span>\n                <span>TEXT 8</span>\n                <span>TEXT 9</span>\n                <span>TEXT 10</span>\n            </div>\n        </div>\n    </div>\n</body>\n\n</html>"
+            }
+        ]
+    }
+]

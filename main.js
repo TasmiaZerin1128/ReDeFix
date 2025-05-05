@@ -1,4 +1,5 @@
 import { MistralAI } from "@langchain/mistralai";
+import { CSVLoader } from "@langchain/community/document_loaders/fs/csv";
 import 'dotenv/config';
 
 const llm = new MistralAI({
@@ -9,7 +10,14 @@ const llm = new MistralAI({
   maxRetries: 2,
 });
 
-const inputText = "MistralAI is an AI company that ";
+try {
+  const loader = new CSVLoader('submission.csv');
+  const data = await loader.load();
+  console.log(data[0]);
 
-const completion = await llm.invoke(inputText);
-console.log(completion);
+  const inputText = "MistralAI is an AI company that ";
+  const completion = await llm.invoke(inputText);
+  console.log(completion);
+} catch (error) {
+  console.error('Error:', error.message);
+}
