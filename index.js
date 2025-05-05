@@ -1,5 +1,9 @@
 import { Mistral } from '@mistralai/mistralai';
 import 'dotenv/config';
+import { JSONLoader } from 'langchain/document_loaders/fs/json';
+import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
+import { Chroma } from '@langchain/community/vectorstores/chroma';
+import { MistralAIEmbeddings } from '@langchain/mistralai';
 import fs from 'fs';
 
 const apiKey = process.env.MISTRL_API_KEY || 'your_api_key';
@@ -7,38 +11,94 @@ console.log('API Key:', apiKey);
 
 const client = new Mistral({apiKey: apiKey});
 
-async function encodeImage(imagePath) {
-    try {
-        
-        const imageBuffer = fs.readFileSync(imagePath);
+const threads = JSON.parse(fs.readFileSync('stackoverflow_overlap_threads.json', 'utf-8'));
 
-        // Convert the buffer to a Base64-encoded string
-        const base64Image = imageBuffer.toString('base64');
-        return base64Image;
-    } catch (error) {
-        console.error(`Error: ${error}`);
-        return null;
+const textSplitter = new RecursiveCharacterTextSplitter({
+    chunkSize: 500,
+    chunkOverlap: 100,
+    separators: ["\n\n", "\n", " ", ""],
+})
+
+const SO_collection = [];
+
+for (const thread of threads){
+    const questionId = thread.question_id;
+    const title = thread.title;
+    const body = thread.question_body;
+
+    const questionDoc = {
+        pageContent: `Question: ${title}\n\n${body}`,
+        metadata: {
+          type: "question",
+          question_id: questionId,
+          title: title,
+          score: thread.score || 0,
+          tags: (thread.tags || []).join(','),
+          link: thread.link || '',
+          view_count: thread.view_count || 0,
+          answer_count: thread.answer_count || 0,
+          comment_count: thread.comment_count || 0
+        }
+    }
+    SO_collection.push(questionDoc);
+
+    for (const answer of thread.answers){
+        const answerDoc = {
+            pageContent: `Answer: ${answer.body}`,
+            metadata: {
+              type: 'answer',
+              question_id: questionId,
+              score: answer.score
+            }
+        };
+        SO_collection.push(answerDoc);
+    }
+
+    for (const comment of thread.comments) {
+        const commentDoc = {
+          pageContent: `Comment: ${comment.body}`,
+          metadata: {
+            type: 'comment',
+            question_id: questionId,
+          }
+        };
+        SO_collection.push(commentDoc);
     }
 }
 
-const imagePath = "FID-19-element-protrusion-697-768-capture-697-TP.png"
-const base64Image = await encodeImage(imagePath)
+async function processDocuments() {
+    const finalDocs = [];
+    for (const doc of SO_collection) {
+    if (doc.pageContent.length > 1000) {
+        const splitDocs = await textSplitter.splitDocuments([doc]);
+        finalDocs.push(...splitDocs);
+    } else {
+        finalDocs.push(doc);
+    }
+    }
+    console.log("\nSample of processed documents:");
+    finalDocs.slice(0, 5).forEach((doc, index) => {
+        console.log(`\n=== Document ${index + 1} ===`);
+        console.log("Type:", doc.metadata.type);
+        console.log("Question ID:", doc.metadata.question_id);
+        console.log("Content:", doc.pageContent);
+        console.log("=".repeat(50));
+    });
 
+    const embeddings = new MistralAIEmbeddings({
+        apiKey: apiKey,
+        model: "mistral-embed"
+    });
+    
+    console.log("Storing documents in ChromaDB...");
+    const vectorStore = await Chroma.fromDocuments(
+        finalDocs,
+        embeddings,
+        { collectionName: "stackoverflow_data" }
+    );
+    
+    console.log("Successfully stored documents in ChromaDB");
+    return vectorStore;
+}
 
-const chatResponse = await client.chat.complete({
-    model: 'pixtral-12b',
-    messages: [
-        {
-            role: 'user',
-            content: [
-                { type: "text", text: "The red dashed area shows the element overflowing its container, which is shown in yellow dash. Can you tell me how to repair this?" },
-                {
-                  type: "image_url",
-                  imageUrl: `data:image/jpeg;base64,${base64Image}`,
-                },
-              ],
-        },
-    ],
-})
-
-console.log(chatResponse.choices[0].message.content);
+processDocuments().catch(console.error);
