@@ -15,11 +15,19 @@ try {
     const threads = JSON.parse(fs.readFileSync('stackoverflow_overlap_threads.json', 'utf-8'));
 
     const textSplitter = new RecursiveCharacterTextSplitter({
-        chunkSize: 1000,
-        chunkOverlap: 100,
+        chunkSize: 1500,
+        chunkOverlap: 200,
         separators: ["\n\n", "\n", " ", ""],
     })
+    const SO_collection = threadToDocument(threads, textSplitter);
+    const documents = processDocuments(SO_collection, textSplitter);
+    storeInVectorDB(documents);
+} catch (error) {
+    console.error("Error processing JSON file:", error);
+}
 
+
+function threadToDocument(threads) {
     const SO_collection = [];
 
     for (const thread of threads){
@@ -30,15 +38,16 @@ try {
         const questionDoc = {
             pageContent: `Question: ${title}\n\n${body}`,
             metadata: {
-            type: "question",
-            question_id: questionId,
-            title: title,
-            score: thread.score || 0,
-            tags: (thread.tags || []).join(','),
-            link: thread.link || '',
-            view_count: thread.view_count || 0,
-            answer_count: thread.answer_count || 0,
-            comment_count: thread.comment_count || 0
+                type: "question",
+                rlf: "type",
+                question_id: questionId,
+                title: title,
+                score: thread.score || 0,
+                tags: (thread.tags || []).join(','),
+                link: thread.link || '',
+                view_count: thread.view_count || 0,
+                answer_count: thread.answer_count || 0,
+                comment_count: thread.comment_count || 0
             }
         }
         SO_collection.push(questionDoc);
@@ -68,13 +77,10 @@ try {
             }
         }
     }
-    processDocuments(SO_collection, textSplitter, apiKey).catch(console.error);
-} catch (error) {
-    console.error("Error processing JSON file:", error);
-}
+    return SO_collection;
+} 
 
-
-async function processDocuments(documents, textSplitter, apiKey) {
+async function processDocuments(documents, textSplitter) {
     console.log(`Splitting ${documents.length} documents...`);
     const finalDocs = [];
     
@@ -88,16 +94,10 @@ async function processDocuments(documents, textSplitter, apiKey) {
     }
     
     console.log(`Split into ${finalDocs.length} chunks`);
-    
-    console.log("\nSample of processed documents:");
-    finalDocs.slice(0, 3).forEach((doc, index) => {
-        console.log(`\n=== Document ${index + 1} ===`);
-        console.log("Type:", doc.metadata.type);
-        console.log("Question ID:", doc.metadata.question_id);
-        console.log("Content (preview):", doc.pageContent.substring(0, 100) + "...");
-        console.log("=".repeat(50));
-    });
+    return finalDocs;
+}
 
+async function storeInVectorDB(finalDocs) {
     // Initialize embeddings
     const embeddings = new MistralAIEmbeddings({
         apiKey: apiKey,
@@ -114,7 +114,7 @@ async function processDocuments(documents, textSplitter, apiKey) {
             embeddings,
             { 
                 collectionName: "stackoverflow_data",
-                url: undefined,
+                url: 'http://localhost:8000',
                 collectionMetadata: {
                     "hnsw:space": "cosine"
                 }
@@ -122,7 +122,7 @@ async function processDocuments(documents, textSplitter, apiKey) {
         );
         
         const remainingDocs = finalDocs.slice(1);
-        const batchSize = 20;
+        const batchSize = 200;
         console.log(`Processing ${remainingDocs.length} remaining documents in batches of ${batchSize}...`);
         
         for (let i = 0; i < remainingDocs.length; i += batchSize) {
@@ -143,7 +143,7 @@ async function processDocuments(documents, textSplitter, apiKey) {
                 for (let j = batchStart; j < batchEnd; j++) {
                     try {
                         await vectorStore.addDocuments([remainingDocs[j]]);
-                        console.log(`✓ Processed document ${j + 1} of ${remainingDocs.length}`);
+                        console.log(`Processed document ${j + 1} of ${remainingDocs.length}`);
                     } catch (docError) {
                         console.error(`Could not process document ${j + 1}: ${docError.message}`);
                     }
