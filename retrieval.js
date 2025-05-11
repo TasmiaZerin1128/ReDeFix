@@ -18,21 +18,21 @@ async function retrieve(collectionDB, cssProperties) {
       { type: "question" },
     );
 
-    const bm25Docs = questions.ids.map((id, index) => 
-      new Document({
-        pageContent: questions.documents[index],
-        metadata: questions.metadatas[index],
-      })
-    );
+    // const bm25Docs = questions.ids.map((id, index) => 
+    //   new Document({
+    //     pageContent: questions.documents[index],
+    //     metadata: questions.metadatas[index],
+    //   })
+    // );
 
 
     const bm25Retriever = new BM25Retriever({
-      documents: bm25Docs,
+      documents: questions,
       // Optional: Customize tokenizer for code-aware splitting
       tokenizer: (text) => text.split(/(?<=[^\w-])|(?=[^\w-])/), 
     });
 
-    const similarQuestions = await bm25Retriever.fromDocuments(cssProperties.join(" "), 10);
+    const similarQuestions = await bm25Retriever.invoke(cssProperties.join(" "));
 
     console.log("Questions retrieved:", similarQuestions);
     return questions;
