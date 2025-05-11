@@ -1,55 +1,47 @@
 import { Chroma } from '@langchain/community/vectorstores/chroma';
 import { MistralAIEmbeddings } from '@langchain/mistralai';
+import { BM25Retriever } from '@langchain/community/retrievers/bm25';
 import 'dotenv/config';
 
 // Initialize environment
 const apiKey = process.env.MISTRL_API_KEY || 'your_api_key';
 
-async function simpleQuery() {
+async function retrieve(collectionDB, cssProperties) {
   try {
-    // Initialize embeddings
-    const embeddings = new MistralAIEmbeddings({
-      apiKey: apiKey,
-      model: "mistral-embed"
-    });
 
     // Connect to existing ChromaDB collection
-    console.log("Connecting to ChromaDB...");
-    const vectorStore = new Chroma(
-      embeddings,
-      { 
-        collectionName: "stackoverflow_data",
-        url: 'http://localhost:8000'
-      }
+    console.log("Connecting to ChromaDB for retrieval");
+
+    const questions = await collectionDB.similaritySearch(
+      "",
+      100,
+      { type: "question" },
     );
-    
-    // Perform a simple search
-    const query = "How to fix CSS list bullets overlapping with floated elements";
-    console.log(`Searching for: "${query}"`);
-    
-    const results = await vectorStore.similaritySearch(query, 3);
-    
-    // Display results
-    console.log("\n=== SEARCH RESULTS ===\n");
-    results.forEach((doc, i) => {
-      console.log(`\n----- Result ${i+1} -----`);
-      console.log(`Type: ${doc.metadata.type}`);
-      
-      if (doc.metadata.type === 'question') {
-        console.log(`Title: ${doc.metadata.title}`);
-      } else if (doc.metadata.type === 'answer') {
-        console.log(`Question ID: ${doc.metadata.question_id}`);
-      }
-      
-      // Show content preview
-      console.log("\nContent Preview:");
-      console.log(doc.pageContent);
-      console.log("-".repeat(40));
+
+    const bm25Docs = questions.ids.map((id, index) => 
+      new Document({
+        pageContent: questions.documents[index],
+        metadata: questions.metadatas[index],
+      })
+    );
+
+
+    const bm25Retriever = new BM25Retriever({
+      documents: bm25Docs,
+      // Optional: Customize tokenizer for code-aware splitting
+      tokenizer: (text) => text.split(/(?<=[^\w-])|(?=[^\w-])/), 
     });
+
+    const similarQuestions = await bm25Retriever.fromDocuments(cssProperties.join(" "), 10);
+
+    console.log("Questions retrieved:", similarQuestions);
+    return questions;
+
   } catch (error) {
     console.error("Error during retrieval:", error);
   }
 }
 
-// Run the query
-simpleQuery();
+// retrieve('SO_collision', ['padding', 'display'])
+
+export default retrieve;

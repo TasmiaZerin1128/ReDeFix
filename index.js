@@ -1,31 +1,76 @@
-import { Mistral } from '@mistralai/mistralai';
+import { ChatMistralAI } from "@langchain/mistralai";
 import 'dotenv/config';
-import { JSONLoader } from 'langchain/document_loaders/fs/json';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { Chroma } from '@langchain/community/vectorstores/chroma';
 import { MistralAIEmbeddings } from '@langchain/mistralai';
 import fs from 'fs';
+import retrieve from "./retrieval.js";
 
 const apiKey = process.env.MISTRL_API_KEY || 'your_api_key';
 console.log('API Key:', apiKey);
 
-const client = new Mistral({apiKey: apiKey});
+const client = new ChatMistralAI({
+    model: "mistral-large-latest",
+    apiKey: apiKey
+});
+
+const textSplitter = new RecursiveCharacterTextSplitter({
+    chunkSize: 1500,
+    chunkOverlap: 200,
+    separators: ["\n\n", "\n", " ", ""],
+});
+
+const embeddings = new MistralAIEmbeddings({
+    apiKey: apiKey,
+    model: "mistral-embed"
+});
+
+let collision_collection = 'SO_collision';
+let protrusion_collection = 'SO_protrusion';
+
+let collision_db = null;
 
 try {
-    const threads = JSON.parse(fs.readFileSync('stackoverflow_overlap_threads.json', 'utf-8'));
+    const collision_threads = JSON.parse(fs.readFileSync('stackoverflow_collision_threads.json', 'utf-8'));
+    // const protrusion_threads = JSON.parse(fs.readFileSync('stackoverflow_overflow_threads.json', 'utf-8'));
+    // const viewport_protrusion_threads = JSON.parse(fs.readFileSync('stackoverflow_viewport_protrusion_threads.json', 'utf-8'));
+    // const wrapping_threads = JSON.parse(fs.readFileSync('stackoverflow_wrapping_threads.json', 'utf-8'));
 
-    const textSplitter = new RecursiveCharacterTextSplitter({
-        chunkSize: 1500,
-        chunkOverlap: 200,
-        separators: ["\n\n", "\n", " ", ""],
-    })
-    const SO_collection = threadToDocument(threads, textSplitter);
-    const documents = processDocuments(SO_collection, textSplitter);
-    storeInVectorDB(documents);
+    collision_db = await create_knowledge_base(collision_threads, 'collision_collection');
+    // protrusion_db = create_knowledge_base(protrusion_threads);
+    // viewport_protrusion_db = create_knowledge_base(viewport_protrusion_threads);
+    // wrapping_db = create_knowledge_base(wrapping_threads);
+    
+
 } catch (error) {
     console.error("Error processing JSON file:", error);
 }
 
+const retriveDocs = retrieve(collision_db, ['padding', 'display']);
+console.log("\n=== SEARCH RESULTS ===\n");
+for (doc in retriveDocs) {
+  console.log(`\n----- Result -----`);
+  console.log(`Type: ${doc.metadata.type}`);
+  
+  if (doc.metadata.type === 'question') {
+    console.log(`Title: ${doc.metadata.title}`);
+  } else if (doc.metadata.type === 'answer') {
+    console.log(`Question ID: ${doc.metadata.question_id}`);
+  }
+  
+  // Show content preview
+  console.log("\nContent Preview:");
+  console.log(doc.pageContent);
+  console.log("-".repeat(40));
+};
+
+
+async function create_knowledge_base(threads, collectionName) {
+    const SO_collection = threadToDocument(threads, textSplitter);
+    const documents = await processDocuments(SO_collection, textSplitter);
+    const vectordb = await storeInVectorDB(documents, collectionName);
+    return vectordb;
+}
 
 function threadToDocument(threads) {
     const SO_collection = [];
@@ -39,7 +84,6 @@ function threadToDocument(threads) {
             pageContent: `Question: ${title}\n\n${body}`,
             metadata: {
                 type: "question",
-                rlf: "type",
                 question_id: questionId,
                 title: title,
                 score: thread.score || 0,
@@ -52,16 +96,18 @@ function threadToDocument(threads) {
         }
         SO_collection.push(questionDoc);
 
-        for (const answer of thread.answers){
-            const answerDoc = {
-                pageContent: `Answer: ${answer.body}`,
-                metadata: {
-                type: 'answer',
-                question_id: questionId,
-                score: answer.score
-                }
-            };
-            SO_collection.push(answerDoc);
+        if (thread.answers) {
+            for (const answer of thread.answers){
+                const answerDoc = {
+                    pageContent: `Answer: ${answer.body}`,
+                    metadata: {
+                    type: 'answer',
+                    question_id: questionId,
+                    score: answer.score
+                    }
+                };
+                SO_collection.push(answerDoc);
+            }
         }
 
         if (thread.comments) {
@@ -97,12 +143,7 @@ async function processDocuments(documents, textSplitter) {
     return finalDocs;
 }
 
-async function storeInVectorDB(finalDocs) {
-    // Initialize embeddings
-    const embeddings = new MistralAIEmbeddings({
-        apiKey: apiKey,
-        model: "mistral-embed"
-    });
+async function storeInVectorDB(finalDocs, collectionName) {
     
     // Store in ChromaDB with batching
     console.log("Storing documents in ChromaDB...");
@@ -113,7 +154,7 @@ async function storeInVectorDB(finalDocs) {
             initDocs,
             embeddings,
             { 
-                collectionName: "stackoverflow_data",
+                collectionName: collectionName,
                 url: 'http://localhost:8000',
                 collectionMetadata: {
                     "hnsw:space": "cosine"
