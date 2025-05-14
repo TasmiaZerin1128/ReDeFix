@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 async function encodeImage(imagePath) {
     try {
         
@@ -11,3 +13,5 @@ async function encodeImage(imagePath) {
         return null;
     }
 }
+
+export default encodeImage;

@@ -3,14 +3,17 @@ import 'dotenv/config';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { Chroma } from '@langchain/community/vectorstores/chroma';
 import { MistralAIEmbeddings } from '@langchain/mistralai';
+import { ChatPromptTemplate } from "@langchain/core/prompts";
+import { StringOutputParser } from "@langchain/core/output_parsers";
 import fs from 'fs';
 import retrieve from "./retrieval.js";
+import encodeImage from "./sendImage.js";
 
 const apiKey = process.env.MISTRL_API_KEY || 'your_api_key';
 console.log('API Key:', apiKey);
 
-const client = new ChatMistralAI({
-    model: "mistral-large-latest",
+const model = new ChatMistralAI({
+    model: "pixtral-12b",
     apiKey: apiKey
 });
 
@@ -30,39 +33,59 @@ let protrusion_collection = 'SO_protrusion';
 
 let collision_db = null;
 
-try {
-    const collision_threads = JSON.parse(fs.readFileSync('stackoverflow_collision_threads.json', 'utf-8'));
-    // const protrusion_threads = JSON.parse(fs.readFileSync('stackoverflow_overflow_threads.json', 'utf-8'));
-    // const viewport_protrusion_threads = JSON.parse(fs.readFileSync('stackoverflow_viewport_protrusion_threads.json', 'utf-8'));
-    // const wrapping_threads = JSON.parse(fs.readFileSync('stackoverflow_wrapping_threads.json', 'utf-8'));
+async function main() {
+    try {
+        const collision_threads = JSON.parse(fs.readFileSync('stackoverflow_collision_threads.json', 'utf-8'));
+        // const protrusion_threads = JSON.parse(fs.readFileSync('stackoverflow_overflow_threads.json', 'utf-8'));
+        // const viewport_protrusion_threads = JSON.parse(fs.readFileSync('stackoverflow_viewport_protrusion_threads.json', 'utf-8'));
+        // const wrapping_threads = JSON.parse(fs.readFileSync('stackoverflow_wrapping_threads.json', 'utf-8'));
 
-    collision_db = await create_knowledge_base(collision_threads, 'collision_collection');
-    // protrusion_db = create_knowledge_base(protrusion_threads);
-    // viewport_protrusion_db = create_knowledge_base(viewport_protrusion_threads);
-    // wrapping_db = create_knowledge_base(wrapping_threads);
-    
+        collision_db = await create_knowledge_base(collision_threads, collision_collection);
+        // protrusion_db = create_knowledge_base(protrusion_threads);
+        // viewport_protrusion_db = create_knowledge_base(viewport_protrusion_threads);
+        // wrapping_db = create_knowledge_base(wrapping_threads);
+        
 
-} catch (error) {
-    console.error("Error processing JSON file:", error);
+    } catch (error) {
+        console.error("Error processing JSON file:", error);
+    }
+
+    const retrieveDocs = await retrieve(collision_collection, ['margin-bottom']);
+    console.log("\n=== SEARCH RESULTS ===\n");
+    console.log(`Answer Count: ${retrieveDocs.length}`);
+
+    console.log("\n===Sending this to Mistral Model===\n")
+    const promptTemplate = ChatPromptTemplate.fromMessages([
+        ["system", "You are an automated program repair tool which works as an expert in CSS and HTML."],
+        ["user", `Fix the following responsive layout failure using the provided context: 
+            RLF Type: {RLF_type},
+            Type Definition: {Type_definition},
+            Failure element XPaths: {Failure_element_XPaths},
+            Viewport range: {viewport_range},
+            localized property which is causing the failure: {localized_property},
+            screenshot of the failure region: {screenshot_failure},
+            screenshot of the lower and upper bound layouts: {screenshot_lower_bound}, {screenshot_upper_bound},
+            5 relevant stack overflow threads containing answers and comments: {relevant_stack_overflow_threads}.
+            Only return the repaired value of the localized property, do not include details. Ensure to keep the web layout responsive (DO NOT USE px, try to use rem, em, or %) and maintain the original design.
+            Let's think step by step.`],
+    ]);
+
+    const chain = promptTemplate.pipe(model).pipe(new StringOutputParser());
+
+    const response = await chain.invoke({ 
+            RLF_type: "Element Collision", 
+            Type_definition: "Elements collide into one another due to insufficient accommodation space when viewport width reduces.",
+            Failure_element_XPaths: 'Node 1:/HTML/BODY/HEADER, Node 2: /HTML/BODY/DIV',
+            viewport_range: '600-680',
+            localized_property: 'margin-bottom: 20px of Node: /HTML/BODY/HEADER',
+            screenshot_failure: encodeImage('FID-1-element-collision-320-680-capture-320-TP.png'),
+            screenshot_lower_bound: null,
+            screenshot_upper_bound: encodeImage('FID-1-element-collision-320-680-capture-681-FP.png'),
+            relevant_stack_overflow_threads: JSON.stringify(retrieveDocs)
+     });
+
+     console.log(response);
 }
-
-const retriveDocs = retrieve(collision_db, ['padding', 'display']);
-console.log("\n=== SEARCH RESULTS ===\n");
-for (doc in retriveDocs) {
-  console.log(`\n----- Result -----`);
-  console.log(`Type: ${doc.metadata.type}`);
-  
-  if (doc.metadata.type === 'question') {
-    console.log(`Title: ${doc.metadata.title}`);
-  } else if (doc.metadata.type === 'answer') {
-    console.log(`Question ID: ${doc.metadata.question_id}`);
-  }
-  
-  // Show content preview
-  console.log("\nContent Preview:");
-  console.log(doc.pageContent);
-  console.log("-".repeat(40));
-};
 
 
 async function create_knowledge_base(threads, collectionName) {
@@ -101,9 +124,9 @@ function threadToDocument(threads) {
                 const answerDoc = {
                     pageContent: `Answer: ${answer.body}`,
                     metadata: {
-                    type: 'answer',
-                    question_id: questionId,
-                    score: answer.score
+                        type: 'answer',
+                        question_id: questionId,
+                        score: answer.score
                     }
                 };
                 SO_collection.push(answerDoc);
@@ -203,3 +226,6 @@ async function storeInVectorDB(finalDocs, collectionName) {
         throw error;
     }
 }
+
+
+main()
