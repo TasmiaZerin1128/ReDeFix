@@ -1,0 +1,1058 @@
+[
+  {
+    "subject": "3MinuteJournal",
+    "type": "Element Protrusion",
+    "viewportRange": "992-1199",
+    "failureNode": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]",
+    "failureParent": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV",
+    "failureElementRect": "Left-P: 0 Right-P: 13.03125 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "position": "absolute",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]"
+      },
+      {
+        "width": "555px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS"
+      },
+      {
+        "max-width": "39px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]"
+      },
+      {
+        "max-width": "39px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[8]"
+      },
+      {
+        "max-width": "39px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[9]"
+      }
+    ],
+    "screenshotFailure": "",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": ""
+  },
+  {
+    "subject": "3MinuteJournal",
+    "type": "Element Protrusion",
+    "viewportRange": "992-1199",
+    "failureNode": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2]",
+    "failureParent": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV",
+    "failureElementRect": "Left-P: 0 Right-P: 100 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "position": "absolute",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2]"
+      },
+      {
+        "width": "555px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2]"
+      }
+    ],
+    "screenshotFailure": "",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": ""
+  },
+  {
+    "subject": "3MinuteJournal",
+    "type": "Element Protrusion",
+    "viewportRange": "1138-1199",
+    "failureNode": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS",
+    "failureParent": "/HTML/BODY/DIV[3]",
+    "failureElementRect": "Left-P: 0 Right-P: 85 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "position": "absolute",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS"
+      },
+      {
+        "width": "555px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS"
+      },
+      {
+        "width": "555px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2]"
+      }
+    ],
+    "screenshotFailure": "",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": ""
+  },
+  {
+    "subject": "3MinuteJournal",
+    "type": "Viewport Protrusion",
+    "viewportRange": "992-1137",
+    "failureNode": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS",
+    "failureParent": "/HTML/BODY",
+    "failureElementRect": "Left-P: 0 Right-P: 74 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "position": "absolute",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS"
+      },
+      {
+        "width": "555px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS"
+      },
+      {
+        "width": "555px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2]"
+      }
+    ],
+    "screenshotFailure": "",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": ""
+  },
+  {
+    "subject": "Ardour",
+    "type": "Element Protrusion",
+    "viewportRange": "659-678",
+    "failureNode": "/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV",
+    "failureParent": "/HTML/BODY/DIV[2]",
+    "failureElementRect": "Left-P: 0 Right-P: 2 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV"
+      },
+      {
+        "width": "640px",
+        "element": "/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV"
+      },
+      {
+        "font-size": "14px",
+        "element": "/HTML/BODY"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Ardour/snapshots/FID-1-viewport-protrusion-350-658-capture-350-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Ardour/snapshots/FID-1-viewport-protrusion-350-658-capture-659-FP.png"
+  },
+  {
+    "subject": "Ardour",
+    "type": "Viewport Protrusion",
+    "viewportRange": "350-658",
+    "failureNode": "/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV",
+    "failureParent": "/HTML/BODY",
+    "failureElementRect": "Left-P: 0 Right-P: 310 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV"
+      },
+      {
+        "width": "640px",
+        "element": "/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV"
+      },
+      {
+        "width": "width larger than viewport size!",
+        "element": "/HTML/BODY"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Ardour/snapshots/FID-2-element-protrusion-659-678-capture-659-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Ardour/snapshots/FID-2-element-protrusion-659-678-capture-679-FP.png"
+  },
+  {
+    "subject": "Bower",
+    "type": "Element Protrusion",
+    "viewportRange": "698-707",
+    "failureNode": "/HTML/BODY/HEADER/DIV/DIV/H1",
+    "failureParent": "/HTML/BODY/HEADER/DIV/DIV",
+    "failureElementRect": "Left-P: 0 Right-P: 11.46875 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "padding-left": "360px",
+        "element": "/HTML/BODY/HEADER/DIV/DIV"
+      },
+      {
+        "width": "340px",
+        "element": "/HTML/BODY/HEADER/DIV/DIV/IMG"
+      },
+      {
+        "font-size": "115px",
+        "element": "/HTML/BODY/HEADER/DIV/DIV/H1"
+      },
+      {
+        "position": "absolute",
+        "element": "/HTML/BODY/HEADER/DIV/DIV/IMG"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Bower/snapshots/FID-3-element-protrusion-698-707-capture-698-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Bower/snapshots/FID-3-element-protrusion-698-707-capture-708-FP.png"
+  },
+  {
+    "subject": "Bower",
+    "type": "Viewport Protrusion",
+    "viewportRange": "681-697",
+    "failureNode": "/HTML/BODY/HEADER/DIV/DIV/H1",
+    "failureParent": "/HTML/BODY",
+    "failureElementRect": "Left-P: 0 Right-P: 17.46875 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "font-size": "115px",
+        "element": "/HTML/BODY/HEADER/DIV/DIV/H1"
+      },
+      {
+        "width": "width larger than viewport size!",
+        "element": "/HTML/BODY"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Bower/snapshots/FID-2-viewport-protrusion-681-697-capture-681-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Bower/snapshots/FID-2-viewport-protrusion-681-697-capture-698-FP.png"
+  },
+  {
+    "subject": "Bower",
+    "type": "Element Collision",
+    "viewportRange": "320-680",
+    "failureNode": "/HTML/BODY/HEADER",
+    "failureSibling": "/HTML/BODY/DIV",
+    "failureElementRect": "Node 1: [ minX: 2 maxX: 498 minY: 2 maxY: 237.5 ] Node 2: [ minX: 0 maxX: 500 minY: 229.5 maxY: 285.5 ]",
+    "localizedProperty": [
+      {
+        "margin-bottom": "20px",
+        "element": "/HTML/BODY/HEADER"
+      },
+      {
+        "margin-top": "-20px",
+        "element": "/HTML/BODY/DIV"
+      },
+      {
+        "padding-bottom": "10px",
+        "element": "/HTML/BODY/HEADER"
+      },
+      {
+        "padding-top": "4px",
+        "element": "/HTML/BODY/DIV"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Bower/snapshots/FID-1-element-collision-320-680-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Bower/snapshots/FID-1-element-collision-320-680-capture-681-FP.png"
+  },
+  {
+    "subject": "BugMeNot",
+    "type": "Element Protrusion",
+    "viewportRange": "320-671",
+    "failureNode": "/HTML/BODY/DIV/HEADER/DIV/FORM",
+    "failureParent": "/HTML/BODY/DIV/HEADER",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 73",
+    "localizedProperty": [
+      {
+        "float": "right",
+        "element": "/HTML/BODY/DIV/HEADER/DIV/FORM"
+      },
+      {
+        "font-size": "180%",
+        "element": "/HTML/BODY/DIV/HEADER/DIV/FORM/INPUT"
+      },
+      {
+        "font-size": "180%",
+        "element": "/HTML/BODY/DIV/HEADER/DIV/FORM/BUTTON"
+      },
+      {
+        "padding-top": "8px",
+        "element": "/HTML/BODY/DIV/HEADER/DIV/FORM/INPUT"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/BugMeNot/snapshots/FID-1-element-protrusion-650-736-capture-650-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/BugMeNot/snapshots/FID-1-element-protrusion-650-736-capture-651-FP.png"
+  },
+  {
+    "subject": "BugMeNot",
+    "type": "Wrapping Elements",
+    "viewportRange": "320-399",
+    "failureNode": "/HTML/BODY/DIV/DIV/HEADER/DIV/FORM/BUTTON",
+    "failureElementRect": "",
+    "localizedProperty": [
+      {
+        "font-size": "180%",
+        "element": "/HTML/BODY/DIV/HEADER/DIV/FORM/INPUT"
+      },
+      {
+        "font-size": "180%",
+        "element": "/HTML/BODY/DIV/HEADER/DIV/FORM/BUTTON"
+      }
+    ],
+    "screenshotFailure": "",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": ""
+  },
+  {
+    "subject": "BugMeNot",
+    "type": "Wrapping Elements",
+    "viewportRange": "324-338",
+    "failureNode": "/HTML/BODY/DIV/DIV/FORM/BUTTON",
+    "failureElementRect": "",
+    "localizedProperty": [
+      {
+        "font-size": "180%",
+        "element": "/HTML/BODY/DIV/HEADER/DIV/FORM/INPUT"
+      },
+      {
+        "font-size": "180%",
+        "element": "/HTML/BODY/DIV/HEADER/DIV/FORM/BUTTON"
+      }
+    ],
+    "screenshotFailure": "",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": ""
+  },
+  {
+    "subject": "Django",
+    "type": "Element Protrusion",
+    "viewportRange": "320-357",
+    "failureNode": "/HTML/BODY/DIV[5]/DIV[2]/DIV/DIV/A",
+    "failureParent": "/HTML/BODY/DIV[5]/DIV[2]/DIV/DIV",
+    "failureElementRect": "Left-P: 0 Right-P: 13.40625 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "109px",
+        "element": "/HTML/BODY/DIV[5]/DIV[2]/DIV/DIV/A"
+      },
+      {
+        "font-size": "4rem",
+        "element": "/HTML/BODY/DIV[5]/DIV[2]/DIV/DIV/A"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Django/snapshots/FID-1-element-protrusion-320-357-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Django/snapshots/FID-1-element-protrusion-320-357-capture-358-FP.png"
+  },
+  {
+    "subject": "Django",
+    "type": "Element Protrusion",
+    "viewportRange": "320-385",
+    "failureNode": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT",
+    "failureParent": "/HTML/BODY/DIV[4]/DIV/DIV[2]",
+    "failureElementRect": "Left-P: 0 Right-P: 3 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "83%",
+        "element": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT"
+      },
+      {
+        "padding-right": "14%",
+        "element": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT"
+      },
+      {
+        "padding-left": "10px",
+        "element": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT"
+      },
+      {
+        "font-size": "1.6rem",
+        "element": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Django/snapshots/FID-6-element-protrusion-320-385-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Django/snapshots/FID-6-element-protrusion-320-385-capture-386-FP.png"
+  },
+  {
+    "subject": "Django",
+    "type": "Element Protrusion",
+    "viewportRange": "320-385",
+    "failureNode": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT",
+    "failureParent": "/HTML/BODY/DIV[4]/DIV/DIV[2]",
+    "failureElementRect": "Left-P: 0 Right-P: 3 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "83%",
+        "element": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT"
+      },
+      {
+        "padding-right": "14%",
+        "element": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT"
+      },
+      {
+        "padding-left": "10px",
+        "element": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT"
+      },
+      {
+        "font-size": "1.6rem",
+        "element": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Django/snapshots/FID-8-element-protrusion-320-385-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Django/snapshots/FID-8-element-protrusion-320-385-capture-386-FP.png"
+  },
+  {
+    "subject": "DjangoREST",
+    "type": "Viewport Protrusion",
+    "viewportRange": "767-767",
+    "failureNode": "/HTML/BODY/DIV/DIV/DIV/DIV/A",
+    "failureParent": "/HTML/BODY",
+    "failureElementRect": "Left-P: 0 Right-P: 10 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "float": "right",
+        "element": "/HTML/BODY/DIV/DIV/DIV/DIV/A"
+      },
+      {
+        "font-size": "12px",
+        "element": "/HTML/BODY/DIV/DIV/DIV/DIV/A"
+      },
+      {
+        "margin-right": "10px",
+        "element": "/HTML/BODY/DIV/DIV/DIV/DIV/A"
+      },
+      {
+        "padding-right": "9px",
+        "element": "/HTML/BODY/DIV/DIV/DIV/DIV/A"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/DjangoRest/snapshots/FID-1-viewport-protrusion-767-767-capture-767-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/DjangoRest/snapshots/FID-1-viewport-protrusion-767-767-capture-768-FP.png"
+  },
+  {
+    "subject": "HotelWiFiTest",
+    "type": "Viewport Protrusion",
+    "viewportRange": "415-766",
+    "failureNode": "/HTML/BODY/DIV[2]",
+    "failureParent": "/HTML/BODY",
+    "failureElementRect": "Left-P: 0 Right-P: 353 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "max-width": "768px",
+        "element": "/HTML/BODY/DIV[2]"
+      },
+      {
+        "font-size": "24px",
+        "element": "/HTML/BODY/DIV[2]/H2[3]"
+      },
+      {
+        "font-size": "24px",
+        "element": "/HTML/BODY/DIV[2]/H2[2]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Hotel WiFi Test/snapshots/FID-6-viewport-protrusion-415-766-capture-415-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Hotel WiFi Test/snapshots/FID-6-viewport-protrusion-415-766-capture-767-FP.png"
+  },
+  {
+    "subject": "MantisBT",
+    "type": "Element Protrusion",
+    "viewportRange": "320-767",
+    "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[4]",
+    "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]",
+    "failureElementRect": "Left-P: 10 Right-P: 10 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "100%",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[4]/DIV"
+      },
+      {
+        "width": "100%",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[4]/DIV[2]"
+      },
+      {
+        "font-size": "14px",
+        "element": "/HTML/BODY"
+      },
+      {
+        "margin-left": "-10px",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[4]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-1-element-protrusion-320-767-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-1-element-protrusion-320-767-capture-768-FP.png"
+  },
+  {
+    "subject": "MantisBT",
+    "type": "Element Protrusion",
+    "viewportRange": "320-767",
+    "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[3]",
+    "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]",
+    "failureElementRect": "Left-P: 10 Right-P: 10 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "100%",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[3]/DIV"
+      },
+      {
+        "font-size": "14px",
+        "element": "/HTML/BODY"
+      },
+      {
+        "margin-left": "-10px",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[3]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-2-element-protrusion-320-767-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-2-element-protrusion-320-767-capture-768-FP.png"
+  },
+  {
+    "subject": "MantisBT",
+    "type": "Element Protrusion",
+    "viewportRange": "320-767",
+    "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]",
+    "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]",
+    "failureElementRect": "Left-P: 10 Right-P: 10 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "font-size": "14px",
+        "element": "/HTML/BODY"
+      },
+      {
+        "margin-left": "-10px",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-10-element-protrusion-320-767-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-10-element-protrusion-320-767-capture-768-FP.png"
+  },
+  {
+    "subject": "MantisBT",
+    "type": "Element Protrusion",
+    "viewportRange": "746-767",
+    "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV",
+    "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 11",
+    "localizedProperty": [
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV"
+      },
+      {
+        "height": "65px",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV"
+      },
+      {
+        "margin-bottom": "40px",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-8-element-protrusion-746-767-capture-746-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-8-element-protrusion-746-767-capture-768-FP.png"
+  },
+  {
+    "subject": "MantisBT",
+    "type": "Element Protrusion",
+    "viewportRange": "551-767",
+    "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV",
+    "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 11",
+    "localizedProperty": [
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV"
+      },
+      {
+        "height": "65px",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV/DIV"
+      },
+      {
+        "margin-bottom": "40px",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-6-element-protrusion-551-767-capture-551-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-6-element-protrusion-551-767-capture-768-FP.png"
+  },
+  {
+    "subject": "MantisBT",
+    "type": "Element Protrusion",
+    "viewportRange": "670-767",
+    "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV",
+    "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 11",
+    "localizedProperty": [
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV"
+      },
+      {
+        "height": "65px",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV"
+      },
+      {
+        "margin-bottom": "40px",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-9-element-protrusion-670-767-capture-670-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-9-element-protrusion-670-767-capture-768-FP.png"
+  },
+  {
+    "subject": "MidwayMeetup",
+    "type": "Element Protrusion",
+    "viewportRange": "768-1222",
+    "failureNode": "/HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/DIV",
+    "failureParent": "/HTML/BODY/DIV/DIV[2]/DIV/DIV",
+    "failureElementRect": "Left-P: 0 Right-P: 107.015625 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "210px",
+        "element": "/HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/DIV/INPUT"
+      },
+      {
+        "width": "50.9219px",
+        "element": "/HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/DIV/INPUT[2]"
+      },
+      {
+        "font-size": "14px",
+        "element": "/HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/DIV/INPUT"
+      },
+      {
+        "font-size": "14px",
+        "element": "/HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/DIV/INPUT[2]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/MidwayMeetup/snapshots/FID-10-element-protrusion-768-1222-capture-768-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/MidwayMeetup/snapshots/FID-10-element-protrusion-768-1222-capture-1223-FP.png"
+  },
+  {
+    "subject": "PepFeed",
+    "type": "Element Protrusion",
+    "viewportRange": "697-768",
+    "failureNode": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]",
+    "failureParent": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 20 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]"
+      },
+      {
+        "margin-top": "-20px",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]"
+      },
+      {
+        "padding-top": "10px",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]/SPAN"
+      },
+      {
+        "font-size": "1.3rem",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]/SPAN"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/PepFeed/snapshots/FID-19-element-protrusion-697-768-capture-697-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/PepFeed/snapshots/FID-19-element-protrusion-697-768-capture-769-FP.png"
+  },
+  {
+    "subject": "PepFeed",
+    "type": "Viewport Protrusion",
+    "viewportRange": "1025-1071",
+    "failureNode": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]",
+    "failureParent": "/HTML/BODY",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 20 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]"
+      },
+      {
+        "margin-right": "-25px",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]"
+      },
+      {
+        "margin-left": "25px",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]"
+      },
+      {
+        "width": "25%",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/PepFeed/snapshots/FID-21-viewport-protrusion-1025-1071-capture-1025-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/PepFeed/snapshots/FID-21-viewport-protrusion-1025-1071-capture-1072-FP.png"
+  },
+  {
+    "subject": "PepFeed",
+    "type": "Element Collision",
+    "viewportRange": "930-959",
+    "failureNode": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]",
+    "failureSibling": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]",
+    "failureElementRect": "Node 1: [ minX: 533.953125 maxX: 679.953125 minY: 533.078125 maxY: 707.640625 ] Node 2: [ minX: 657.5 maxX: 890 minY: 556.078125 maxY: 736.0625 ]",
+    "localizedProperty": [
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]"
+      },
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]"
+      },
+      {
+        "width": "256px",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]"
+      },
+      {
+        "margin-left": "25px",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/PepFeed/snapshots/FID-20-element-collision-930-959-capture-930-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/PepFeed/snapshots/FID-20-element-collision-930-959-capture-960-FP.png"
+  },
+  {
+    "subject": "PepFeed",
+    "type": "Element Collision",
+    "viewportRange": "320-479",
+    "failureNode": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV",
+    "failureSibling": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV[2]",
+    "failureElementRect": "Node 1: [ minX: 2 maxX: 318 minY: 1355.21875 maxY: 1532.21875 ] Node 2: [ minX: 0 maxX: 320 minY: 1529.21875 maxY: 1653.21875 ]",
+    "localizedProperty": [
+      {
+        "margin-bottom": "25px",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/PepFeed/snapshots/FID-17-element-collision-320-479-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/PepFeed/snapshots/FID-17-element-collision-320-479-capture-480-FP.png"
+  },
+  {
+    "subject": "PepFeed",
+    "type": "Element Collision",
+    "viewportRange": "415-479",
+    "failureNode": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV[2]",
+    "failureSibling": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV[3]",
+    "failureElementRect": "Node 1: [ minX: 2 maxX: 318 minY: 1355.21875 maxY: 1532.21875 ] Node 2: [ minX: 0 maxX: 320 minY: 1529.21875 maxY: 1653.21875 ]",
+    "localizedProperty": [
+      {
+        "margin-bottom": "25px",
+        "element": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV[2]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/PepFeed/snapshots/FID-18-element-collision-415-479-capture-415-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/PepFeed/snapshots/FID-18-element-collision-415-479-capture-480-FP.png"
+  },
+  {
+    "subject": "PDFescape",
+    "type": "Element Protrusion",
+    "viewportRange": "842-959",
+    "failureNode": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]/DIV",
+    "failureParent": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]",
+    "failureElementRect": "Left-P: 0 Right-P: 38 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "220px",
+        "element": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]/DIV"
+      },
+      {
+        "width": "220px",
+        "element": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]"
+      },
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/PDF Escape/snapshots/FID-3-element-protrusion-842-959-capture-842-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/PDF Escape/snapshots/FID-3-element-protrusion-842-959-capture-960-FP.png"
+  },
+  {
+    "subject": "PDFescape",
+    "type": "Viewport Protrusion",
+    "viewportRange": "768-841",
+    "failureNode": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]/DIV",
+    "failureParent": "/HTML/BODY",
+    "failureElementRect": "Left-P: 0 Right-P: 38 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "220px",
+        "element": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]/DIV"
+      },
+      {
+        "width": "220px",
+        "element": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]"
+      },
+      {
+        "float": "left",
+        "element": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/PDF Escape/snapshots/FID-2-viewport-protrusion-768-841-capture-768-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/PDF Escape/snapshots/FID-2-viewport-protrusion-768-841-capture-842-FP.png"
+  },
+  {
+    "subject": "Selenium",
+    "type": "Element Collision",
+    "viewportRange": "320-380",
+    "failureNode": "/HTML/BODY/DIV[2]/DIV/DIV[2]",
+    "failureSibling": "/HTML/BODY/DIV[2]/DIV/DIV/A/IMG",
+    "failureElementRect": "Node 1: [ minX: 164 maxX: 284 minY: 3330.984375 maxY: 3408.40625 ] Node 2: [ minX: 44 maxX: 168 minY: 3338.984375 maxY: 3400.40625 ]",
+    "localizedProperty": [
+      {
+        "width": "188px",
+        "element": "/HTML/BODY/DIV[2]/DIV/DIV[2]"
+      },
+      {
+        "width": "188px",
+        "element": "/HTML/BODY/DIV[2]/DIV/DIV/A/IMG"
+      },
+      {
+        "padding-right": "10px",
+        "element": "/HTML/BODY/DIV[2]/DIV/DIV[2]"
+      },
+      {
+        "padding-left": "10px",
+        "element": "/HTML/BODY/DIV[2]/DIV/DIV/A/IMG"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Selenium/snapshots/FID-2-element-collision-320-380-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-2-element-collision-320-380-capture-381-FP.png"
+  },
+  {
+    "subject": "Selenium",
+    "type": "Element Collision",
+    "viewportRange": "320-380",
+    "failureNode": "/HTML/BODY/DIV[2]/DIV/DIV[10]",
+    "failureSibling": "/HTML/BODY/DIV[2]/DIV/DIV[9]/A/IMG",
+    "failureElementRect": "Node 1: [ minX: 164 maxX: 284 minY: 3733.484375 maxY: 3799 ] Node 2: [ minX: 44 maxX: 168 minY: 3743.765625 maxY: 3788.71875 ]",
+    "localizedProperty": [
+      {
+        "width": "188px",
+        "element": "/HTML/BODY/DIV[2]/DIV/DIV[10]"
+      },
+      {
+        "width": "188px",
+        "element": "/HTML/BODY/DIV[2]/DIV/DIV[9]/A/IMG"
+      },
+      {
+        "padding-right": "10px",
+        "element": "/HTML/BODY/DIV[2]/DIV/DIV[10]"
+      },
+      {
+        "padding-left": "10px",
+        "element": "/HTML/BODY/DIV[2]/DIV/DIV[9]/A/IMG"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Selenium/snapshots/FID-7-element-collision-320-380-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-7-element-collision-320-380-capture-381-FP.png"
+  },
+  {
+    "subject": "Selenium",
+    "type": "Element Collision",
+    "viewportRange": "320-380",
+    "failureNode": "/HTML/BODY/DIV[3]/DIV/DIV[2]",
+    "failureSibling": "/HTML/BODY/DIV[3]/DIV/DIV/A/IMG",
+    "failureElementRect": "Node 1: [ minX: 164 maxX: 284 minY: 4033 maxY: 4109.265625 ] Node 2: [ minX: 164 maxX: 284 minY: 4033 maxY: 4109.265625 ]",
+    "localizedProperty": [
+      {
+        "width": "188px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]"
+      },
+      {
+        "width": "188px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV/A/IMG"
+      },
+      {
+        "padding-right": "10px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV[2]"
+      },
+      {
+        "padding-left": "10px",
+        "element": "/HTML/BODY/DIV[3]/DIV/DIV/A/IMG"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Selenium/snapshots/FID-8-element-collision-320-380-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-8-element-collision-320-380-capture-381-FP.png"
+  },
+  {
+    "subject": "Selenium",
+    "type": "Element Protrusion",
+    "viewportRange": "320-324",
+    "failureNode": "/HTML/BODY/DIV[4]/DIV[4]/A",
+    "failureParent": "/HTML/BODY/DIV[4]",
+    "failureElementRect": "Left-P: 6 Right-P: 0 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "display": "flex",
+        "element": "/HTML/BODY/DIV[4]"
+      },
+      {
+        "width": "200px",
+        "element": "/HTML/BODY/DIV[4]/DIV[4]/A/DIV"
+      },
+      {
+        "width": "100%",
+        "element": "/HTML/BODY/DIV[4]/DIV[4]"
+      },
+      {
+        "margin-right": "60px",
+        "element": "/HTML/BODY/DIV[4]/DIV[4]/A/DIV"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Selenium/snapshots/FID-1-element-protrusion-320-324-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-1-element-protrusion-320-324-capture-325-FP.png"
+  },
+  {
+    "subject": "Selenium",
+    "type": "Element Protrusion",
+    "viewportRange": "320-331",
+    "failureNode": "/HTML/BODY/DIV[6]/DIV",
+    "failureParent": "/HTML/BODY/DIV[6]",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 12.09375",
+    "localizedProperty": [
+      {
+        "padding-top": "60px",
+        "element": "/HTML/BODY/DIV[6]"
+      },
+      {
+        "padding-bottom": "60px",
+        "element": "/HTML/BODY/DIV[6]"
+      },
+      {
+        "font-size": "32px",
+        "element": "/HTML/BODY/DIV[6]/DIV/H2"
+      },
+      {
+        "font-size": "22px",
+        "element": "/HTML/BODY/DIV[6]/DIV/H3"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Selenium/snapshots/FID-6-element-protrusion-320-331-capture-320-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-6-element-protrusion-320-331-capture-332-FP.png"
+  },
+  {
+    "subject": "Selenium",
+    "type": "Wrapping Elements",
+    "viewportRange": "901-941",
+    "failureNode": "/HTML/BODY/HEADER/NAV/DIV[2]",
+    "failureElementRect": "",
+    "localizedProperty": [
+      {
+        "width": "150px",
+        "element": "/HTML/BODY/HEADER/NAV/DIV[2]/DIV"
+      },
+      {
+        "margin-right": "15px",
+        "element": "/HTML/BODY/HEADER/NAV/DIV[2]"
+      },
+      {
+        "margin-right": "15px",
+        "element": "/HTML/BODY/HEADER/NAV/A[5]"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/Selenium/snapshots/FID-10-wrapping-901-941-capture-901-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-10-wrapping-901-941-capture-942-FP.png"
+  },
+  {
+    "subject": "WillMyPhoneWork",
+    "type": "Element Protrusion",
+    "viewportRange": "992-1200",
+    "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[1]/BUTTON",
+    "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[1]",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "232px",
+        "element": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[1]/BUTTON"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-1-element-protrusion-1100-1199-capture-1100-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-1-element-protrusion-1100-1199-capture-1200-FP.png"
+  },
+  {
+    "subject": "WillMyPhoneWork",
+    "type": "Element Protrusion",
+    "viewportRange": "992-1200",
+    "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV/BUTTON",
+    "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "232px",
+        "element": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV/BUTTON"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-2-element-protrusion-1100-1199-capture-1100-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-2-element-protrusion-1100-1199-capture-1200-FP.png"
+  },
+  {
+    "subject": "WillMyPhoneWork",
+    "type": "Element Protrusion",
+    "viewportRange": "992-1200",
+    "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[3]/BUTTON",
+    "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[3]",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "232px",
+        "element": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[3]/BUTTON"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-3-element-protrusion-1100-1199-capture-1100-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-3-element-protrusion-1100-1199-capture-1200-FP.png"
+  },
+  {
+    "subject": "WillMyPhoneWork",
+    "type": "Element Protrusion",
+    "viewportRange": "992-1200",
+    "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[3]/BUTTON",
+    "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[3]",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "232px",
+        "element": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[3]/BUTTON"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-4-element-protrusion-1100-1199-capture-1100-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-4-element-protrusion-1100-1199-capture-1200-FP.png"
+  },
+  {
+    "subject": "WillMyPhoneWork",
+    "type": "Element Protrusion",
+    "viewportRange": "992-1200",
+    "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[2]/BUTTON",
+    "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "232px",
+        "element": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[2]/BUTTON"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-5-element-protrusion-1100-1199-capture-1100-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-5-element-protrusion-1100-1199-capture-1200-FP.png"
+  },
+  {
+    "subject": "WillMyPhoneWork",
+    "type": "Element Protrusion",
+    "viewportRange": "992-1200",
+    "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[2]/BUTTON",
+    "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[2]",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "localizedProperty": [
+      {
+        "width": "232px",
+        "element": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[2]/BUTTON"
+      }
+    ],
+    "screenshotFailure": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-6-element-protrusion-1100-1199-capture-1100-TP.png",
+    "screenshotLowerBound": "",
+    "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-6-element-protrusion-1100-1199-capture-1200-FP.png"
+  }
+]
