@@ -5,6 +5,8 @@ import { StringOutputParser } from "@langchain/core/output_parsers";
 import retrieve from "./retrieval.js";
 import encodeImage from "./sendImage.js";
 import readJson from "./readJson.js";
+import fs from 'fs/promises';
+import path from 'path';
 
 const DEFINITIONS = {
     "Element-Collision": "Elements collide into one another due to insufficient accommodation space when viewport width reduces.",
@@ -33,10 +35,11 @@ const model = new ChatMistralAI({
 });
 
 async function main() {
+    const failureData = null;
     const jsonData = readJson();
     if (Array.isArray(jsonData)) {
         jsonData.forEach((item) => {
-            const failureData = {
+            failureData = {
                 failureType: item['type'],
                 failureRange: item['viewportRange'],
                 failureNode: item['failureNode'],
@@ -48,13 +51,14 @@ async function main() {
             }
         })
     }
+    createPrompt(failureData);
 }
 
-async function createPrompt() {
+async function createPrompt(failureData) {
     console.log("Retrieve first============\n")
     const retrieveDocs = await retrieve(
-        COLLECTIONS[this.failureType],
-        this.faultyProperties.map(element => element["property"])
+        COLLECTIONS[failureData.failureType],
+        failureData.faultyProperties.map(element => element["property"])
     );
 
     console.log("\n===Sending this to Mistral Model===\n");
@@ -73,7 +77,7 @@ async function createPrompt() {
                 Failure Viewport range: {viewport_range},
                 Localized properties which are causing the failure (ranked from most to least problematic): {localized_property},
                 screenshot of the failure region: {screenshot_failure},
-                screenshot of the lower and upper bound layouts where there is no failure: {screenshot_lower_bound}, {screenshot_upper_bound},
+                screenshot of the lower and upper bound layouts where there is no failure: {screenshot_upper_bound},
                 5 relevant stack overflow threads containing answers and comments: {relevant_stack_overflow_threads}.
                 Only return the repaired values of the localized properties, do not include details. Ensure to keep the web layout responsive (DO NOT USE px, try to use rem, em, or %) and maintain the original design.
                 Let's think step by step.`,
@@ -83,26 +87,32 @@ async function createPrompt() {
     const chain = promptTemplate.pipe(model).pipe(new StringOutputParser());
 
     const response = await chain.invoke({
-        RLF_type: this.failureType,
-        Type_definition: DEFINITIONS[this.failureType],
-        Failure_element_XPaths: `Node 1:${this.failureNode}, Node 2: ${this.failureParent ? this.failureParent : ""}, ${this.failureSibling ? this.failureSibling : ""}`,
-        Failure_element_rect: `Node 1:${this.failureNodeRect}, Node 2: ${this.failureParentRect ? this.failureParentRect : ""}, ${this.failureSibling ? this.failureSiblingRect : ""}`,
-        viewport_range: this.failureRange,
-        localized_property: this.faultyProperties,
+        RLF_type: failureData.failureType,
+        Type_definition: DEFINITIONS[failureData.failureType],
+        Failure_element_XPaths: `Node 1:${failureData.failureNode}, Node 2: ${failureData.failureParent ? failureData.failureParent : ""}`,
+        Failure_element_rect: `Node 1:${failureData.failureNodeRect}`,
+        viewport_range: failureData.failureRange,
+        localized_property: failureData.faultyProperties,
         screenshot_failure: encodeImage(
-        this.failureMinScreenshot
+        failureData.failureMinScreenshot
         ),
-        screenshot_lower_bound: null,
         screenshot_upper_bound: encodeImage(
-        this.failureOuterUpperSS
+        failureData.failureOuterUpperSS
         ),
         relevant_stack_overflow_threads: JSON.stringify(retrieveDocs),
     });
 
-    console.log(response);
-    utils.printToFile(this.repairFile, response);
-    let text = "======================\n";
-    utils.printToFile(this.repairFile, text);
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const fileName = `repair_${failureData.failureType}_${timestamp}.txt`;
+    const filePath = path.join(process.cwd(), 'repairs', fileName);
+    
+    // Make sure the directory exists
+    await fs.mkdir(path.join(process.cwd(), 'repairs'), { recursive: true });
+    
+    await fs.writeFile(filePath, response);
+    await fs.appendFile(filePath, "\n======================\n");
+    
+    console.log(`Response saved to: ${filePath}`);
 }
 
 main()
