@@ -24,17 +24,12 @@ let wrapping_collection = "SO_wrapping";
 
 async function main() {
   try {
-    const collision_threads = JSON.parse(
-      fs.readFileSync("SODiscussions/stackoverflow_collision_threads.json", "utf-8")
-    );
-    const protrusion_threads = JSON.parse(fs.readFileSync('SODiscussions/stackoverflow_protrusion_threads.json', 'utf-8'));
-    const viewport_protrusion_threads = JSON.parse(fs.readFileSync('SODiscussions/stackoverflow_protrusion_threads.json', 'utf-8'));
-    const wrapping_threads = JSON.parse(fs.readFileSync('SODiscussions/stackoverflow_wrapping_threads.json', 'utf-8'));
+    const collision_threads = JSON.parse(fs.readFileSync("stackoverflow_collision_threads.json", "utf-8"));
+    const protrusion_threads = JSON.parse(fs.readFileSync('stackoverflow_protrusion_threads.json', 'utf-8'));
+    const viewport_protrusion_threads = JSON.parse(fs.readFileSync('stackoverflow_protrusion_threads.json', 'utf-8'));
+    const wrapping_threads = JSON.parse(fs.readFileSync('stackoverflow_wrapping_threads.json', 'utf-8'));
 
-    let collision_db = await create_knowledge_base(
-      collision_threads,
-      collision_collection
-    );
+    let collision_db = await create_knowledge_base(collision_threads,collision_collection);
     let protrusion_db = await create_knowledge_base(protrusion_threads, protrusion_collection);
     let viewport_protrusion_db = await create_knowledge_base(viewport_protrusion_threads, protrusion_collection);
     let wrapping_db = await create_knowledge_base(wrapping_threads, wrapping_collection);

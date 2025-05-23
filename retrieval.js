@@ -7,7 +7,7 @@ import { Document } from 'langchain/document';
 import 'dotenv/config';
 
 // Initialize environment
-const apiKey = process.env.MISTRL_API_KEY || 'your_api_key';
+const apiKey = process.env.MISTRAL_API_KEY || 'your_api_key';
 
 const embeddings = new MistralAIEmbeddings({
     apiKey: apiKey,

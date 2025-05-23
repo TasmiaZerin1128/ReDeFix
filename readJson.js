@@ -1,20 +1,13 @@
-import fs from 'fs';
+import fs from 'fs/promises';
 
-function readJson() {
-    fs.readFile('rlf_full_list.json', 'utf8', (err, data) => {
-        if (err) {
-            console.error("Error reading file:", err);
-            return;
-        }
-
-        try {
-            const json = JSON.parse(data);
-            return json
-        } catch (parseError) {
-            console.error("Failed to parse JSON:", parseError);
-        }
-    });
+async function readJson() {
+  try {
+    const data = await fs.readFile('rlf_full_list.json', 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    console.error("Error reading or parsing file:", error);
+    return null;
+  }
 }
 
 export default readJson;
-

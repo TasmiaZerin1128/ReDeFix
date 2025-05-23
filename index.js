@@ -20,9 +20,9 @@ let protrusion_collection = "SO_protrusion";
 let wrapping_collection = "SO_wrapping";
 
 const COLLECTIONS = {
-    "Element-Collision": collision_collection,
-    "Element-Protrusion": protrusion_collection,
-    "Viewport-Protrusion": protrusion_collection,
+    "Element Collision": collision_collection,
+    "Element Protrusion": protrusion_collection,
+    "Viewport Protrusion": protrusion_collection,
     "Wrapping": wrapping_collection
 }
 
@@ -35,10 +35,10 @@ const model = new ChatMistralAI({
 });
 
 async function main() {
-    const failureData = null;
-    const jsonData = readJson();
+    let failureData = null;
+    const jsonData = await readJson();
     if (Array.isArray(jsonData)) {
-        jsonData.forEach((item) => {
+        for (const item of jsonData) {
             failureData = {
                 failureType: item['type'],
                 failureRange: item['viewportRange'],
@@ -48,17 +48,19 @@ async function main() {
                 failureMinScreenshot: item['screenshotFailure'],
                 failureOuterUpperSS: item['screenshotUpperBound'],
                 faultyProperties: item['localizedProperty']
-            }
-        })
+            };
+            await createPrompt(failureData);
+        }
     }
-    createPrompt(failureData);
 }
 
 async function createPrompt(failureData) {
     console.log("Retrieve first============\n")
+    console.log(failureData.failureType);
+    const propertyNames = [...new Set(failureData.faultyProperties.map(element => Object.keys(element)[0]))];
     const retrieveDocs = await retrieve(
         COLLECTIONS[failureData.failureType],
-        failureData.faultyProperties.map(element => element["property"])
+        propertyNames
     );
 
     console.log("\n===Sending this to Mistral Model===\n");
@@ -73,13 +75,13 @@ async function createPrompt(failureData) {
                 RLF Type: {RLF_type},
                 Type Definition: {Type_definition},
                 Failure element XPaths: {Failure_element_XPaths},
-                Failure element rectangle coordinates: {Failure_element_rect},
+                Failure segment coordinates: {Failure_element_rect},
                 Failure Viewport range: {viewport_range},
                 Localized properties which are causing the failure (ranked from most to least problematic): {localized_property},
                 screenshot of the failure region: {screenshot_failure},
                 screenshot of the lower and upper bound layouts where there is no failure: {screenshot_upper_bound},
-                5 relevant stack overflow threads containing answers and comments: {relevant_stack_overflow_threads}.
-                Only return the repaired values of the localized properties, do not include details. Ensure to keep the web layout responsive (DO NOT USE px, try to use rem, em, or %) and maintain the original design.
+                relevant stack overflow threads containing answers and comments: {relevant_stack_overflow_threads}.
+                Only repair the values of given localized properties, do not include details. Ensure to keep the web layout responsive (DO NOT USE px, try to use rem, em, or %) and maintain the original design.
                 Let's think step by step.`,
         ],
     ]);
@@ -88,17 +90,17 @@ async function createPrompt(failureData) {
 
     const response = await chain.invoke({
         RLF_type: failureData.failureType,
-        Type_definition: DEFINITIONS[failureData.failureType],
+        Type_definition: DEFINITIONS[failureData['failureType']],
         Failure_element_XPaths: `Node 1:${failureData.failureNode}, Node 2: ${failureData.failureParent ? failureData.failureParent : ""}`,
         Failure_element_rect: `Node 1:${failureData.failureNodeRect}`,
         viewport_range: failureData.failureRange,
         localized_property: failureData.faultyProperties,
-        screenshot_failure: encodeImage(
+        screenshot_failure: failureData.failureMinScreenshot ? encodeImage(
         failureData.failureMinScreenshot
-        ),
-        screenshot_upper_bound: encodeImage(
+        ) : null,
+        screenshot_upper_bound: failureData.failureOuterUpperSS ? encodeImage(
         failureData.failureOuterUpperSS
-        ),
+        ) : null,
         relevant_stack_overflow_threads: JSON.stringify(retrieveDocs),
     });
 
