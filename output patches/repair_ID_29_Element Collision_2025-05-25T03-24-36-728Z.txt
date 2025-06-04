@@ -1,0 +1,14 @@
+```css
+/* Original CSS */
+HTML BODY DIV[2] DIV[2] DIV DIV[2] DIV DIV[3] DIV DIV[2] {
+    margin-bottom: 25px;
+}
+
+/* Repair Patch */
+@media (min-width: 415px) and (max-width: 479px) {
+    HTML BODY DIV[2] DIV[2] DIV DIV[2] DIV DIV[3] DIV DIV[2] {
+        margin-bottom: 0;
+    }
+}
+```
+======================

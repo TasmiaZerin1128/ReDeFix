@@ -1,0 +1,22 @@
+```css
+/* Remove fixed width from the problematic elements */
+/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]/DIV {
+    width: auto;
+}
+
+/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4] {
+    width: auto;
+}
+
+/* Remove float property from the problematic element */
+/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4] {
+    float: none;
+}
+
+/* Ensure the container can handle the responsive layout */
+/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2] {
+    display: flex;
+    flex-wrap: wrap;
+}
+```
+======================

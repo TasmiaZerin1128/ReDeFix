@@ -1,0 +1,42 @@
+```css
+.work .ic .I1 {
+  float: none;
+  display: inline-block;
+}
+
+.work .ic .ih {
+  float: none;
+  display: inline-block;
+}
+
+.work .ic .ih {
+  min-height: auto;
+}
+
+.work .ic .ih {
+  width: auto;
+}
+
+.work .ic .ih {
+  margin-left: 0;
+}
+```
+
+```html
+<div class="ih">
+    <img src="img/p1.png" id="P1" />
+    <div id="P1A" class="works-text">
+        <span class="h1">3-2-1 Bread</span>
+        <p>3-2-1 Bread is a national relief program which fights hunger and poverty through generosity and love.</p>
+        <a href="piece1/index.html" target="_blank" class="b1">Go</a>
+    </div>
+</div>
+```
+
+```javascript
+$('.ih').on(TouchMouseEvent.DOWN, function () {
+    $(this).find('img').fadeToggle();
+    $(this).find('.works-text').fadeToggle();
+});
+```
+======================

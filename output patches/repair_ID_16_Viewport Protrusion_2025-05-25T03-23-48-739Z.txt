@@ -1,0 +1,24 @@
+```css
+/* Remove the float property from the problematic element */
+HTML BODY DIV DIV DIV DIV A {
+    float: none;
+}
+
+/* Adjust the font-size to be more responsive */
+@media (max-width: 767px) {
+    HTML BODY DIV DIV DIV DIV A {
+        font-size: 10px;
+    }
+}
+
+/* Remove the margin-right to prevent protrusion */
+HTML BODY DIV DIV DIV DIV A {
+    margin-right: 0;
+}
+
+/* Remove the padding-right to prevent protrusion */
+HTML BODY DIV DIV DIV DIV A {
+    padding-right: 0;
+}
+```
+======================

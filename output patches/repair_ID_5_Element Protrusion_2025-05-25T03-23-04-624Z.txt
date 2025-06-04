@@ -1,0 +1,13 @@
+```css
+/* Remove the float property from the problematic element */
+/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV {
+    float: none;
+}
+
+/* Make the width responsive */
+/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV {
+    width: 100%;
+    max-width: 640px;
+}
+```
+======================

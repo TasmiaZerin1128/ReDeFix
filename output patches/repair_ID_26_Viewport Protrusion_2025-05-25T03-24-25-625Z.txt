@@ -1,0 +1,13 @@
+```diff
+/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] {
+-   float: left;
+-   margin-right: -25px;
+-   margin-left: 25px;
+-   width: 25%;
++   float: none;
++   margin-right: 0;
++   margin-left: 0;
++   width: 100%;
+}
+```
+======================

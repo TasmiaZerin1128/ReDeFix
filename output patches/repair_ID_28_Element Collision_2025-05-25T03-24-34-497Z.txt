@@ -1,0 +1,8 @@
+```css
+@media (max-width: 479px) {
+    /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV {
+        margin-bottom: 10px;
+    }
+}
+```
+======================

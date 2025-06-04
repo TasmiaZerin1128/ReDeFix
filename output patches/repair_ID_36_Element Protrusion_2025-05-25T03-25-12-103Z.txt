@@ -1,0 +1,17 @@
+```css
+/* Adjust padding for the container */
+div:nth-of-type(6) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Adjust font sizes for better responsiveness */
+div:nth-of-type(6) div h2 {
+    font-size: 24px;
+}
+
+div:nth-of-type(6) div h3 {
+    font-size: 18px;
+}
+```
+======================

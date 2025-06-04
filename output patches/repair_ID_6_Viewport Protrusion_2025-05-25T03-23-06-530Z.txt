@@ -1,0 +1,19 @@
+```css
+/* Remove the float property */
+div.header div div div {
+    float: none;
+}
+
+/* Make the width responsive */
+div.header div div div {
+    width: 100%;
+    max-width: 640px;
+}
+
+/* Ensure the body width does not exceed the viewport */
+body {
+    width: 100%;
+    max-width: 100%;
+}
+```
+======================

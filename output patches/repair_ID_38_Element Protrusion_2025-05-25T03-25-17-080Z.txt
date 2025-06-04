@@ -1,0 +1,17 @@
+```css
+/* Add this CSS to your stylesheet */
+@media (min-width: 992px) and (max-width: 1200px) {
+    /* Target the specific button causing the protrusion */
+    /HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[1]/BUTTON {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Ensure the parent container can shrink appropriately */
+    /HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[1] {
+        min-width: 0;
+        width: 100%;
+    }
+}
+```
+======================

@@ -1,0 +1,13 @@
+```css
+/* Remove the max-width property from the DIV element */
+div:nth-of-type(2) {
+    max-width: none;
+}
+
+/* Adjust the font-size of the H2 elements using the min() function */
+div:nth-of-type(2) h2:nth-of-type(2),
+div:nth-of-type(2) h2:nth-of-type(3) {
+    font-size: min(24px, 10vw);
+}
+```
+======================

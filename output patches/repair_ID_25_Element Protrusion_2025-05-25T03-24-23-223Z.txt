@@ -1,0 +1,22 @@
+```css
+/* Remove the float property from the problematic element */
+HTML BODY DIV[2] DIV[2] DIV DIV[2] DIV DIV[2] DIV DIV DIV[2] DIV[3] {
+    float: none;
+}
+
+/* Adjust the margin-top to ensure it doesn't protrude */
+HTML BODY DIV[2] DIV[2] DIV DIV[2] DIV DIV[2] DIV DIV DIV[2] DIV[3] {
+    margin-top: 0;
+}
+
+/* Ensure the padding-top does not cause protrusion */
+HTML BODY DIV[2] DIV[2] DIV DIV[2] DIV DIV[2] DIV DIV DIV[2] DIV[3] SPAN {
+    padding-top: 0;
+}
+
+/* Adjust the font-size to ensure it fits within the container */
+HTML BODY DIV[2] DIV[2] DIV DIV[2] DIV DIV[2] DIV DIV DIV[2] DIV[3] SPAN {
+    font-size: 1rem;
+}
+```
+======================

@@ -1,0 +1,16 @@
+```css
+@media screen and (max-width: 380px) {
+    /HTML/BODY/DIV[3]/DIV/DIV[2] {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /HTML/BODY/DIV[3]/DIV/DIV[2]/A/IMG {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+```
+======================

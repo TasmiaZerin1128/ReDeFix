@@ -1,0 +1,33 @@
+```css
+/* Add this to your CSS file */
+html, body {
+    font-size: 100%; /* Reset font-size to 100% to avoid inheritance issues */
+}
+
+body {
+    font-size: 14px; /* Set the desired font-size for the body */
+}
+
+div div div[2] div div div[2] {
+    margin-left: 0; /* Reset margin-left to 0 to avoid protrusion */
+    margin-right: 0; /* Reset margin-right to 0 to avoid protrusion */
+}
+```
+
+```html
+<!-- Ensure your HTML structure is correct and consistent -->
+<div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <!-- Your content here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+======================

@@ -1,0 +1,11 @@
+```css
+/* Add this CSS to your stylesheet */
+
+@media screen and (max-width: 399px) {
+    /HTML/BODY/DIV/HEADER/DIV/FORM/INPUT,
+    /HTML/BODY/DIV/HEADER/DIV/FORM/BUTTON {
+        font-size: 16px; /* Adjust the font-size to a more appropriate value */
+    }
+}
+```
+======================

@@ -1,0 +1,11 @@
+```css
+/* Target the input element causing the protrusion */
+HTML BODY DIV[4] DIV DIV[2] DIV DIV[2] FORM INPUT {
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+```
+======================

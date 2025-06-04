@@ -34,16 +34,16 @@ async function retrieve(collectionDBName, cssProperties) {
       include: ["documents", "metadatas"],
     });
 
-    const docs = texts.map(
+    const all_docs = texts.map(
       (txt, i) => new Document({ pageContent: txt, metadata: metadatas[i] })
     );
 
-    console.log("Number of documents in collection:", docs.length);
+    console.log("Number of documents in collection:", all_docs.length);
 
     const k_retriever = 5;
 
     const bm25Retriever = new BM25Retriever({
-      docs: docs.filter((d) => d.metadata.type === "question"),
+      docs: all_docs.filter((d) => d.metadata.type === "question"),
       k: k_retriever,
     });
 
@@ -54,27 +54,36 @@ async function retrieve(collectionDBName, cssProperties) {
 
     const ensembleRetriever = new EnsembleRetriever({
       retrievers: [bm25Retriever, vectorstoreRetriever],
-      weights: [0.6, 0.4],
+      weights: [0.8, 0.2],
     });
 
+    console.log(cssProperties.join(" "));
     const questions = await ensembleRetriever.invoke(cssProperties.join(" "));
     console.log(questions.length + " Questions retrieved");
 
     for (const question of questions) {
       const questionId = question.metadata.question_id;
-      const answers = docs.filter(
+      const answers = all_docs.filter(
         (d) =>
           d.metadata.type === "answer" && d.metadata.question_id === questionId
       );
       question.answers = answers;
-      const comments = docs.filter(
+      const comments = all_docs.filter(
         (d) =>
           d.metadata.type === "comment" && d.metadata.question_id === questionId
       );
       question.comments = comments;
     }
 
-    return questions;
+    let SO_discussions_formatted = questions.map((q) => {
+      return {
+        question: q.pageContent,
+        answers: q.answers.map((a) => a.pageContent),
+        comments: q.comments.map((c) => c.pageContent),
+      }
+    })
+
+    return SO_discussions_formatted;
   } catch (error) {
     console.error("Error during retrieval:", error);
   }

@@ -1,0 +1,17 @@
+```css
+/* Adjust the width of the inner div using calc to account for the margin */
+/HTML/BODY/HEADER/NAV/DIV[2]/DIV {
+    width: calc(150px - 15px);
+}
+
+/* Remove the margin-right from the parent div */
+/HTML/BODY/HEADER/NAV/DIV[2] {
+    margin-right: 0;
+}
+
+/* Adjust the margin-right of the anchor tag */
+/HTML/BODY/HEADER/NAV/A[5] {
+    margin-right: 0;
+}
+```
+======================

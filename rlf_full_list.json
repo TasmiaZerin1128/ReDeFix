@@ -1,11 +1,12 @@
 [
   {
+    "id": 1,
     "subject": "3MinuteJournal",
     "type": "Element Protrusion",
     "viewportRange": "992-1199",
     "failureNode": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]",
     "failureParent": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV",
-    "failureElementRect": "Left-P: 0 Right-P: 13.03125 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 13.03125px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "position": "absolute",
@@ -33,12 +34,13 @@
     "screenshotUpperBound": ""
   },
   {
+    "id": 2,
     "subject": "3MinuteJournal",
     "type": "Element Protrusion",
     "viewportRange": "992-1199",
     "failureNode": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2]",
     "failureParent": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV",
-    "failureElementRect": "Left-P: 0 Right-P: 100 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 100px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "position": "absolute",
@@ -54,12 +56,13 @@
     "screenshotUpperBound": ""
   },
   {
+    "id": 3,
     "subject": "3MinuteJournal",
     "type": "Element Protrusion",
     "viewportRange": "1138-1199",
     "failureNode": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS",
     "failureParent": "/HTML/BODY/DIV[3]",
-    "failureElementRect": "Left-P: 0 Right-P: 85 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 85px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "position": "absolute",
@@ -79,12 +82,13 @@
     "screenshotUpperBound": ""
   },
   {
+    "id": 4,
     "subject": "3MinuteJournal",
     "type": "Viewport Protrusion",
     "viewportRange": "992-1137",
     "failureNode": "/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS",
     "failureParent": "/HTML/BODY",
-    "failureElementRect": "Left-P: 0 Right-P: 74 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 74px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "position": "absolute",
@@ -104,12 +108,13 @@
     "screenshotUpperBound": ""
   },
   {
+    "id": 5,
     "subject": "Ardour",
     "type": "Element Protrusion",
     "viewportRange": "659-678",
     "failureNode": "/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV",
     "failureParent": "/HTML/BODY/DIV[2]",
-    "failureElementRect": "Left-P: 0 Right-P: 2 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 2px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "float": "left",
@@ -129,12 +134,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Ardour/snapshots/FID-1-viewport-protrusion-350-658-capture-659-FP.png"
   },
   {
+    "id": 6,
     "subject": "Ardour",
     "type": "Viewport Protrusion",
     "viewportRange": "350-658",
     "failureNode": "/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV",
     "failureParent": "/HTML/BODY",
-    "failureElementRect": "Left-P: 0 Right-P: 310 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 310px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "float": "left",
@@ -154,12 +160,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Ardour/snapshots/FID-2-element-protrusion-659-678-capture-679-FP.png"
   },
   {
+    "id": 7,
     "subject": "Bower",
     "type": "Element Protrusion",
     "viewportRange": "698-707",
     "failureNode": "/HTML/BODY/HEADER/DIV/DIV/H1",
     "failureParent": "/HTML/BODY/HEADER/DIV/DIV",
-    "failureElementRect": "Left-P: 0 Right-P: 11.46875 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 11.4687px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "padding-left": "360px",
@@ -183,12 +190,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Bower/snapshots/FID-3-element-protrusion-698-707-capture-708-FP.png"
   },
   {
+    "id": 8,
     "subject": "Bower",
     "type": "Viewport Protrusion",
     "viewportRange": "681-697",
     "failureNode": "/HTML/BODY/HEADER/DIV/DIV/H1",
     "failureParent": "/HTML/BODY",
-    "failureElementRect": "Left-P: 0 Right-P: 17.46875 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 17.46875px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "font-size": "115px",
@@ -204,6 +212,7 @@
     "screenshotUpperBound": "results/Outputs with Localization/Bower/snapshots/FID-2-viewport-protrusion-681-697-capture-698-FP.png"
   },
   {
+    "id": 9,
     "subject": "Bower",
     "type": "Element Collision",
     "viewportRange": "320-680",
@@ -233,12 +242,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Bower/snapshots/FID-1-element-collision-320-680-capture-681-FP.png"
   },
   {
+    "id": 10,
     "subject": "BugMeNot",
     "type": "Element Protrusion",
     "viewportRange": "320-671",
     "failureNode": "/HTML/BODY/DIV/HEADER/DIV/FORM",
     "failureParent": "/HTML/BODY/DIV/HEADER",
-    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 73",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 73px",
     "localizedProperty": [
       {
         "float": "right",
@@ -262,10 +272,11 @@
     "screenshotUpperBound": "results/Outputs with Localization/BugMeNot/snapshots/FID-1-element-protrusion-650-736-capture-737-FP.png"
   },
   {
+    "id": 11,
     "subject": "BugMeNot",
     "type": "Wrapping Elements",
-    "viewportRange": "320-399",
-    "failureNode": "/HTML/BODY/DIV/DIV/HEADER/DIV/FORM/BUTTON",
+    "viewportRange": "320-395",
+    "failureNode": "/HTML/BODY/DIV/HEADER/DIV/FORM/BUTTON",
     "failureElementRect": "",
     "localizedProperty": [
       {
@@ -282,9 +293,10 @@
     "screenshotUpperBound": ""
   },
   {
+    "id": 12,
     "subject": "BugMeNot",
     "type": "Wrapping Elements",
-    "viewportRange": "324-338",
+    "viewportRange": "324-399",
     "failureNode": "/HTML/BODY/DIV/DIV/FORM/BUTTON",
     "failureElementRect": "",
     "localizedProperty": [
@@ -302,12 +314,13 @@
     "screenshotUpperBound": ""
   },
   {
+    "id": 13,
     "subject": "Django",
     "type": "Element Protrusion",
     "viewportRange": "320-357",
     "failureNode": "/HTML/BODY/DIV[5]/DIV[2]/DIV/DIV/A",
     "failureParent": "/HTML/BODY/DIV[5]/DIV[2]/DIV/DIV",
-    "failureElementRect": "Left-P: 0 Right-P: 13.40625 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 13.40625px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "109px",
@@ -323,12 +336,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Django/snapshots/FID-1-element-protrusion-320-357-capture-358-FP.png"
   },
   {
+    "id": 14,
     "subject": "Django",
     "type": "Element Protrusion",
     "viewportRange": "320-385",
     "failureNode": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT",
     "failureParent": "/HTML/BODY/DIV[4]/DIV/DIV[2]",
-    "failureElementRect": "Left-P: 0 Right-P: 3 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 3px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "83%",
@@ -352,12 +366,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Django/snapshots/FID-6-element-protrusion-320-385-capture-386-FP.png"
   },
   {
+    "id": 15,
     "subject": "Django",
     "type": "Element Protrusion",
     "viewportRange": "320-385",
     "failureNode": "/HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT",
     "failureParent": "/HTML/BODY/DIV[4]/DIV/DIV[2]",
-    "failureElementRect": "Left-P: 0 Right-P: 3 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 3px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "83%",
@@ -381,12 +396,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Django/snapshots/FID-8-element-protrusion-320-385-capture-386-FP.png"
   },
   {
+    "id": 16,
     "subject": "DjangoREST",
     "type": "Viewport Protrusion",
     "viewportRange": "767-767",
     "failureNode": "/HTML/BODY/DIV/DIV/DIV/DIV/A",
     "failureParent": "/HTML/BODY",
-    "failureElementRect": "Left-P: 0 Right-P: 10 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 10px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "float": "right",
@@ -410,15 +426,20 @@
     "screenshotUpperBound": "results/Outputs with Localization/DjangoRest/snapshots/FID-1-viewport-protrusion-767-767-capture-768-FP.png"
   },
   {
+    "id": 17,
     "subject": "HotelWiFiTest",
     "type": "Viewport Protrusion",
     "viewportRange": "415-766",
     "failureNode": "/HTML/BODY/DIV[2]",
     "failureParent": "/HTML/BODY",
-    "failureElementRect": "Left-P: 0 Right-P: 353 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 353px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "max-width": "768px",
+        "element": "/HTML/BODY/DIV[2]"
+      },
+      {
+        "min-width": "768px",
         "element": "/HTML/BODY/DIV[2]"
       },
       {
@@ -435,12 +456,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Hotel WiFi Test/snapshots/FID-6-viewport-protrusion-415-766-capture-767-FP.png"
   },
   {
+    "id": 18,
     "subject": "MantisBT",
     "type": "Element Protrusion",
     "viewportRange": "320-767",
     "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[4]",
     "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]",
-    "failureElementRect": "Left-P: 10 Right-P: 10 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 10px Right-P: 10px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "100%",
@@ -457,6 +479,10 @@
       {
         "margin-left": "-10px",
         "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[4]"
+      },
+      {
+        "margin-right": "-10px",
+        "element": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[4]"
       }
     ],
     "screenshotFailure": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-1-element-protrusion-320-767-capture-320-TP.png",
@@ -464,12 +490,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-1-element-protrusion-320-767-capture-768-FP.png"
   },
   {
+    "id": 19,
     "subject": "MantisBT",
     "type": "Element Protrusion",
     "viewportRange": "320-767",
     "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[3]",
     "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]",
-    "failureElementRect": "Left-P: 10 Right-P: 10 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 10px Right-P: 10px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "100%",
@@ -489,12 +516,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-2-element-protrusion-320-767-capture-768-FP.png"
   },
   {
+    "id": 20,
     "subject": "MantisBT",
     "type": "Element Protrusion",
     "viewportRange": "320-767",
     "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]",
     "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]",
-    "failureElementRect": "Left-P: 10 Right-P: 10 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 10px Right-P: 10px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "font-size": "14px",
@@ -510,12 +538,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-10-element-protrusion-320-767-capture-768-FP.png"
   },
   {
+    "id": 21,
     "subject": "MantisBT",
     "type": "Element Protrusion",
     "viewportRange": "746-767",
     "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV",
     "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV",
-    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 11",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 11px",
     "localizedProperty": [
       {
         "float": "left",
@@ -535,12 +564,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-8-element-protrusion-746-767-capture-768-FP.png"
   },
   {
+    "id": 22,
     "subject": "MantisBT",
     "type": "Element Protrusion",
     "viewportRange": "551-767",
     "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV",
     "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]",
-    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 11",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 11px",
     "localizedProperty": [
       {
         "float": "left",
@@ -560,12 +590,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-6-element-protrusion-551-767-capture-768-FP.png"
   },
   {
+    "id": 23,
     "subject": "MantisBT",
     "type": "Element Protrusion",
     "viewportRange": "670-767",
     "failureNode": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV",
     "failureParent": "/HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]",
-    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 11",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 11px",
     "localizedProperty": [
       {
         "float": "left",
@@ -585,12 +616,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Mantis/Mantis/run---1/snapshots/FID-9-element-protrusion-670-767-capture-768-FP.png"
   },
   {
+    "id": 24,
     "subject": "MidwayMeetup",
     "type": "Element Protrusion",
     "viewportRange": "768-1222",
     "failureNode": "/HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/DIV",
     "failureParent": "/HTML/BODY/DIV/DIV[2]/DIV/DIV",
-    "failureElementRect": "Left-P: 0 Right-P: 107.015625 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 107.015625px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "210px",
@@ -614,12 +646,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/MidwayMeetup/snapshots/FID-10-element-protrusion-768-1222-capture-1223-FP.png"
   },
   {
+    "id": 25,
     "subject": "PepFeed",
     "type": "Element Protrusion",
     "viewportRange": "697-768",
     "failureNode": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]",
     "failureParent": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV",
-    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 20 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 20px Bottom-P: 0",
     "localizedProperty": [
       {
         "float": "left",
@@ -643,12 +676,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/PepFeed/snapshots/FID-19-element-protrusion-697-768-capture-769-FP.png"
   },
   {
+    "id": 26,
     "subject": "PepFeed",
     "type": "Viewport Protrusion",
     "viewportRange": "1025-1071",
     "failureNode": "/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]",
     "failureParent": "/HTML/BODY",
-    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 20 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 20px Bottom-P: 0",
     "localizedProperty": [
       {
         "float": "left",
@@ -672,6 +706,7 @@
     "screenshotUpperBound": "results/Outputs with Localization/PepFeed/snapshots/FID-21-viewport-protrusion-1025-1071-capture-1072-FP.png"
   },
   {
+    "id": 27,
     "subject": "PepFeed",
     "type": "Element Collision",
     "viewportRange": "930-959",
@@ -701,6 +736,7 @@
     "screenshotUpperBound": "results/Outputs with Localization/PepFeed/snapshots/FID-20-element-collision-930-959-capture-960-FP.png"
   },
   {
+    "id": 28,
     "subject": "PepFeed",
     "type": "Element Collision",
     "viewportRange": "320-479",
@@ -718,6 +754,7 @@
     "screenshotUpperBound": "results/Outputs with Localization/PepFeed/snapshots/FID-17-element-collision-320-479-capture-480-FP.png"
   },
   {
+    "id": 29,
     "subject": "PepFeed",
     "type": "Element Collision",
     "viewportRange": "415-479",
@@ -735,12 +772,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/PepFeed/snapshots/FID-18-element-collision-415-479-capture-480-FP.png"
   },
   {
+    "id": 30,
     "subject": "PDFescape",
     "type": "Element Protrusion",
     "viewportRange": "842-959",
     "failureNode": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]/DIV",
     "failureParent": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]",
-    "failureElementRect": "Left-P: 0 Right-P: 38 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 38px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "220px",
@@ -760,12 +798,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/PDF Escape/snapshots/FID-3-element-protrusion-842-959-capture-960-FP.png"
   },
   {
+    "id": 31,
     "subject": "PDFescape",
     "type": "Viewport Protrusion",
     "viewportRange": "768-841",
     "failureNode": "/HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]/DIV",
     "failureParent": "/HTML/BODY",
-    "failureElementRect": "Left-P: 0 Right-P: 38 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 38px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "220px",
@@ -785,6 +824,7 @@
     "screenshotUpperBound": "results/Outputs with Localization/PDF Escape/snapshots/FID-2-viewport-protrusion-768-841-capture-842-FP.png"
   },
   {
+    "id": 32,
     "subject": "Selenium",
     "type": "Element Collision",
     "viewportRange": "320-380",
@@ -814,6 +854,7 @@
     "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-2-element-collision-320-380-capture-381-FP.png"
   },
   {
+    "id": 33,
     "subject": "Selenium",
     "type": "Element Collision",
     "viewportRange": "320-380",
@@ -843,6 +884,7 @@
     "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-7-element-collision-320-380-capture-381-FP.png"
   },
   {
+    "id": 34,
     "subject": "Selenium",
     "type": "Element Collision",
     "viewportRange": "320-380",
@@ -872,12 +914,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-8-element-collision-320-380-capture-381-FP.png"
   },
   {
+    "id": 35,
     "subject": "Selenium",
     "type": "Element Protrusion",
     "viewportRange": "320-324",
     "failureNode": "/HTML/BODY/DIV[4]/DIV[4]/A",
     "failureParent": "/HTML/BODY/DIV[4]",
-    "failureElementRect": "Left-P: 6 Right-P: 0 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 6px Right-P: 0 Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "display": "flex",
@@ -901,12 +944,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-1-element-protrusion-320-324-capture-325-FP.png"
   },
   {
+    "id": 36,
     "subject": "Selenium",
     "type": "Element Protrusion",
     "viewportRange": "320-331",
     "failureNode": "/HTML/BODY/DIV[6]/DIV",
     "failureParent": "/HTML/BODY/DIV[6]",
-    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 12.09375",
+    "failureElementRect": "Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 12.09375px",
     "localizedProperty": [
       {
         "padding-top": "60px",
@@ -930,6 +974,7 @@
     "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-6-element-protrusion-320-331-capture-332-FP.png"
   },
   {
+    "id": 37,
     "subject": "Selenium",
     "type": "Wrapping Elements",
     "viewportRange": "901-941",
@@ -954,12 +999,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/Selenium/snapshots/FID-10-wrapping-901-941-capture-942-FP.png"
   },
   {
+    "id": 38,
     "subject": "WillMyPhoneWork",
     "type": "Element Protrusion",
     "viewportRange": "992-1200",
     "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[1]/BUTTON",
     "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[1]",
-    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "232px",
@@ -971,12 +1017,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-1-element-protrusion-1100-1199-capture-1200-FP.png"
   },
   {
+    "id": 39,
     "subject": "WillMyPhoneWork",
     "type": "Element Protrusion",
     "viewportRange": "992-1200",
     "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV/BUTTON",
     "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV",
-    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "232px",
@@ -988,12 +1035,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-2-element-protrusion-1100-1199-capture-1200-FP.png"
   },
   {
+    "id": 40,
     "subject": "WillMyPhoneWork",
     "type": "Element Protrusion",
     "viewportRange": "992-1200",
     "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[3]/BUTTON",
     "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[3]",
-    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "232px",
@@ -1005,12 +1053,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-3-element-protrusion-1100-1199-capture-1200-FP.png"
   },
   {
+    "id": 41,
     "subject": "WillMyPhoneWork",
     "type": "Element Protrusion",
     "viewportRange": "992-1200",
     "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[3]/BUTTON",
     "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[3]",
-    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "232px",
@@ -1022,12 +1071,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-4-element-protrusion-1100-1199-capture-1200-FP.png"
   },
   {
+    "id": 42,
     "subject": "WillMyPhoneWork",
     "type": "Element Protrusion",
     "viewportRange": "992-1200",
     "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[2]/BUTTON",
     "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]",
-    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "232px",
@@ -1039,12 +1089,13 @@
     "screenshotUpperBound": "results/Outputs with Localization/WillMyPhoneWork-AdvanceLookup/snapshots/FID-5-element-protrusion-1100-1199-capture-1200-FP.png"
   },
   {
+    "id": 43,
     "subject": "WillMyPhoneWork",
     "type": "Element Protrusion",
     "viewportRange": "992-1200",
     "failureNode": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[2]/BUTTON",
     "failureParent": "/HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[2]",
-    "failureElementRect": "Left-P: 0 Right-P: 39.78125 Top-P: 0 Bottom-P: 0",
+    "failureElementRect": "Left-P: 0 Right-P: 39.78125px Top-P: 0 Bottom-P: 0",
     "localizedProperty": [
       {
         "width": "232px",

@@ -1,0 +1,17 @@
+```css
+/* Remove float property from the problematic element */
+div.div2 > div > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div {
+    float: none;
+}
+
+/* Adjust the height of the problematic element */
+div.div2 > div > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div > div {
+    height: auto;
+}
+
+/* Adjust the margin-bottom of the problematic element */
+div.div2 > div > div:nth-child(2) > div > div > div:nth-child(2) > div > div {
+    margin-bottom: 0;
+}
+```
+======================

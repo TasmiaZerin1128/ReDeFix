@@ -1,0 +1,19 @@
+```css
+/* Remove the problematic padding-left */
+/HTML/BODY/HEADER/DIV/DIV {
+    padding-left: 0;
+}
+
+/* Adjust the width of the image to be responsive */
+/HTML/BODY/HEADER/DIV/DIV/IMG {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+/* Adjust the font-size to be responsive */
+/HTML/BODY/HEADER/DIV/DIV/H1 {
+    font-size: 5vw; /* Adjust the value as needed */
+}
+```
+======================

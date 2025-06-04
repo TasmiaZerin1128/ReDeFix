@@ -1,0 +1,21 @@
+```css
+/* Remove the width: 100% from the following elements */
+div:nth-of-type(2) div:nth-of-type(3) div:nth-of-type(4) div:nth-of-type(4) div,
+div:nth-of-type(2) div:nth-of-type(3) div:nth-of-type(4) div:nth-of-type(4) div:nth-of-type(2) {
+    width: auto;
+}
+
+/* Adjust the margin-left and margin-right to 0 */
+div:nth-of-type(2) div:nth-of-type(3) div:nth-of-type(4) div:nth-of-type(4) {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Add media query to handle viewport range 320-767 */
+@media (max-width: 767px) {
+    div:nth-of-type(2) div:nth-of-type(3) div:nth-of-type(4) div:nth-of-type(4) div {
+        width: 100%;
+    }
+}
+```
+======================

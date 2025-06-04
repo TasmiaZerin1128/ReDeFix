@@ -1,0 +1,20 @@
+```css
+/* Change the position of the problematic element to relative */
+/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11] {
+    position: relative;
+}
+
+/* Make the width of the canvas responsive */
+/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS {
+    width: 100%;
+    max-width: 555px;
+}
+
+/* Remove the max-width constraints from the problematic elements */
+/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11],
+/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[8],
+/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[9] {
+    max-width: none;
+}
+```
+======================

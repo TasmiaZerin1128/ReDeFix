@@ -12,7 +12,7 @@ const DEFINITIONS = {
     "Element-Collision": "Elements collide into one another due to insufficient accommodation space when viewport width reduces.",
     "Element-Protrusion": "When the child element is contained within its container, but as the viewport width decreases, it lacks sufficient space to fit within its parent. As a result, the child element protrudes out of its container.",
     "Viewport-Protrusion": "As the viewport size decreases, elements may not only overflow their containers but also protrude out of the viewable area of the webpage (i.e., the <BODY> tag), causing them to appear outside the horizontally visible portion of the page.",
-    "Wrapping": "When the container is not wide enough but has a flexible height, horizontally aligned elements contained within it no longer fit side by side, causing “wrap” to a new line on the page."
+    "Wrapping Elements": "When the container is not wide enough but has a flexible height, horizontally aligned elements contained within it no longer fit side by side, causing “wrap” to a new line on the page."
 }
 
 let collision_collection = "SO_collision";
@@ -23,15 +23,16 @@ const COLLECTIONS = {
     "Element Collision": collision_collection,
     "Element Protrusion": protrusion_collection,
     "Viewport Protrusion": protrusion_collection,
-    "Wrapping": wrapping_collection
+    "Wrapping Elements": wrapping_collection
 }
 
 const apiKey = process.env.MISTRAL_API_KEY || "your_api_key";
 console.log("API Key:", apiKey);
 
 const model = new ChatMistralAI({
-  model: "pixtral-12b",
+  model: "mistral-small-2503",
   apiKey: apiKey,
+  temperature: 0,
 });
 
 async function main() {
@@ -40,6 +41,7 @@ async function main() {
     if (Array.isArray(jsonData)) {
         for (const item of jsonData) {
             failureData = {
+                id: item['id'],
                 failureType: item['type'],
                 failureRange: item['viewportRange'],
                 failureNode: item['failureNode'],
@@ -72,17 +74,18 @@ async function createPrompt(failureData) {
         [
         "user",
         `Fix the following responsive layout failure using the provided context: 
-                RLF Type: {RLF_type},
-                Type Definition: {Type_definition},
-                Failure element XPaths: {Failure_element_XPaths},
-                Failure segment coordinates: {Failure_element_rect},
-                Failure Viewport range: {viewport_range},
-                Localized properties which are causing the failure (ranked from most to least problematic): {localized_property},
-                screenshot of the failure region: {screenshot_failure},
-                screenshot of the lower and upper bound layouts where there is no failure: {screenshot_upper_bound},
-                relevant stack overflow threads containing answers and comments: {relevant_stack_overflow_threads}.
-                Only repair the values of given localized properties, do not include details. Ensure to keep the web layout responsive (DO NOT USE px, try to use rem, em, or %) and maintain the original design.
-                Let's think step by step.`,
+            RLF Type (means which type of failure): {RLF_type},
+            Type Definition (how does the failure occur): {Type_definition},
+            Failure element XPaths: {Failure_element_XPaths},
+            Failure segment coordinates (region which is out of the container/colliding/going to a new line): {Failure_element_rect},
+            Failure Viewport range: {viewport_range},
+            Localized properties which are causing the failure (ranked from most to least problematic) [each tuple contains the property: value, then the element]: {localized_property},
+            screenshot of the failure region (red and yellow dashed region): {screenshot_failure},
+            screenshot of the upper bound layout where there is no failure (red and yellow dashed region): {screenshot_upper_bound},
+            example stack overflow threads to help you understand how developers solve these failures. Each containing the problem, answers and comments on how to repair that failure: {relevant_stack_overflow_threads}.
+            Generate a repair patch from the given localized properties, fix which are needed so that the failure is resolved. Or you can add additional properties, if their absence is causing the failure. Do not provide explanations or notes.
+            Keep the layout as close to the original, as shown in upper bound screenshot.
+            Let's solve this step by step.`,
         ],
     ]);
 
@@ -105,7 +108,7 @@ async function createPrompt(failureData) {
     });
 
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const fileName = `repair_${failureData.failureType}_${timestamp}.txt`;
+    const fileName = `repair_ID_${failureData.id}_${failureData.failureType}_${timestamp}.txt`;
     const filePath = path.join(process.cwd(), 'repairs', fileName);
     
     // Make sure the directory exists

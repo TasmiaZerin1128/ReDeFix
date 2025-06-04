@@ -1,0 +1,14 @@
+```css
+/* Remove absolute positioning from the canvas element */
+/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS {
+    position: relative;
+}
+
+/* Make the width of the canvas element responsive */
+/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS,
+/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2] {
+    width: 100%;
+    max-width: 555px;
+}
+```
+======================

@@ -1,0 +1,12 @@
+```css
+/* Repair Patch */
+
+@media (min-width: 768px) and (max-width: 841px) {
+    /HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4]/DIV,
+    /HTML/BODY/DIV[4]/DIV[3]/DIV/DIV[2]/DIV[4] {
+        width: 100%;
+        float: none;
+    }
+}
+```
+======================

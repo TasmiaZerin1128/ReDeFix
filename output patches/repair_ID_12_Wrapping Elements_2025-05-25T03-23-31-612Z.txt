@@ -1,0 +1,27 @@
+```css
+/* Adjust the font-size to a more reasonable value */
+/HTML/BODY/DIV/HEADER/DIV/FORM/INPUT {
+    font-size: 16px;
+}
+
+/HTML/BODY/DIV/HEADER/DIV/FORM/BUTTON {
+    font-size: 16px;
+}
+
+/* Ensure the elements do not wrap by setting a min-width */
+/HTML/BODY/DIV/DIV/FORM/BUTTON {
+    min-width: 100px; /* Adjust the value as needed */
+}
+
+/* Make the container flexible */
+/HTML/BODY/DIV/DIV/FORM {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Ensure the container has a flexible height */
+/HTML/BODY/DIV/DIV/FORM {
+    height: auto;
+}
+```
+======================

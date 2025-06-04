@@ -1,0 +1,20 @@
+```css
+/* Add this to your CSS file */
+
+@media (max-width: 767px) {
+    body {
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+
+    /HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[3] {
+        width: 100%;
+        margin-left: 0; /* Remove negative margin */
+        margin-right: 0; /* Remove negative margin */
+    }
+
+    /HTML/BODY/DIV/DIV/DIV[2]/DIV/DIV/DIV[3]/DIV[3]/DIV {
+        width: auto; /* Allow the inner div to adjust its width automatically */
+    }
+}
+```
+======================

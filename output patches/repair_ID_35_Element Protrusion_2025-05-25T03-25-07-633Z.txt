@@ -1,0 +1,11 @@
+```diff
+div[4] {
+    display: block;
+}
+
+div[4] div[4] a div {
+    width: auto;
+    margin-right: 0;
+}
+```
+======================

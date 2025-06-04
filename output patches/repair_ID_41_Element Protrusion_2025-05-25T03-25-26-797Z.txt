@@ -1,0 +1,8 @@
+```css
+@media (min-width: 992px) and (max-width: 1200px) {
+    /HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[3]/BUTTON {
+        width: 100%;
+    }
+}
+```
+======================

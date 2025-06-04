@@ -1,0 +1,18 @@
+To fix the "Element Protrusion" issue, we need to address the localized properties that are causing the failure. Specifically, we need to adjust the width of the button element to ensure it fits within its container. Here is the repair patch:
+
+```css
+/* Apply the repair patch */
+@media (min-width: 992px) and (max-width: 1200px) {
+    /HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[1]/DIV[2]/BUTTON {
+        width: 100%;
+        max-width: 100%;
+    }
+    /HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+```
+
+This CSS rule ensures that the button element will take up the full width of its container and will not protrude outside of it. The media query ensures that this rule only applies within the specified viewport range (992px to 1200px). The `flex-wrap: wrap` property on the parent container ensures that the elements inside it will wrap to the next line if necessary, preventing any overflow.
+======================

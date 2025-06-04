@@ -1,0 +1,12 @@
+```css
+/* Add this CSS to your stylesheet */
+@media (min-width: 992px) and (max-width: 1200px) {
+    /HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[2]/BUTTON {
+        width: auto;
+    }
+    /HTML/BODY/DIV[1]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[2] {
+        display: table-cell;
+    }
+}
+```
+======================

@@ -1,0 +1,18 @@
+```css
+/* Update the width of the input element to a more appropriate value */
+input {
+    width: 100%;
+}
+
+/* Adjust the padding to ensure it doesn't cause overflow */
+input {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+/* Ensure the font size is responsive */
+input {
+    font-size: 1rem;
+}
+```
+======================
