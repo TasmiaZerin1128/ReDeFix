@@ -78,3 +78,7 @@ Check the `repairs/` directory for generated fixes.
 
 ## Related Paper (ICSME 2025 NIER Track) 📰
 You can find the preprint of the related paper [here](./ReDeFix%20preprint.pdf).
+
+
+## License
+This project is licensed under the [MIT License](LICENSE.md).
