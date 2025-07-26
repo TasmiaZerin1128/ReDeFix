@@ -8,13 +8,13 @@ This tool helps web developers automatically fix CSS layout issues by:
 - Retrieving relevant StackOverflow discussions using semantic search
 - Generating targeted repair suggestions using Mistral AI
 
-## Components
+## Components 🧠
 1. ChromaDB Vector Store: Stores embeddings of StackOverflow questions and answers
 2. BM25 Retriever: Provides keyword-based search for CSS properties
 3. Ensemble Retrieval: Combines vector similarity and BM25 for optimal results
 4. Mistral AI: Generates embeddings and provides CSS repair suggestions
 
-## 📁 Structure  
+## Structure 📁 
 Repository/  
 ├── src/                # Source code directory  
 │   ├── index.js        # Main entry point and orchestration  
@@ -34,7 +34,7 @@ ChromaDB running locally
 Mistral API key  
 Stack Exchange API key
 
-## Installation Guide
+## Installation Guide 🔧
 
 Follow these steps to set up and run the project:
 
@@ -74,3 +74,7 @@ node index.js
 
 ### Step 6: View Results
 Check the `repairs/` directory for generated fixes.
+
+
+## Related Paper (ICSME 2025 NIER Track) 📰
+You can find the preprint of the related paper [here](./ReDeFix%20preprint.pdf).
