@@ -1,0 +1,246 @@
+Type: Element-Protrusion Range:320-324 Parent:/HTML/BODY/DIV[4] Child: /HTML/BODY/DIV[4]/DIV[4]/A
+|  |  |--[ Property: display ]
+|  |  |--[ Value: flex ]
+|  |  |--[ Element: /HTML/BODY/DIV[4] ]
+-----------------
+Type: Element-Protrusion Range:320-324 Parent:/HTML/BODY/DIV[4] Child: /HTML/BODY/DIV[4]/DIV[4]/A
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 200px ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV[4]/A/DIV ]
+-----------------
+Type: Element-Protrusion Range:320-324 Parent:/HTML/BODY/DIV[4] Child: /HTML/BODY/DIV[4]/DIV[4]/A
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 100% ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV[4] ]
+-----------------
+Type: Element-Protrusion Range:320-324 Parent:/HTML/BODY/DIV[4] Child: /HTML/BODY/DIV[4]/DIV[4]/A
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: 60px ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV[4]/A/DIV ]
+-----------------
+---------------------------------------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[3]/DIV/DIV[2] Node 2: /HTML/BODY/DIV[3]/DIV/DIV/A/IMG
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 188px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2] ]
+-----------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[3]/DIV/DIV[2] Node 2: /HTML/BODY/DIV[3]/DIV/DIV/A/IMG
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 188px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV/A/IMG ]
+-----------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[3]/DIV/DIV[2] Node 2: /HTML/BODY/DIV[3]/DIV/DIV/A/IMG
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2] ]
+-----------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[3]/DIV/DIV[2] Node 2: /HTML/BODY/DIV[3]/DIV/DIV/A/IMG
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV/A/IMG ]
+-----------------
+---------------------------------------------
+Type: Element-Protrusion Range:320-331 Parent:/HTML/BODY/DIV[6] Child: /HTML/BODY/DIV[6]/DIV
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 60px ]
+|  |  |--[ Element: /HTML/BODY/DIV[6] ]
+-----------------
+Type: Element-Protrusion Range:320-331 Parent:/HTML/BODY/DIV[6] Child: /HTML/BODY/DIV[6]/DIV
+|  |  |--[ Property: padding-bottom ]
+|  |  |--[ Value: 60px ]
+|  |  |--[ Element: /HTML/BODY/DIV[6] ]
+-----------------
+Type: Element-Protrusion Range:320-331 Parent:/HTML/BODY/DIV[6] Child: /HTML/BODY/DIV[6]/DIV
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 32px ]
+|  |  |--[ Element: /HTML/BODY/DIV[6]/DIV/H2 ]
+-----------------
+Type: Element-Protrusion Range:320-331 Parent:/HTML/BODY/DIV[6] Child: /HTML/BODY/DIV[6]/DIV
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 22px ]
+|  |  |--[ Element: /HTML/BODY/DIV[6]/DIV/H3 ]
+-----------------
+Type: Element-Protrusion Range:320-331 Parent:/HTML/BODY/DIV[6] Child: /HTML/BODY/DIV[6]/DIV
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/DIV[6]/DIV ]
+-----------------
+---------------------------------------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[2]/DIV/DIV[10] Node 2: /HTML/BODY/DIV[2]/DIV/DIV[9]/A/IMG
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 188px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV/DIV[10] ]
+-----------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[2]/DIV/DIV[10] Node 2: /HTML/BODY/DIV[2]/DIV/DIV[9]/A/IMG
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 188px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV/DIV[9]/A/IMG ]
+-----------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[2]/DIV/DIV[10] Node 2: /HTML/BODY/DIV[2]/DIV/DIV[9]/A/IMG
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV/DIV[10] ]
+-----------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[2]/DIV/DIV[10] Node 2: /HTML/BODY/DIV[2]/DIV/DIV[9]/A/IMG
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV/DIV[9]/A/IMG ]
+-----------------
+---------------------------------------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[2]/DIV/DIV[2] Node 2: /HTML/BODY/DIV[2]/DIV/DIV/A/IMG
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 188px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[2]/DIV/DIV[2] Node 2: /HTML/BODY/DIV[2]/DIV/DIV/A/IMG
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 188px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV/DIV/A/IMG ]
+-----------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[2]/DIV/DIV[2] Node 2: /HTML/BODY/DIV[2]/DIV/DIV/A/IMG
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Element-Collision Range:320-380 Node 1:/HTML/BODY/DIV[2]/DIV/DIV[2] Node 2: /HTML/BODY/DIV[2]/DIV/DIV/A/IMG
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV/DIV/A/IMG ]
+-----------------
+---------------------------------------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 150px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV[2]/DIV ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV[2] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[5] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV[2] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[2] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[3] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV[2] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV[2] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[4] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[4] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[5] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[5] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV[2] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV[2] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[2] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[2] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[3] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/A[3] ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: 5px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV/DIV ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: width ]
+|  |  |--[ Value: auto ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV[2]/DIV/IMG ]
+-----------------
+Type: Wrapping Range:901-941 Node: /HTML/BODY/HEADER/NAV/DIV[2]
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 0px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/NAV/DIV/DIV ]
+-----------------
+---------------------------------------------

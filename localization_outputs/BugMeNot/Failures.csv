@@ -1,0 +1,2 @@
+Webpage,Run,FID,Type,RangeMin,RangeMax,XPath1,Xpath2,ClassNarrower,ClassMin,ClassMid,ClassMax,ClassWider
+192.168.0.108/,1,1,Element-Protrusion,650,736,/HTML/BODY/DIV/HEADER/DIV/FORM,/HTML/BODY/DIV/HEADER,TP,TP,TP,TP,FP

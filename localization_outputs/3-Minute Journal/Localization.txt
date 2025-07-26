@@ -1,0 +1,594 @@
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 555px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[8] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[9] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[10] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[4] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[5] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[6] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[7] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[2] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[3] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 14px ]
+|  |  |--[ Element: /HTML/BODY ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[8] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[9] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[10] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[4] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[5] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[6] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[7] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[2] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[3] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[5] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[4] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[2] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[9] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[8] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[7] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[6] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[11] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[10] ]
+-----------------
+---------------------------------------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2]
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2] ]
+-----------------
+Type: Element-Protrusion Range:992-1199 Parent:/HTML/BODY/DIV[3]/DIV/DIV[2]/DIV Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2]
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 555px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2] ]
+-----------------
+---------------------------------------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 555px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 555px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[12] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[8] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[9] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[10] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[4] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[5] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[6] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[7] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[2] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[3] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 14px ]
+|  |  |--[ Element: /HTML/BODY ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[12] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[8] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[9] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[10] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[4] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[5] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[6] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[7] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[2] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[3] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[5] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[4] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[2] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[9] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[8] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[7] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[6] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[11] ]
+-----------------
+Type: Element-Protrusion Range:1138-1199 Parent:/HTML/BODY/DIV[3] Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[10] ]
+-----------------
+---------------------------------------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 555px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 555px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[12] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[8] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[9] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[10] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[4] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[5] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[6] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[7] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 39px ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[3] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[11] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS[2] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[12] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[8] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[9] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[10] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[4] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[5] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[6] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[7] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV/DIV[3] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[5] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[4] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[9] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[8] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[7] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[6] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[11] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[10] ]
+-----------------
+Type: Viewport-Protrusion Range:992-1137 Parent:/HTML/BODY Child: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV/CANVAS
+|  |  |--[ Property: width ]
+|  |  |--[ Value: width smaller than viewport size! ]
+|  |  |--[ Element: /HTML/BODY ]
+-----------------
+---------------------------------------------

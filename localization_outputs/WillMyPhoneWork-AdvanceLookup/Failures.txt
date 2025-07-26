@@ -1,0 +1,18 @@
+*
+|  |--[ Element-Protrusion (1): 1100-1199(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[2]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV ]
+|  |--[ Element-Protrusion (2): 1100-1199(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[2]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV ]
+|  |--[ Element-Protrusion (3): 1100-1199(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[2]/SECTION/DIV/DIV[2]/DIV/DIV[2] ]
+|  |--[ Element-Protrusion (4): 1100-1199(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[2]/SECTION/DIV/DIV[2]/DIV/DIV[2] ]
+|  |--[ Element-Protrusion (5): 1100-1199(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[2]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+|  |--[ Element-Protrusion (6): 1100-1199(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[2]/SECTION/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/DIV[2] ]
+|  |--[ Element-Protrusion (7): 1100-1199(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[2]/SECTION/DIV/DIV[2]/DIV/DIV ]
+|  |--[ Element-Protrusion (8): 1100-1199(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[2]/SECTION/DIV/DIV[2] ]
+8 Responsive Layout Failures Found.

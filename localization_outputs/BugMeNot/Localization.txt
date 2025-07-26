@@ -1,0 +1,151 @@
+Type: Element-Protrusion Range:325-671 Parent:/HTML/BODY/DIV/HEADER Child: /HTML/BODY/DIV/HEADER/DIV/FORM
+|  |  |--[ Property: float ]
+|  |  |--[ Value: right ]
+|  |  |--[ Element: /HTML/BODY/DIV/HEADER/DIV/FORM ]
+-----------------
+Type: Element-Protrusion Range:325-671 Parent:/HTML/BODY/DIV/HEADER Child: /HTML/BODY/DIV/HEADER/DIV/FORM
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 180% ]
+|  |  |--[ Element: /HTML/BODY/DIV/HEADER/DIV/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:325-671 Parent:/HTML/BODY/DIV/HEADER Child: /HTML/BODY/DIV/HEADER/DIV/FORM
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 180% ]
+|  |  |--[ Element: /HTML/BODY/DIV/HEADER/DIV/FORM/BUTTON ]
+-----------------
+Type: Element-Protrusion Range:325-671 Parent:/HTML/BODY/DIV/HEADER Child: /HTML/BODY/DIV/HEADER/DIV/FORM
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 8px ]
+|  |  |--[ Element: /HTML/BODY/DIV/HEADER/DIV/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:325-671 Parent:/HTML/BODY/DIV/HEADER Child: /HTML/BODY/DIV/HEADER/DIV/FORM
+|  |  |--[ Property: padding-bottom ]
+|  |  |--[ Value: 8px ]
+|  |  |--[ Element: /HTML/BODY/DIV/HEADER/DIV/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:325-671 Parent:/HTML/BODY/DIV/HEADER Child: /HTML/BODY/DIV/HEADER/DIV/FORM
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 8px ]
+|  |  |--[ Element: /HTML/BODY/DIV/HEADER/DIV/FORM/BUTTON ]
+-----------------
+Type: Element-Protrusion Range:325-671 Parent:/HTML/BODY/DIV/HEADER Child: /HTML/BODY/DIV/HEADER/DIV/FORM
+|  |  |--[ Property: padding-bottom ]
+|  |  |--[ Value: 8px ]
+|  |  |--[ Element: /HTML/BODY/DIV/HEADER/DIV/FORM/BUTTON ]
+-----------------
+Type: Element-Protrusion Range:325-671 Parent:/HTML/BODY/DIV/HEADER Child: /HTML/BODY/DIV/HEADER/DIV/FORM
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 5px ]
+|  |  |--[ Element: /HTML/BODY/DIV/HEADER/DIV/FORM ]
+-----------------
+Type: Element-Protrusion Range:320-334 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[3]
+|  |  |--[ Property: float ]
+|  |  |--[ Value: left ]
+|  |  |--[ Element: /HTML/BODY/FOOTER/UL/LI[3] ]
+-----------------
+Type: Element-Protrusion Range:320-334 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[3]
+|  |  |--[ Property: padding-bottom ]
+|  |  |--[ Value: 30px ]
+|  |  |--[ Element: /HTML/BODY/FOOTER ]
+-----------------
+Type: Element-Protrusion Range:320-334 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[3]
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/FOOTER ]
+-----------------
+Type: Element-Protrusion Range:320-334 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[3]
+|  |  |--[ Property: padding-bottom ]
+|  |  |--[ Value: 0.2em ]
+|  |  |--[ Element: /HTML/BODY/FOOTER/UL/LI[3] ]
+-----------------
+Type: Element-Protrusion Range:320-334 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[3]
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 0.1em ]
+|  |  |--[ Element: /HTML/BODY/FOOTER/UL/LI[3] ]
+-----------------
+Type: Element-Protrusion Range:320-420 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[4]
+|  |  |--[ Property: float ]
+|  |  |--[ Value: left ]
+|  |  |--[ Element: /HTML/BODY/FOOTER/UL/LI[4] ]
+-----------------
+Type: Element-Protrusion Range:320-420 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[4]
+|  |  |--[ Property: padding-bottom ]
+|  |  |--[ Value: 30px ]
+|  |  |--[ Element: /HTML/BODY/FOOTER ]
+-----------------
+Type: Element-Protrusion Range:320-420 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[4]
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/FOOTER ]
+-----------------
+Type: Element-Protrusion Range:320-420 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[4]
+|  |  |--[ Property: padding-bottom ]
+|  |  |--[ Value: 0.2em ]
+|  |  |--[ Element: /HTML/BODY/FOOTER/UL/LI[4] ]
+-----------------
+Type: Element-Protrusion Range:320-420 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[4]
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 0.1em ]
+|  |  |--[ Element: /HTML/BODY/FOOTER/UL/LI[4] ]
+-----------------
+Type: Element-Protrusion Range:335-529 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[5]
+|  |  |--[ Property: float ]
+|  |  |--[ Value: left ]
+|  |  |--[ Element: /HTML/BODY/FOOTER/UL/LI[5] ]
+-----------------
+Type: Element-Protrusion Range:335-529 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[5]
+|  |  |--[ Property: padding-bottom ]
+|  |  |--[ Value: 30px ]
+|  |  |--[ Element: /HTML/BODY/FOOTER ]
+-----------------
+Type: Element-Protrusion Range:335-529 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[5]
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/FOOTER ]
+-----------------
+Type: Element-Protrusion Range:335-529 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[5]
+|  |  |--[ Property: padding-bottom ]
+|  |  |--[ Value: 0.2em ]
+|  |  |--[ Element: /HTML/BODY/FOOTER/UL/LI[5] ]
+-----------------
+Type: Element-Protrusion Range:335-529 Parent:/HTML/BODY/FOOTER Child: /HTML/BODY/FOOTER/UL/LI[5]
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 0.1em ]
+|  |  |--[ Element: /HTML/BODY/FOOTER/UL/LI[5] ]
+-----------------
+Type: Element-Protrusion Range:324-338 Parent:/HTML/BODY/DIV/DIV/FORM Child: /HTML/BODY/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 180% ]
+|  |  |--[ Element: /HTML/BODY/DIV/DIV/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:324-338 Parent:/HTML/BODY/DIV/DIV/FORM Child: /HTML/BODY/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 12px ]
+|  |  |--[ Element: /HTML/BODY/DIV/DIV/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:324-338 Parent:/HTML/BODY/DIV/DIV/FORM Child: /HTML/BODY/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 12px ]
+|  |  |--[ Element: /HTML/BODY/DIV/DIV/FORM/INPUT ]
+-----------------
+Type: Viewport-Protrusion Range:320-323 Parent:/HTML/BODY Child: /HTML/BODY/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 180% ]
+|  |  |--[ Element: /HTML/BODY/DIV/DIV/FORM/INPUT ]
+-----------------
+Type: Viewport-Protrusion Range:320-323 Parent:/HTML/BODY Child: /HTML/BODY/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 12px ]
+|  |  |--[ Element: /HTML/BODY/DIV/DIV/FORM/INPUT ]
+-----------------
+Type: Viewport-Protrusion Range:320-323 Parent:/HTML/BODY Child: /HTML/BODY/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 12px ]
+|  |  |--[ Element: /HTML/BODY/DIV/DIV/FORM/INPUT ]
+-----------------
+Type: Viewport-Protrusion Range:320-323 Parent:/HTML/BODY Child: /HTML/BODY/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: width ]
+|  |  |--[ Value: width smaller than viewport size! ]
+|  |  |--[ Element: /HTML/BODY ]
+-----------------
+---------------------------------------------

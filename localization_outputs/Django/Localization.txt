@@ -1,0 +1,73 @@
+Type: Element-Protrusion Range:320-357 Parent:/HTML/BODY/DIV[5]/DIV[2]/DIV/DIV Child: /HTML/BODY/DIV[5]/DIV[2]/DIV/DIV/A
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 109px ]
+|  |  |--[ Element: /HTML/BODY/DIV[5]/DIV[2]/DIV/DIV/A ]
+-----------------
+Type: Element-Protrusion Range:320-357 Parent:/HTML/BODY/DIV[5]/DIV[2]/DIV/DIV Child: /HTML/BODY/DIV[5]/DIV[2]/DIV/DIV/A
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 4rem ]
+|  |  |--[ Element: /HTML/BODY/DIV[5]/DIV[2]/DIV/DIV/A ]
+-----------------
+---------------------------------------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 83% ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 14% ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 1.6rem ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 1.6rem ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM ]
+-----------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM/INPUT
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 1.6rem ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV[2]/FORM ]
+-----------------
+---------------------------------------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 83% ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 14% ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 1.6rem ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT ]
+-----------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 1.6rem ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM ]
+-----------------
+Type: Element-Protrusion Range:320-385 Parent:/HTML/BODY/DIV[4]/DIV/DIV[2] Child: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM/INPUT
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 1.6rem ]
+|  |  |--[ Element: /HTML/BODY/DIV[4]/DIV/DIV[2]/DIV/DIV/FORM ]
+-----------------
+---------------------------------------------

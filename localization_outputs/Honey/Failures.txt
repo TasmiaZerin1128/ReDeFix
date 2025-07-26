@@ -1,0 +1,14 @@
+*
+|  |--[ Element-Protrusion (1): 330-524(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]/DIV/DIV[2]/IMG ]
+|  |--[ Element-Protrusion (2): 330-524(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[2]/DIV/DIV[2]/IMG ]
+|  |--[ Element-Collision (3): 876-1075(TP,TP,TP,TP,FP) ]
+|  |  |--[ Sibling: /HTML/BODY/DIV/DIV/DIV/DIV/DIV/DIV[3]/DIV[3]/DIV/DIV ]
+|  |--[ Wrapping (4): 320-376(TP,TP,TP,TP,FP) ]
+|  |  |--[ Row Element: /HTML/BODY/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV/A ]
+|  |  |--[ Row Element: /HTML/BODY/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV/A[2] ]
+|  |  |--[ Row Element: /HTML/BODY/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV/DIV/DIV/A[3] ]
+|  |--[ Element-Collision (5): 539-546(FP,TP,TP,TP,FP) ]
+|  |  |--[ Sibling: /HTML/BODY/DIV/DIV/DIV/DIV ]
+5 Responsive Layout Failures Found.

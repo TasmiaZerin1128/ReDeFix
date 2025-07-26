@@ -1,0 +1,53 @@
+Type: Element-Collision Range:600-680 Node 1:/HTML/BODY/HEADER Node 2: /HTML/BODY/DIV
+|  |  |--[ Property: margin-bottom ]
+|  |  |--[ Value: 20px ]
+|  |  |--[ Element: /HTML/BODY/HEADER ]
+-----------------
+Type: Element-Collision Range:600-680 Node 1:/HTML/BODY/HEADER Node 2: /HTML/BODY/DIV
+|  |  |--[ Property: margin-top ]
+|  |  |--[ Value: -20px ]
+|  |  |--[ Element: /HTML/BODY/DIV ]
+-----------------
+Type: Element-Collision Range:600-680 Node 1:/HTML/BODY/HEADER Node 2: /HTML/BODY/DIV
+|  |  |--[ Property: padding-bottom ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/HEADER ]
+-----------------
+Type: Element-Collision Range:600-680 Node 1:/HTML/BODY/HEADER Node 2: /HTML/BODY/DIV
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 4px ]
+|  |  |--[ Element: /HTML/BODY/DIV ]
+-----------------
+---------------------------------------------
+Type: Element-Protrusion Range:698-707 Parent:/HTML/BODY/HEADER/DIV/DIV Child: /HTML/BODY/HEADER/DIV/DIV/H1
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 360px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/DIV/DIV ]
+-----------------
+Type: Element-Protrusion Range:698-707 Parent:/HTML/BODY/HEADER/DIV/DIV Child: /HTML/BODY/HEADER/DIV/DIV/H1
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 340px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/DIV/DIV/IMG ]
+-----------------
+Type: Element-Protrusion Range:698-707 Parent:/HTML/BODY/HEADER/DIV/DIV Child: /HTML/BODY/HEADER/DIV/DIV/H1
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 115px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/DIV/DIV/H1 ]
+-----------------
+Type: Element-Protrusion Range:698-707 Parent:/HTML/BODY/HEADER/DIV/DIV Child: /HTML/BODY/HEADER/DIV/DIV/H1
+|  |  |--[ Property: position ]
+|  |  |--[ Value: absolute ]
+|  |  |--[ Element: /HTML/BODY/HEADER/DIV/DIV/IMG ]
+-----------------
+---------------------------------------------
+Type: Viewport-Protrusion Range:681-697 Parent:/HTML/BODY Child: /HTML/BODY/HEADER/DIV/DIV/H1
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 115px ]
+|  |  |--[ Element: /HTML/BODY/HEADER/DIV/DIV/H1 ]
+-----------------
+Type: Viewport-Protrusion Range:681-697 Parent:/HTML/BODY Child: /HTML/BODY/HEADER/DIV/DIV/H1
+|  |  |--[ Property: width ]
+|  |  |--[ Value: width smaller than viewport size! ]
+|  |  |--[ Element: /HTML/BODY ]
+-----------------
+---------------------------------------------

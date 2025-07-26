@@ -1,0 +1,30 @@
+ID: 6 Type: Viewport-Protrusion Range:415-766 Viewport:414 Classification: FP
+|  |--[ Left-P: 0 Right-P: 0 Top-P: 0 Bottom-P: 0 ]
+|--[ Parent: /HTML/BODY ]
+|  |--[ minX: 0 maxX: 414 minY: 0 maxY: 2997.09375 width: 414 height: 2997.09375 ]
+|--[ Child: /HTML/BODY/DIV[2] ]
+|  |--[ minX: 0 maxX: 414 minY: 52 maxY: 2997.09375 width: 414 height: 2945.09375 ]
+ID: 6 Type: Viewport-Protrusion Range:415-766 Viewport:415 Classification: TP
+|  |--[ Left-P: 0 Right-P: 353 Top-P: 0 Bottom-P: 0 ]
+|--[ Parent: /HTML/BODY ]
+|  |--[ minX: 0 maxX: 415 minY: 0 maxY: 1724.28125 width: 415 height: 1724.28125 ]
+|--[ Child: /HTML/BODY/DIV[2] ]
+|  |--[ minX: 0 maxX: 768 minY: 52 maxY: 1724.28125 width: 768 height: 1672.28125 ]
+ID: 6 Type: Viewport-Protrusion Range:415-766 Viewport:590 Classification: TP
+|  |--[ Left-P: 0 Right-P: 178 Top-P: 0 Bottom-P: 0 ]
+|--[ Parent: /HTML/BODY ]
+|  |--[ minX: 0 maxX: 590 minY: 0 maxY: 1724.28125 width: 590 height: 1724.28125 ]
+|--[ Child: /HTML/BODY/DIV[2] ]
+|  |--[ minX: 0 maxX: 768 minY: 52 maxY: 1724.28125 width: 768 height: 1672.28125 ]
+ID: 6 Type: Viewport-Protrusion Range:415-766 Viewport:766 Classification: TP
+|  |--[ Left-P: 0 Right-P: 2 Top-P: 0 Bottom-P: 0 ]
+|--[ Parent: /HTML/BODY ]
+|  |--[ minX: 0 maxX: 766 minY: 0 maxY: 1724.28125 width: 766 height: 1724.28125 ]
+|--[ Child: /HTML/BODY/DIV[2] ]
+|  |--[ minX: 0 maxX: 768 minY: 52 maxY: 1724.28125 width: 768 height: 1672.28125 ]
+ID: 6 Type: Viewport-Protrusion Range:415-766 Viewport:767 Classification: FP
+|  |--[ Left-P: 0 Right-P: 1 Top-P: 0 Bottom-P: 0 ]
+|--[ Parent: /HTML/BODY ]
+|  |--[ minX: 0 maxX: 767 minY: 0 maxY: 1724.28125 width: 767 height: 1724.28125 ]
+|--[ Child: /HTML/BODY/DIV[2] ]
+|  |--[ minX: 0 maxX: 768 minY: 52 maxY: 1724.28125 width: 768 height: 1672.28125 ]

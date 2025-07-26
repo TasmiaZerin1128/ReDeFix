@@ -1,0 +1,12 @@
+*
+|  |--[ Element-Collision (17): 320-479(TP,TP,TP,TP,FP) ]
+|  |  |--[ Sibling: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV[2] ]
+|  |--[ Element-Collision (18): 415-479(FP,TP,TP,TP,FP) ]
+|  |  |--[ Sibling: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV[3] ]
+|  |--[ Element-Protrusion (19): 697-768(FP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV ]
+|  |--[ Element-Collision (20): 930-959(FP,TP,TP,TP,FP) ]
+|  |  |--[ Sibling: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+|  |--[ Viewport-Protrusion (21): 1025-1071(FP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY ]
+21 Responsive Layout Failures Found.

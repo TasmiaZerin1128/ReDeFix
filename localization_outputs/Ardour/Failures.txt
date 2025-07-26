@@ -1,0 +1,6 @@
+*
+|  |--[ Viewport-Protrusion (1): 350-658(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY ]
+|  |--[ Element-Protrusion (2): 659-678(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[2] ]
+2 Responsive Layout Failures Found.

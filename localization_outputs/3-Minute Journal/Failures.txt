@@ -1,0 +1,10 @@
+*
+|  |--[ Element-Protrusion (1): 992-1199(FP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV ]
+|  |--[ Element-Protrusion (2): 992-1199(FP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[3]/DIV/DIV[2]/DIV ]
+|  |--[ Viewport-Protrusion (3): 992-1137(FP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY ]
+|  |--[ Element-Protrusion (4): 1138-1199(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[3] ]
+4 Responsive Layout Failures Found.

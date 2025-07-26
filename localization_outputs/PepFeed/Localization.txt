@@ -1,0 +1,105 @@
+Type: Element-Collision Range:320-479 Node 1:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV Node 2: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV[2]
+|  |  |--[ Property: margin-bottom ]
+|  |  |--[ Value: 25px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV ]
+-----------------
+---------------------------------------------
+Type: Element-Collision Range:415-479 Node 1:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV[2] Node 2: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV[3]
+|  |  |--[ Property: margin-bottom ]
+|  |  |--[ Value: 25px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[3]/DIV/DIV[2] ]
+-----------------
+---------------------------------------------
+Type: Element-Protrusion Range:697-768 Parent:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]
+|  |  |--[ Property: float ]
+|  |  |--[ Value: left ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] ]
+-----------------
+Type: Element-Protrusion Range:697-768 Parent:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]
+|  |  |--[ Property: margin-top ]
+|  |  |--[ Value: -20px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] ]
+-----------------
+Type: Element-Protrusion Range:697-768 Parent:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]
+|  |  |--[ Property: padding-top ]
+|  |  |--[ Value: 10px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]/SPAN ]
+-----------------
+Type: Element-Protrusion Range:697-768 Parent:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 1.3rem ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3]/SPAN ]
+-----------------
+---------------------------------------------
+Type: Element-Collision Range:930-959 Node 1:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] Node 2: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: float ]
+|  |  |--[ Value: left ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] ]
+-----------------
+Type: Element-Collision Range:930-959 Node 1:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] Node 2: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: float ]
+|  |  |--[ Value: left ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Element-Collision Range:930-959 Node 1:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] Node 2: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 256px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Element-Collision Range:930-959 Node 1:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] Node 2: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: margin-left ]
+|  |  |--[ Value: 25px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Element-Collision Range:930-959 Node 1:/HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV/DIV[2]/DIV[3] Node 2: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+---------------------------------------------
+Type: Viewport-Protrusion Range:1025-1071 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: float ]
+|  |  |--[ Value: left ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:1025-1071 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: -25px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:1025-1071 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: margin-left ]
+|  |  |--[ Value: 25px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:1025-1071 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 25% ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:1025-1071 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:1025-1071 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:1025-1071 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: inherit ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:1025-1071 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: inherit ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/SPAN ]
+-----------------
+Type: Viewport-Protrusion Range:1025-1071 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/DIV[2]/DIV/DIV[2]/DIV/DIV[2]/DIV/DIV[2]
+|  |  |--[ Property: width ]
+|  |  |--[ Value: width smaller than viewport size! ]
+|  |  |--[ Element: /HTML/BODY ]
+-----------------
+---------------------------------------------

@@ -1,0 +1,32 @@
+Type: Element-Protrusion Range:659-678 Parent:/HTML/BODY/DIV[2] Child: /HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV
+|  |  |--[ Property: float ]
+|  |  |--[ Value: left ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV ]
+-----------------
+Type: Element-Protrusion Range:659-678 Parent:/HTML/BODY/DIV[2] Child: /HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 640px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV ]
+-----------------
+Type: Element-Protrusion Range:659-678 Parent:/HTML/BODY/DIV[2] Child: /HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 14px ]
+|  |  |--[ Element: /HTML/BODY ]
+-----------------
+---------------------------------------------
+Type: Viewport-Protrusion Range:350-658 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV
+|  |  |--[ Property: float ]
+|  |  |--[ Value: left ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV ]
+-----------------
+Type: Viewport-Protrusion Range:350-658 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV
+|  |  |--[ Property: width ]
+|  |  |--[ Value: 640px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV ]
+-----------------
+Type: Viewport-Protrusion Range:350-658 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV
+|  |  |--[ Property: width ]
+|  |  |--[ Value: width smaller than viewport size! ]
+|  |  |--[ Element: /HTML/BODY ]
+-----------------
+---------------------------------------------

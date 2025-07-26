@@ -1,0 +1,86 @@
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: max-width ]
+|  |  |--[ Value: 768px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 24px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/H2[3] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 24px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/H2[2] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: font-size ]
+|  |  |--[ Value: 24px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/H2 ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: padding-right ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: padding-left ]
+|  |  |--[ Value: 15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: -15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[4] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: margin-left ]
+|  |  |--[ Value: -15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[4] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: -15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[6] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: margin-left ]
+|  |  |--[ Value: -15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[6] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: -15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[3] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: margin-left ]
+|  |  |--[ Value: -15px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[3] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: border-right-width ]
+|  |  |--[ Value: 1px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[5] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: border-left-width ]
+|  |  |--[ Value: 1px ]
+|  |  |--[ Element: /HTML/BODY/DIV[2]/DIV[5] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: margin-right ]
+|  |  |--[ Value: auto ]
+|  |  |--[ Element: /HTML/BODY/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: margin-left ]
+|  |  |--[ Value: auto ]
+|  |  |--[ Element: /HTML/BODY/DIV[2] ]
+-----------------
+Type: Viewport-Protrusion Range:415-766 Parent:/HTML/BODY Child: /HTML/BODY/DIV[2]
+|  |  |--[ Property: width ]
+|  |  |--[ Value: width smaller than viewport size! ]
+|  |  |--[ Element: /HTML/BODY ]
+-----------------
+---------------------------------------------

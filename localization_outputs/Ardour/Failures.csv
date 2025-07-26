@@ -1,0 +1,3 @@
+Webpage,Run,FID,Type,RangeMin,RangeMax,XPath1,Xpath2,ClassNarrower,ClassMin,ClassMid,ClassMax,ClassWider
+192.168.0.108/,1,2,Element-Protrusion,659,678,/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV,/HTML/BODY/DIV[2],TP,TP,TP,TP,FP
+192.168.0.108/,1,1,Viewport-Protrusion,350,658,/HTML/BODY/DIV[2]/HEADER/DIV/DIV/DIV,/HTML/BODY,TP,TP,TP,TP,FP

@@ -1,0 +1,4 @@
+*
+|  |--[ Element-Protrusion (1): 650-736(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV/HEADER ]
+1 Responsive Layout Failures Found.

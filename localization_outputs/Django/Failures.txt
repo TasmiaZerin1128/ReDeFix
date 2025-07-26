@@ -1,0 +1,18 @@
+*
+|  |--[ Element-Protrusion (1): 320-357(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[5]/DIV[2]/DIV/DIV ]
+|  |--[ Element-Protrusion (2): 767-767(FP,FP,FP,FP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[5] ]
+|  |--[ Element-Protrusion (3): 767-767(FP,FP,FP,FP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[5] ]
+|  |--[ Element-Protrusion (4): 767-767(FP,FP,FP,FP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[5]/DIV ]
+|  |--[ Element-Protrusion (5): 767-767(FP,FP,FP,FP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[5]/DIV[2] ]
+|  |--[ Element-Protrusion (6): 320-385(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[4]/DIV/DIV[2] ]
+|  |--[ Element-Protrusion (7): 767-767(FP,FP,FP,FP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[4]/DIV[2] ]
+|  |--[ Element-Protrusion (8): 320-385(TP,TP,TP,TP,FP) ]
+|  |  |--[ Parent: /HTML/BODY/DIV[4]/DIV/DIV[2] ]
+8 Responsive Layout Failures Found.
